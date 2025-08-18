@@ -1,0 +1,106 @@
+Build a playful diary-style website for a funny UK book series called The Blended Diaries. The site should look like a diary, with lined-paper backgrounds, handwritten fonts for titles, and doodle accents. Tone: witty, warm, British, honest. Goal: showcase the series, capture emails, and link to Amazon KDP + Etsy shop.
+
+Style & Branding
+
+Background: soft cream notebook paper with faint horizontal lines.
+
+Accents: doodles in margins (hearts, arrows, stars, paw prints, speech bubbles).
+
+Headings font: handwritten style (Patrick Hand, Homemade Apple, or Shadows Into Light).
+
+Body font: simple, clean (Roboto or Lato) for readability.
+
+Buttons: look like sticky notes or washi tape strips.
+
+Colours: cream paper, charcoal text, accents of coral, teal, mustard.
+
+
+Pages
+
+1. Home
+
+Hero: tagline “Chaos. Love. Repeat.” with collage of book covers pinned like diary pages.
+
+Hook: “Blended family life. Less Pinterest. More real.”
+
+Series strip: Taylor, Caleb, Libby, Pumpkin — each card styled like a diary entry with cover + 2-sentence blurb.
+
+Reviews: short quotes styled like scribbles in the margins.
+
+Email signup: doodle arrow pointing to box “Get a free bonus chapter.”
+
+
+
+2. Books
+
+Grid of books on diary-style pages.
+
+Each book subpage = open diary spread: cover on left, handwritten blurb + 3 funny quotes on right.
+
+Buy buttons styled as doodle tape links.
+
+
+
+3. About
+
+Notebook page layout.
+
+Short bio: “A rheumatology nurse turned chaos curator, writing honest, funny diaries about blended family life.”
+
+Polaroid-style photo placeholder pinned with tape graphic.
+
+
+
+4. Press & Reviews
+
+Media kit download.
+
+Short press blurb.
+
+Contact form.
+
+
+
+5. Freebies
+
+Email signup for free sampler PDF.
+
+Diary doodle design around signup box.
+
+
+
+6. Contact
+
+Sticky note style contact form with dropdown (Reader, Press, Collaboration, Schools).
+
+
+
+7. Legal
+
+Simple footer links: Privacy, Terms.
+
+
+
+
+Copy Snippets
+
+Elevator pitch: “A diary series that makes blended family chaos feel normal. You will laugh. You might cry. You will definitely nod.”
+
+Taylor: “Teen with sarcasm for breakfast. Mum’s new girlfriend. New siblings. New mess.”
+
+Caleb: “Same house. Different brain. Deadpan commentary included.”
+
+Libby: “Mum. Ringmaster. Trying her best. Powered by tea.”
+
+Pumpkin: “Small scruffy dog. Big opinions. Zero personal space.”
+
+
+SEO
+
+Keywords: blended family books, funny diary series, UK teen diary book, LGBTQ family books.
+
+Slugs: /books, /about, /press, /freebies, /contact.
+
+Meta description: “The Blended Diaries — funny, honest diaries about blended family chaos. Read a sample. Grab a book. Feel seen.”
+
+
