@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand:wght@400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 18%);
+  --card: hsl(180 6.6667% 97.0588%);
+  --card-foreground: hsl(0 0% 18%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 18%);
+  --primary: hsl(0 75% 56%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(260 60% 65%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(210 40% 95%);
+  --muted-foreground: hsl(0 0% 45%);
+  --accent: hsl(50 100% 67%);
+  --accent-foreground: hsl(0 0% 18%);
+  --destructive: hsl(0 75% 56%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(220 13% 91%);
+  --input: hsl(220 13% 91%);
+  --ring: hsl(260 60% 65%);
+  
+  /* Diary-specific colors */
+  --diary-cream: hsl(54 50% 98%);
+  --diary-charcoal: hsl(0 0% 18%);
+  --diary-red: hsl(0 75% 56%);
+  --diary-purple: hsl(260 60% 65%);
+  --diary-yellow: hsl(50 100% 67%);
+  --diary-lines: hsl(0 0% 91%);
+  
+  --font-handwritten: "Patrick Hand", cursive;
+  --font-body: "Lato", sans-serif;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(0 0% 95%);
+  --card: hsl(0 0% 4%);
+  --card-foreground: hsl(0 0% 95%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(0 0% 95%);
+  --primary: hsl(0 75% 56%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(260 60% 65%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(0 0% 8%);
+  --muted-foreground: hsl(0 0% 60%);
+  --accent: hsl(50 100% 67%);
+  --accent-foreground: hsl(0 0% 18%);
+  --destructive: hsl(0 75% 56%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(0 0% 15%);
+  --input: hsl(0 0% 15%);
+  --ring: hsl(260 60% 65%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-diary-cream text-diary-charcoal font-body antialiased;
+    background-image: linear-gradient(
+      transparent 19px,
+      var(--diary-lines) 19px,
+      var(--diary-lines) 21px,
+      transparent 21px
+    );
+    background-size: 100% 22px;
+  }
+}
+
+@layer components {
+  .lined-paper {
+    background-image: linear-gradient(
+      transparent 19px,
+      var(--diary-lines) 19px,
+      var(--diary-lines) 21px,
+      transparent 21px
+    );
+    background-size: 100% 22px;
+  }
+  
+  .margin-line {
+    position: relative;
+  }
+  
+  .margin-line::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--diary-red);
+    opacity: 0.3;
+  }
+  
+  .sticky-note {
+    transform: rotate(-1deg);
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    border: none;
+    font-family: var(--font-handwritten);
+  }
+  
+  .sticky-note:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 4px 8px 16px rgba(0,0,0,0.15);
+  }
+  
+  .polaroid {
+    background: white;
+    padding: 8px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.15);
+    transform: rotate(-2deg);
+  }
+  
+  .tape {
+    background: rgba(128, 90, 213, 0.7);
+    transform: rotate(-5deg);
+  }
+  
+  .doodle-arrow {
+    color: var(--diary-yellow);
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-4px); }
+    60% { transform: translateY(-2px); }
+  }
+  
+  .font-handwritten {
+    font-family: var(--font-handwritten);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
+  }
+}
+
+@layer utilities {
+  .bg-diary-cream {
+    background-color: var(--diary-cream);
+  }
+  
+  .bg-diary-charcoal {
+    background-color: var(--diary-charcoal);
+  }
+  
+  .bg-diary-red {
+    background-color: var(--diary-red);
+  }
+  
+  .bg-diary-purple {
+    background-color: var(--diary-purple);
+  }
+  
+  .bg-diary-yellow {
+    background-color: var(--diary-yellow);
+  }
+  
+  .text-diary-cream {
+    color: var(--diary-cream);
+  }
+  
+  .text-diary-charcoal {
+    color: var(--diary-charcoal);
+  }
+  
+  .text-diary-red {
+    color: var(--diary-red);
+  }
+  
+  .text-diary-purple {
+    color: var(--diary-purple);
+  }
+  
+  .text-diary-yellow {
+    color: var(--diary-yellow);
+  }
+  
+  .border-diary-red {
+    border-color: var(--diary-red);
+  }
+  
+  .border-diary-purple {
+    border-color: var(--diary-purple);
+  }
+  
+  .border-diary-yellow {
+    border-color: var(--diary-yellow);
+  }
+  
+  .border-diary-lines {
+    border-color: var(--diary-lines);
+  }
+}
