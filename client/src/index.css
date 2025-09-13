@@ -84,20 +84,7 @@
     background-size: 100% 22px;
   }
 
-  .margin-line {
-    position: relative;
-  }
 
-  .margin-line::before {
-    content: '';
-    position: absolute;
-    left: 80px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--diary-red);
-    opacity: 0.3;
-  }
 
   .sticky-note {
     transform: rotate(-1deg);

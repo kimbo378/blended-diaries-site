@@ -1,5 +1,4 @@
-import { ArrowRight, ArrowLeft, Gift } from "lucide-react";
-import EmailSignup from "@/components/forms/email-signup";
+import { Gift, Mail, Instagram, Music2 } from "lucide-react";
 
 export default function Freebies() {
   return (
@@ -10,70 +9,62 @@ export default function Freebies() {
             Free Goodies
             <Gift className="inline ml-3 text-diary-red" size={40} />
           </h1>
-          
           <p className="text-xl text-diary-charcoal/80 mb-12 max-w-2xl mx-auto">
-            Get a free bonus chapter plus exclusive content delivered to your inbox. 
-            No spam, just the good stuff.
+            Get a free bonus page plus exclusive content delivered to your
+            inbox. No spam, just the good stuff.
           </p>
-          
-          <EmailSignup />
-          
-          {/* Additional freebies section */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg transform -rotate-1">
-              <h3 className="font-handwritten text-2xl text-diary-purple mb-4">
-                📖 Free Sample Chapter
-              </h3>
-              <p className="text-diary-charcoal/80 mb-4">
-                Get the first chapter of Taylor's Diary to see if our chaos matches yours.
-              </p>
-              <p className="text-sm text-diary-charcoal/60">
-                Delivered instantly to your inbox!
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-8 shadow-lg transform rotate-1">
-              <h3 className="font-handwritten text-2xl text-diary-red mb-4">
-                🎨 Printable Doodle Pages
-              </h3>
-              <p className="text-diary-charcoal/80 mb-4">
-                Diary-style pages for your own chaotic family moments.
-              </p>
-              <p className="text-sm text-diary-charcoal/60">
-                Perfect for journaling or doodling!
-              </p>
-            </div>
-          </div>
-          
-          {/* Behind the scenes */}
-          <div className="mt-16 bg-white rounded-xl p-8 shadow-xl border-4 border-dashed border-diary-yellow">
-            <h2 className="font-handwritten text-3xl text-diary-charcoal mb-6">
-              Behind the Scenes
-            </h2>
-            <p className="text-diary-charcoal/80 leading-relaxed mb-6">
-              Ever wondered how these diaries came to be? Subscribers get exclusive access to the real stories 
-              behind the stories, plus updates on new books, family adventures, and the occasional recipe disaster.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-              <div className="bg-diary-cream p-4 rounded border border-diary-lines">
-                <p className="font-handwritten text-diary-purple">✨ Early book previews</p>
-              </div>
-              <div className="bg-diary-cream p-4 rounded border border-diary-lines">
-                <p className="font-handwritten text-diary-red">📝 Writing process insights</p>
-              </div>
-              <div className="bg-diary-cream p-4 rounded border border-diary-lines">
-                <p className="font-handwritten text-diary-yellow">🎭 Real family stories</p>
-              </div>
-            </div>
-          </div>
+
+          {/* Email signup form from Kit */}
+          <form
+            action="https://app.kit.com/forms/8555422/subscriptions"
+            method="post"
+            target="_blank"
+            className="max-w-md mx-auto"
+          >
+            <input
+              type="email"
+              name="email_address"
+              placeholder="Your email address"
+              required
+              className="w-full px-4 py-3 rounded mb-4 border border-gray-300"
+            />
+            <button
+              type="submit"
+              className="w-full bg-diary-red text-white font-bold py-3 px-6 rounded shadow hover:bg-diary-charcoal transition"
+            >
+              Send Me the Good Stuff!
+            </button>
+          </form>
+
+          <p className="text-sm text-diary-charcoal/60 mt-4">
+            Unsubscribe anytime. Promise we’re not that clingy.
+          </p>
         </div>
-        
-        {/* Doodle arrows pointing to signup */}
-        <div className="absolute left-10 top-1/2 text-diary-yellow text-3xl doodle-arrow transform rotate-45 hidden lg:block">
-          <ArrowRight size={32} />
-        </div>
-        <div className="absolute right-10 top-1/2 text-diary-yellow text-3xl doodle-arrow transform -rotate-45 hidden lg:block">
-          <ArrowLeft size={32} />
+
+        {/* Social links */}
+        <div className="mt-12 flex justify-center space-x-8">
+          <a
+            href="mailto:hello@theblendeddiaries.com"
+            className="text-diary-charcoal hover:text-diary-red"
+          >
+            <Mail size={28} />
+          </a>
+          <a
+            href="https://instagram.com/theblendeddiaries"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-diary-charcoal hover:text-diary-red"
+          >
+            <Instagram size={28} />
+          </a>
+          <a
+            href="https://tiktok.com/@theblendeddiaries"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-diary-charcoal hover:text-diary-red"
+          >
+            <Music2 size={28} />
+          </a>
         </div>
       </section>
     </div>
