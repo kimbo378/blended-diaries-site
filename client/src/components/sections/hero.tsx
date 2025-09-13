@@ -24,8 +24,11 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Featured book cover mockup */}
           <div className="polaroid mx-auto">
-            <img
-              src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500"
+            <img 
+  src="/attached_assets/taylor-cover.jpg" 
+  alt="Taylor's Book Cover" 
+  className="polaroid mx-auto"
+/>
               alt="The Blended Diaries Book Cover"
               className="w-full h-64 object-cover"
             />
