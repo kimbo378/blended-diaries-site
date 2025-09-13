@@ -1,7 +1,7 @@
 import { ArrowDown, ArrowRight, Gift } from "lucide-react";
 import { Link } from "wouter";
 import { StickyNoteButton } from "@/components/ui/sticky-note-button";
-import BookCover from "../../../attached_assets/taylorcover.png";
+import BookCover from "@assets/taylorcover.png";
 
 export default function Hero() {
   return (
