@@ -25,10 +25,7 @@ export default function Hero() {
           {/* Featured book cover mockup */}
           <div className="polaroid mx-auto">
             <img 
-  src="/attached_assets/taylor-cover.jpg" 
-  alt="Taylor's Book Cover" 
-  className="polaroid mx-auto"
-/>
+              src="/attached_assets/taylor-cover.jpg" 
               alt="The Blended Diaries Book Cover"
               className="w-full h-64 object-cover"
             />
