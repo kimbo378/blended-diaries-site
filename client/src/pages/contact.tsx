@@ -34,3 +34,11 @@ export default function Contact() {
               </p>
             </div>
           </div>
+
+          {/* Contact Form */}
+          <ContactForm />
+        </div>
+      </section>
+    </div>
+  );
+}
