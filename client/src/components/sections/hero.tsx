@@ -24,12 +24,15 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Featured book cover mockup */}
           <div className="polaroid mx-auto">
-            <img 
-              src="/attached_assets/taylor-cover.jpg" 
-              alt="The Blended Diaries Book Cover"
-              className="w-full h-64 object-cover"
-            />
-            <div className="tape absolute -top-2 left-1/2 transform -translate-x-1/2 w-16 h-6"></div>
+            <div className="polaroid mx-auto">
+  <img
+    src="/attached_assets/Screenshot 2025-09-13 121227.png"
+    alt="The Blended Diaries Book Cover"
+    className="polaroid mx-auto w-full h-64 object-cover"
+  />
+  <div className="tape absolute -top-2 left-1/2 transform -translate-x-1/2"></div>
+</div>
+</div>
           </div>
           
           {/* Tagline and description */}
