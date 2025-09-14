@@ -11,27 +11,30 @@ export default function About() {
             <h1 className="font-handwritten text-4xl text-diary-charcoal mb-8 text-center">
               About the Author
             </h1>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-              <div className="lg:col-span-2">
+
+            <div className="grid grid-cols-1 gap-8 items-start">
+              <div>
                 <p className="text-lg text-diary-charcoal/80 leading-relaxed mb-6">
-                  A rheumatology nurse turned chaos curator, writing honest, funny diaries about blended family life.
+                  Callie Cruse writes about the messy and funny side of modern
+                  family life, finding humour in the small moments that often
+                  feel the most overwhelming. Her series, The Blended Diaries,
+                  explores the ups and downs of families of all shapes and sizes
+                  with honesty, warmth and plenty of laughs.
                 </p>
                 <p className="text-diary-charcoal/80 leading-relaxed mb-6">
-                  When I'm not untangling medical mysteries or family drama, you'll find me with a cup of tea, 
-                  wondering how I ended up with four kids, one dog, and a partner who thinks hoovering is optional.
+                  Outside of writing, Callie works as a nurse and understands
+                  how important it is to share stories that help people feel
+                  less alone. Family life, with all its chaos and love, inspires
+                  much of her work and she hopes her books give readers both
+                  comfort and entertainment.
                 </p>
                 <p className="text-diary-charcoal/80 leading-relaxed mb-6">
-                  These diaries started as a way to process the beautiful chaos of blended family life. 
-                  I wrote them late at night, between nursing shifts, when the house was finally quiet and I could 
-                  laugh about the day's disasters instead of crying into my tea.
+                  When she is not working or writing, Callie enjoys spending
+                  time with her own family, drinking too much tea and coming up
+                  with new ideas for the next diary entry.
                 </p>
-                <p className="text-diary-charcoal/80 leading-relaxed mb-8">
-                  Turns out, other people found them relatable too. Who knew that our particular brand of organized 
-                  chaos would resonate with so many families navigating their own beautiful messes?
-                </p>
-                
-                <div className="flex flex-wrap gap-4">
+
+                <div className="flex flex-wrap gap-4 mt-6">
                   <Link href="/contact">
                     <StickyNoteButton color="purple" className="px-6 py-3">
                       Say Hello <Mail className="ml-2" size={16} />
@@ -44,20 +47,6 @@ export default function About() {
                   </a>
                 </div>
               </div>
-              
-              <div className="flex justify-center lg:justify-end">
-                <div className="polaroid">
-                  <img
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400"
-                    alt="Author portrait"
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="tape absolute -top-3 left-1/2 transform -translate-x-1/2 w-20 h-8"></div>
-                  <p className="font-handwritten text-center mt-2 text-diary-charcoal">
-                    Tea-powered chaos curator
-                  </p>
-                </div>
-              </div>
             </div>
 
             {/* Fun facts section */}
@@ -68,12 +57,13 @@ export default function About() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-diary-yellow/20 p-4 rounded border-2 border-dashed border-diary-yellow transform -rotate-1">
                   <p className="font-handwritten text-diary-charcoal">
-                    🍵 Daily tea consumption: Approximately 7 cups (and counting)
+                    🍵 Daily tea consumption: Approximately 7 cups (and
+                    counting)
                   </p>
                 </div>
                 <div className="bg-diary-red/20 p-4 rounded border-2 border-dashed border-diary-red transform rotate-1">
                   <p className="font-handwritten text-diary-charcoal">
-                    🩺 Can diagnose joint problems but can't fix a wobbly table
+                    🩺 Can diagnose joint problems but cannot fix a wobbly table
                   </p>
                 </div>
                 <div className="bg-diary-purple/20 p-4 rounded border-2 border-dashed border-diary-purple transform rotate-1">
