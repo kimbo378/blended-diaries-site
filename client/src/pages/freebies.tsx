@@ -58,7 +58,7 @@ export default function Freebies() {
             <Instagram size={28} />
           </a>
           <a
-            href="https://tiktok.com/@theblendeddiaries"
+            href="https://tiktok.com/@blendeddiaries"
             target="_blank"
             rel="noopener noreferrer"
             className="text-diary-charcoal hover:text-diary-red"

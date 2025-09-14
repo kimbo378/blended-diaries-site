@@ -75,14 +75,14 @@ export default function Contact() {
               <Mail className="w-6 h-6 hover:text-diary-red transition" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/theblendeddiaries"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Instagram className="w-6 h-6 hover:text-diary-purple transition" />
             </a>
             <a
-              href="https://tiktok.com"
+              href="https://www.tiktok.com/@blendeddiaries"
               target="_blank"
               rel="noopener noreferrer"
             >
