@@ -1,59 +1,40 @@
-import { ArrowDown, ArrowRight, Gift } from "lucide-react";
-import { Link } from "wouter";
-import { StickyNoteButton } from "@/components/ui/sticky-note-button";
+import React from "react";
+import { Heart } from "lucide-react";
+import ChapterSample from "../../../assets/ChapterSample.png";
 
 export default function Hero() {
   return (
-    <section className="relative py-12 sm:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="font-handwritten text-4xl sm:text-6xl lg:text-7xl text-diary-charcoal/80 font-light">
-            Cry. Laugh. Repeat.
-          </h2>
-          <p className="text-xl sm:text-2xl text-diary-charcoal/80 font-light mt-4">
-            Blended family life. Less Filter. More real.
-          </p>
-        </div>
+    <section className="text-center py-16 bg-[url('/attached_assets/linedpaper.png')] bg-repeat">
+      <h1 className="text-5xl font-bold mb-4 text-gray-800">
+        Cry. Laugh. Repeat.
+      </h1>
+      <p className="text-lg text-gray-600 mb-6">
+        Crazy family life. Less filter. More real.
+      </p>
+      <Heart className="mx-auto text-diary-red mb-8" size={32} />
 
-        {/* Doodle Arrow */}
-        <div className="text-center mb-8">
-          <ArrowDown className="text-3xl doodle-arrow mx-auto" size={32} />
-        </div>
+      <blockquote className="text-xl italic text-diary-purple max-w-2xl mx-auto mb-10">
+        "Blended family life, told honestly. It's messy, it's funny, and it
+        feels just like home."
+      </blockquote>
 
-       
-          </div>
+      <div className="flex justify-center gap-4">
+        {/* Read the Books Button */}
+        <a
+          href="/books"
+          className="bg-diary-red text-white px-6 py-3 rounded-lg shadow hover:bg-red-600 transition"
+        >
+          Read the Books →
+        </a>
 
-          {/* Tagline and description */}
-          <div className="md:col-span-2 flex flex-col justify-center space-y-6">
-            <p className="font-handwritten text-2xl sm:text-3xl text-diary-purple">
-              "Blended family life, told honestly. It’s messy, it’s funny, and
-              it feels just like home."
-            </p>
-          </div>
-        
-
-        {/* Buttons */}
-        <div className="flex flex-wrap gap-4 mt-8">
-          <Link href="/books">
-            <StickyNoteButton color="red" className="text-lg px-6 py-3">
-              Read the Books <ArrowRight className="ml-2" size={16} />
-            </StickyNoteButton>
-          </Link>
-          <Link href="/freebies">
-            <StickyNoteButton color="purple" className="text-lg px-6 py-3">
-              Free Sample <Gift className="ml-2" size={16} />
-            </StickyNoteButton>
-          </Link>
-        </div>
-      </div>
-
-      {/* Scattered doodles */}
-      <div className="absolute top-20 left-10 text-diary-yellow text-2xl transform -rotate-12">
-        ★
-      </div>
-      <div className="absolute top-40 right-20 text-diary-red text-xl transform rotate-12">
-        ❤
+        {/* Free Sample Button */}
+        <a
+          href={ChapterSample}
+          download="BlendedDiaries-Sample.png"
+          className="bg-diary-purple text-white px-6 py-3 rounded-lg shadow hover:bg-purple-600 transition"
+        >
+          Free Sample 🎁
+        </a>
       </div>
     </section>
   );

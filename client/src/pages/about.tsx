@@ -1,4 +1,4 @@
-import { Mail, Download } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Link } from "wouter";
 import { StickyNoteButton } from "@/components/ui/sticky-note-button";
 
@@ -40,11 +40,6 @@ export default function About() {
                       Say Hello <Mail className="ml-2" size={16} />
                     </StickyNoteButton>
                   </Link>
-                  <a href="/media-kit.pdf" download>
-                    <StickyNoteButton color="red" className="px-6 py-3">
-                      Media Kit <Download className="ml-2" size={16} />
-                    </StickyNoteButton>
-                  </a>
                 </div>
               </div>
             </div>

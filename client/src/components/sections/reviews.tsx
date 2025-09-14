@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 
 const reviews = [
   {
-    text: "Finally! A book series that gets blended families right. Messy, funny, real.",
+    text: "Finally! A book series that gets how bonkers blended families can be. Messy, funny, real.",
     author: "Sarah, Mum of 3",
     color: "diary-yellow",
   },
