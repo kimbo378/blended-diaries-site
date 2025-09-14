@@ -1,4 +1,3 @@
-import taylorcover from "../assets/taylorcover.png";
 import React from "react";
 
 export default function Books() {
