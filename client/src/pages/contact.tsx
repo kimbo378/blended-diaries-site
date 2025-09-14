@@ -1,44 +1,100 @@
-import { MessageCircle } from "lucide-react";
-import ContactForm from "@/components/forms/contact-form";
+import { Mail, Instagram, Music2 } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="lined-paper margin-line">
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Title */}
-          <h1 className="font-handwritten text-4xl text-center text-diary-charcoal mb-12">
-            Let's Chat
-            <MessageCircle className="inline ml-3 text-diary-purple" size={36} />
-          </h1>
+    <div className="min-h-screen flex flex-col bg-diary-paper">
+      {/* Contact Section */}
+      <section className="flex-grow py-16 px-6 max-w-4xl mx-auto">
+        <h1 className="font-handwritten text-4xl sm:text-5xl text-diary-charcoal mb-6 text-center">
+          Let’s Chat 💬
+        </h1>
+        <p className="text-center text-diary-charcoal/80 mb-12">
+          Got questions or just want to say hi? I’ll reply between tea breaks
+          and teenage drama.
+        </p>
 
-          {/* Short + friendly intro */}
-          <div className="mb-10 text-center">
-            <p className="text-lg text-diary-charcoal/80 max-w-2xl mx-auto">
-              Got questions or just want to say hi? I’ll reply between tea breaks and teenage drama.
+        {/* Contact Options */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="border-2 border-diary-purple rounded-xl p-6 text-center bg-white/70 backdrop-blur-sm">
+            <h3 className="font-handwritten text-2xl text-diary-purple mb-2">
+              Readers
+            </h3>
+            <p className="text-diary-charcoal/80">
+              Ask about the books, characters, or what’s coming next.
             </p>
           </div>
-
-          {/* Two simple “sticky” notes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-            <div className="bg-diary-yellow/20 p-4 rounded border-2 border-dashed border-diary-yellow transform -rotate-1">
-              <h3 className="font-handwritten text-diary-charcoal font-bold">📚 Readers</h3>
-              <p className="text-sm text-diary-charcoal/80">
-                Ask about the books, characters, or what’s coming next.
-              </p>
-            </div>
-            <div className="bg-diary-purple/20 p-4 rounded border-2 border-dashed border-diary-purple transform rotate-1">
-              <h3 className="font-handwritten text-diary-charcoal font-bold">🤝 General & Collabs</h3>
-              <p className="text-sm text-diary-charcoal/80">
-                Friendly notes, small partnerships, or anything else non-chaotic.
-              </p>
-            </div>
+          <div className="border-2 border-diary-red rounded-xl p-6 text-center bg-white/70 backdrop-blur-sm">
+            <h3 className="font-handwritten text-2xl text-diary-red mb-2">
+              Chaos & Questions
+            </h3>
+            <p className="text-diary-charcoal/80">
+              Friendly notes, small collabs, or anything else non-chaotic.
+            </p>
           </div>
-
-          {/* Contact Form */}
-          <ContactForm />
         </div>
+
+        {/* Contact Form */}
+        <form className="space-y-4 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-md">
+          <input
+            type="text"
+            placeholder="Name"
+            className="w-full p-3 border border-gray-300 rounded-md"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full p-3 border border-gray-300 rounded-md"
+          />
+          <textarea
+            placeholder="Your message..."
+            rows={5}
+            className="w-full p-3 border border-gray-300 rounded-md"
+          ></textarea>
+          <button
+            type="submit"
+            className="w-full py-3 bg-diary-purple text-white font-bold rounded-md hover:bg-diary-red transition"
+          >
+            Send Message
+          </button>
+        </form>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-diary-charcoal text-white py-8 mt-12">
+        <div className="max-w-4xl mx-auto px-6 flex flex-col items-center space-y-4">
+          <p className="text-center text-sm">
+            Honest, funny diaries about the beautiful chaos of blended family
+            life.
+          </p>
+          <div className="flex space-x-6">
+            <a
+              href="mailto:hello@theblendeddiaries.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Mail className="w-6 h-6 hover:text-diary-red transition" />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="w-6 h-6 hover:text-diary-purple transition" />
+            </a>
+            <a
+              href="https://tiktok.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Music2 className="w-6 h-6 hover:text-diary-red transition" />
+            </a>
+          </div>
+          <p className="text-xs text-gray-400 mt-4">
+            © {new Date().getFullYear()} The Blended Diaries. All rights
+            reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
