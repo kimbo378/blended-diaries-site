@@ -1,5 +1,4 @@
 import React from "react";
-import taylorCover from "../assets/taylorcover.png"; // Taylor's image
 
 export default function Books() {
   return (
@@ -14,11 +13,11 @@ export default function Books() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         {/* Taylor's Diary */}
         <div className="bg-white rounded-xl shadow-lg border border-diary-pink p-4 flex flex-col items-center">
-          <img
-            src={taylorCover}
-            alt="Taylor's Diary Cover"
-            className="rounded-md shadow-md mb-4"
-          />
+          <div className="w-full h-48 flex items-center justify-center bg-diary-paper border-2 border-diary-pink rounded mb-4">
+            <span className="text-diary-red font-handwritten text-lg">
+              Taylor’s Diary <br /> Available Now
+            </span>
+          </div>
           <h2 className="text-2xl font-handwritten text-diary-red mb-2">
             Taylor’s Diary
           </h2>
