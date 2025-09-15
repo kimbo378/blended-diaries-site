@@ -9,19 +9,13 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Book Cover */}
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-start lg:justify-start pl-4 lg:pl-8">
             <div className="relative">
-              {/* Purple tape pieces */}
-              <div className="absolute -top-6 -left-4 w-16 h-8 bg-purple-600 opacity-80 transform rotate-12 z-10 rounded-sm shadow-md"></div>
-              <div className="absolute -top-6 -right-4 w-16 h-8 bg-purple-600 opacity-80 transform -rotate-12 z-10 rounded-sm shadow-md"></div>
-              <div className="absolute -bottom-6 -left-4 w-16 h-8 bg-purple-600 opacity-80 transform -rotate-12 z-10 rounded-sm shadow-md"></div>
-              <div className="absolute -bottom-6 -right-4 w-16 h-8 bg-purple-600 opacity-80 transform rotate-12 z-10 rounded-sm shadow-md"></div>
-              
-              {/* Book cover image - taped on at an angle */}
+              {/* Book cover image - smaller and positioned left */}
               <img
                 src={taylorCover}
                 alt="The Blended Diaries Book Cover"
-                className="h-96 w-auto object-cover rounded-lg shadow-xl transform -rotate-3"
+                className="h-72 w-auto object-cover rounded-lg shadow-xl transform -rotate-3"
                 data-testid="img-book-cover"
               />
             </div>
