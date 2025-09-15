@@ -4,22 +4,24 @@ import { Mail, Instagram, Music2 } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-10">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 max-w-7xl mx-auto px-6">
         {/* Subscribe */}
-        <div>
+        <div className="md:col-span-6 flex flex-col items-start text-left">
           <h3 className="text-white font-semibold text-lg mb-4">Subscribe</h3>
           <p className="text-gray-300 mb-4">
             Get free samples & updates straight to your inbox.
           </p>
-          <form className="flex">
+          <form className="flex w-full gap-2 flex-col sm:flex-row">
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full p-2 rounded-l-md text-black"
+              className="flex-1 h-10 rounded-md px-3 text-black"
+              data-testid="input-subscribe-email"
             />
             <button
               type="submit"
-              className="bg-yellow-500 text-black px-4 py-2 rounded-r-md hover:bg-yellow-400 transition"
+              className="h-10 px-4 rounded-md bg-yellow-500 text-black hover:bg-yellow-400 transition"
+              data-testid="button-subscribe"
             >
               Subscribe
             </button>
@@ -27,26 +29,26 @@ export default function Footer() {
         </div>
 
         {/* Quick Links */}
-        <div className="flex flex-col items-center text-center">
+        <div className="md:col-span-3 flex flex-col items-start text-left">
           <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="/books" className="hover:underline">
+              <a href="/books" className="hover:text-yellow-400 transition-colors">
                 Books
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:underline">
+              <a href="/about" className="hover:text-yellow-400 transition-colors">
                 About
               </a>
             </li>
             <li>
-              <a href="/freebies" className="hover:underline">
+              <a href="/freebies" className="hover:text-yellow-400 transition-colors">
                 Freebies
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:underline">
+              <a href="/contact" className="hover:text-yellow-400 transition-colors">
                 Contact
               </a>
             </li>
@@ -54,13 +56,14 @@ export default function Footer() {
         </div>
 
         {/* Shop */}
-        <div className="flex flex-col items-end text-right">
+        <div className="md:col-span-3 flex flex-col items-start text-left">
           <h3 className="text-white font-semibold text-lg mb-4">Shop</h3>
           <a
             href="https://amazon.co.uk"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-yellow-500 text-black px-4 py-2 rounded-md flex items-center space-x-2 hover:bg-yellow-400 transition"
+            className="inline-flex items-center gap-2 h-10 px-4 rounded-md bg-yellow-500 text-black hover:bg-yellow-400 transition"
+            data-testid="link-amazon"
           >
             <span>🛒</span>
             <span>Buy on Amazon</span>
@@ -69,34 +72,42 @@ export default function Footer() {
       </div>
 
       {/* Social + Copyright */}
-      <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6">
-        <div className="flex space-x-6 mb-4 md:mb-0">
-          <a
-            href="mailto:hello@theblendeddiaries.com"
-            className="hover:text-yellow-400"
-          >
-            <Mail size={20} />
-          </a>
-          <a
-            href="https://tiktok.com/@blendeddiaries"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-yellow-400"
-          >
-            <Music2 size={20} />
-          </a>
-          <a
-            href="https://instagram.com/blendeddiaries"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-yellow-400"
-          >
-            <Instagram size={20} />
-          </a>
+      <div className="mt-10 border-t border-gray-700 pt-6">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 max-w-7xl mx-auto px-6">
+          <div className="flex gap-4">
+            <a
+              href="mailto:hello@theblendeddiaries.com"
+              className="hover:text-yellow-400 transition-colors"
+              aria-label="Email"
+              data-testid="link-social-email"
+            >
+              <Mail size={20} />
+            </a>
+            <a
+              href="https://tiktok.com/@blendeddiaries"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-400 transition-colors"
+              aria-label="TikTok"
+              data-testid="link-social-tiktok"
+            >
+              <Music2 size={20} />
+            </a>
+            <a
+              href="https://instagram.com/blendeddiaries"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-400 transition-colors"
+              aria-label="Instagram"
+              data-testid="link-social-instagram"
+            >
+              <Instagram size={20} />
+            </a>
+          </div>
+          <p className="text-gray-400 text-sm">
+            © 2025 The Blended Diaries. All rights reserved.
+          </p>
         </div>
-        <p className="text-gray-400 text-sm">
-          © 2025 The Blended Diaries. All rights reserved.
-        </p>
       </div>
     </footer>
   );
