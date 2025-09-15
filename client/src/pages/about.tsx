@@ -1,4 +1,4 @@
-with the about page i would like the about author info to be on like a scrap diary piece of paper taped on: everything else to be kept the same though. here is the current code: import { Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Link } from "wouter";
 import { StickyNoteButton } from "@/components/ui/sticky-note-button";
 
