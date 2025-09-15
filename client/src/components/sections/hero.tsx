@@ -54,7 +54,7 @@ export default function Hero() {
                 className="bg-diary-red text-white px-6 py-3 rounded-lg shadow hover:bg-red-600 transition"
                 data-testid="button-read-books"
               >
-                Read the Books →
+                Read the Books
               </a>
 
               {/* Free Sample Button */}
