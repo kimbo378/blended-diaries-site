@@ -28,6 +28,26 @@ const characters = [
 ];
 
 export default function CharacterCards() {
+  const getBorderClass = (color: string) => {
+    switch (color) {
+      case "diary-purple": return "border-diary-purple";
+      case "diary-green": return "border-diary-green";
+      case "diary-yellow": return "border-diary-yellow";
+      case "diary-red": return "border-diary-red";
+      default: return "border-gray-300";
+    }
+  };
+
+  const getTextClass = (color: string) => {
+    switch (color) {
+      case "diary-purple": return "text-diary-purple";
+      case "diary-green": return "text-diary-green";
+      case "diary-yellow": return "text-diary-yellow";
+      case "diary-red": return "text-diary-red";
+      default: return "text-gray-600";
+    }
+  };
+
   return (
     <section className="py-16 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,13 +60,13 @@ export default function CharacterCards() {
           {characters.map((character, index) => (
             <div
               key={character.name}
-              className={`bg-white rounded-lg p-6 shadow-lg border-l-4 border-${character.color} transform hover:scale-105 transition-transform`}
+              className={`bg-white rounded-lg p-6 shadow-lg border-l-4 ${getBorderClass(character.color)} transform hover:scale-105 transition-transform`}
             >
               <h3 className="font-handwritten text-2xl text-diary-charcoal mb-3">
                 {character.name}
               </h3>
               <p className="text-diary-charcoal/80 mb-4">{character.description}</p>
-              <div className={`text-${character.color}`}>
+              <div className={getTextClass(character.color)} data-testid={`quote-${character.name.toLowerCase()}`}>
                 <Quote className="inline mr-2" size={16} />
                 <span className="font-handwritten">{character.quote}</span>
               </div>
