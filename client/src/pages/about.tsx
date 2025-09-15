@@ -4,10 +4,10 @@ import { StickyNoteButton } from "@/components/ui/sticky-note-button";
 
 export default function About() {
   return (
-    <div className="diary-lined diary-holes min-h-screen">
+    <div className="lined-paper margin-line">
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="diary-page">
+          <div className="bg-white rounded-lg shadow-xl p-8 md:p-12">
             <h1 className="font-handwritten text-4xl text-diary-charcoal mb-8 text-center">
               About the Author
             </h1>
@@ -69,16 +69,4 @@ export default function About() {
                     📚 Writes books about chaos while living in delightful chaos
                   </p>
                 </div>
-                <div className="bg-diary-green/20 p-4 rounded border-2 border-dashed border-diary-green transform -rotate-1">
-                  <p className="font-handwritten text-diary-charcoal">
-                    ✍️ Believes the best stories come from the most ordinary moments
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
+                <div className="bg-
