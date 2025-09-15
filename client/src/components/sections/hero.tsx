@@ -35,10 +35,10 @@ export default function Hero() {
               Chaos. Love. Repeat.
             </h1>
             <div className="relative mb-8">
-              <p className="text-lg text-gray-600 mb-4 text-center lg:text-left">
+              <p className="text-lg text-gray-600 mb-2 text-center lg:text-left">
                 Blended family life. Less Pinterest. More real.
               </p>
-              <div className="absolute left-1/2 transform -translate-x-1/2 lg:left-40 lg:transform-none">
+              <div className="absolute left-1/2 transform -translate-x-1/2 lg:left-40 lg:transform-none top-6">
                 <Heart className="text-diary-red" size={32} />
               </div>
             </div>
