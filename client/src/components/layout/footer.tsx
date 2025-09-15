@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
 
         {/* Quick Links */}
-        <div className="md:col-span-3 flex flex-col items-start text-left">
+        <div className="md:col-span-3 md:pl-6 flex flex-col items-start text-left">
           <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
