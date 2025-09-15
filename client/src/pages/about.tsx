@@ -69,4 +69,16 @@ export default function About() {
                     📚 Writes books about chaos while living in delightful chaos
                   </p>
                 </div>
-                <div className="bg-
+                <div className="bg-diary-green/20 p-4 rounded border-2 border-dashed border-diary-green transform -rotate-1">
+                  <p className="font-handwritten text-diary-charcoal">
+                    ✍️ Believes the best stories come from the most ordinary moments
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
