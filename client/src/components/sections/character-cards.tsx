@@ -11,7 +11,7 @@ const characters = [
     name: "Caleb",
     description: "Same house. Different brain. Deadpan commentary included.",
     quote: "That's... interesting.",
-    color: "green-500",
+    color: "diary-green",
   },
   {
     name: "Libby",

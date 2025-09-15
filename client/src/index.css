@@ -31,6 +31,7 @@
   --diary-red: hsl(0 75% 56%);
   --diary-purple: hsl(260 60% 65%);
   --diary-yellow: hsl(50 100% 67%);
+  --diary-green: hsl(120 60% 50%);
   --diary-lines: hsl(0 0% 91%);
 
   --font-handwritten: "Patrick Hand", cursive;
@@ -165,6 +166,10 @@
     background-color: var(--diary-yellow);
   }
 
+  .bg-diary-green {
+    background-color: var(--diary-green);
+  }
+
   .text-diary-cream {
     color: var(--diary-cream);
   }
@@ -185,6 +190,10 @@
     color: var(--diary-yellow);
   }
 
+  .text-diary-green {
+    color: var(--diary-green);
+  }
+
   .border-diary-red {
     border-color: var(--diary-red);
   }
@@ -195,6 +204,10 @@
 
   .border-diary-yellow {
     border-color: var(--diary-yellow);
+  }
+
+  .border-diary-green {
+    border-color: var(--diary-green);
   }
 
   .border-diary-lines {
