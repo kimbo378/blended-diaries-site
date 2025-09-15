@@ -46,18 +46,32 @@ export default function Reviews() {
           />
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className={`bg-${review.color}/20 p-6 rounded-lg border-2 border-dashed border-${review.color} transform ${
-                index % 2 === 0 ? "-rotate-1" : "rotate-1"
-              }`}
+              className={`bg-yellow-200 p-6 shadow-lg relative transform ${
+                index % 3 === 0 ? "-rotate-2" : index % 3 === 1 ? "rotate-1" : "-rotate-1"
+              } hover:rotate-0 hover:scale-105 transition-all duration-300`}
+              style={{
+                backgroundColor: index % 6 === 0 ? '#fef08a' : // yellow-200
+                                 index % 6 === 1 ? '#fbcfe8' : // pink-200  
+                                 index % 6 === 2 ? '#ddd6fe' : // purple-200
+                                 index % 6 === 3 ? '#fed7aa' : // orange-200
+                                 index % 6 === 4 ? '#bbf7d0' : // green-200
+                                 '#bfdbfe' // blue-200
+              }}
             >
-              <p className="font-handwritten text-lg text-diary-charcoal mb-4">
+              {/* Post-it note shadow effect */}
+              <div className="absolute inset-0 bg-black/10 transform translate-x-1 translate-y-1 -z-10"></div>
+              
+              {/* Folded corner effect */}
+              <div className="absolute top-0 right-0 w-6 h-6 bg-black/20 transform rotate-45 translate-x-3 -translate-y-3"></div>
+              
+              <p className="font-handwritten text-lg text-gray-800 mb-4 leading-relaxed">
                 "{review.text}"
               </p>
-              <p className="text-sm text-diary-charcoal/70">
+              <p className="text-sm text-gray-600 font-handwritten">
                 - {review.author}
               </p>
             </div>
