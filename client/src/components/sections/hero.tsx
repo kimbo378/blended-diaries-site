@@ -1,13 +1,21 @@
 import React from "react";
-import { Heart } from "lucide-react";
+import { Heart, Star } from "lucide-react";
 import ChapterSample from "../../../assets/ChapterSample.png";
 import taylorCover from "../../../assets/taylorcover.png";
 
 export default function Hero() {
   return (
-    <section className="py-16 bg-[url('/attached_assets/linedpaper.png')] bg-repeat">
+    <section className="py-16 bg-[url('/attached_assets/linedpaper.png')] bg-repeat relative">
+      {/* Decorative doodles */}
+      <Star className="absolute top-8 left-8 text-diary-yellow transform rotate-12" size={20} />
+      <Heart className="absolute top-12 right-16 text-diary-red transform -rotate-12" size={16} />
+      <Star className="absolute top-32 right-8 text-diary-purple transform rotate-45" size={14} />
+      <Heart className="absolute bottom-32 left-12 text-diary-red transform rotate-12" size={18} />
+      <Star className="absolute bottom-16 right-32 text-diary-yellow transform -rotate-12" size={16} />
+      <Heart className="absolute top-64 left-32 text-diary-red transform rotate-45" size={14} />
+      
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left side - Book Cover */}
           <div className="flex justify-start lg:justify-start pl-4 lg:pl-8">
             <div className="relative">
@@ -22,16 +30,16 @@ export default function Hero() {
           </div>
 
           {/* Right side - Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold mb-4 text-gray-800 font-handwritten">
+          <div className="text-center lg:text-left lg:pt-8">
+            <h1 className="text-5xl font-bold mb-2 text-gray-800 font-handwritten">
               Chaos. Love. Repeat.
             </h1>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-gray-600 mb-4">
               Blended family life. Less Pinterest. More real.
             </p>
-            <Heart className="mx-auto lg:mx-0 text-diary-red mb-8" size={32} />
+            <Heart className="mx-auto lg:mx-0 text-diary-red mb-6" size={32} />
 
-            <blockquote className="text-xl italic text-diary-purple mb-10">
+            <blockquote className="text-xl italic text-diary-purple mb-8">
               "A diary series that makes blended family chaos feel normal. You will laugh. You might cry. You will definitely nod."
             </blockquote>
 
