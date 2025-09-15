@@ -34,11 +34,13 @@ export default function Hero() {
             <h1 className="text-5xl font-bold mb-2 text-gray-800 font-handwritten">
               Chaos. Love. Repeat.
             </h1>
-            <p className="text-lg text-gray-600 mb-4">
-              Blended family life. Less Pinterest. More real.
-            </p>
-            <div className="flex justify-center lg:justify-start mb-8">
-              <Heart className="text-diary-red" size={32} />
+            <div className="relative mb-8">
+              <p className="text-lg text-gray-600 mb-4 text-center lg:text-left">
+                Blended family life. Less Pinterest. More real.
+              </p>
+              <div className="absolute left-1/2 transform -translate-x-1/2 lg:left-40 lg:transform-none">
+                <Heart className="text-diary-red" size={32} />
+              </div>
             </div>
 
             <blockquote className="text-xl italic text-diary-purple mb-8">
