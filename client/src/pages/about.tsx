@@ -12,35 +12,38 @@ export default function About() {
               About the Author
             </h1>
 
-            <div className="grid grid-cols-1 gap-8 items-start">
-              <div>
-                <p className="text-lg text-diary-charcoal/80 leading-relaxed mb-6">
-                  Callie Cruse writes about the messy and funny side of modern
-                  family life, finding humour in the small moments that often
-                  feel the most overwhelming. Her series, The Blended Diaries,
-                  explores the ups and downs of families of all shapes and sizes
-                  with honesty, warmth and plenty of laughs.
-                </p>
-                <p className="text-diary-charcoal/80 leading-relaxed mb-6">
-                  Outside of writing, Callie works as a nurse and understands
-                  how important it is to share stories that help people feel
-                  less alone. Family life, with all its chaos and love, inspires
-                  much of her work and she hopes her books give readers both
-                  comfort and entertainment.
-                </p>
-                <p className="text-diary-charcoal/80 leading-relaxed mb-6">
-                  When she is not working or writing, Callie enjoys spending
-                  time with her own family, drinking too much tea and coming up
-                  with new ideas for the next diary entry.
-                </p>
+            {/* Scrap paper effect for author info */}
+            <div className="relative bg-diary-cream p-8 md:p-10 border-2 border-diary-charcoal/20 shadow-lg transform -rotate-1">
+              {/* Tape effect */}
+              <div className="absolute -top-3 left-6 w-16 h-6 bg-yellow-200 opacity-70 rotate-2"></div>
+              <div className="absolute -top-3 right-6 w-16 h-6 bg-yellow-200 opacity-70 -rotate-2"></div>
 
-                <div className="flex flex-wrap gap-4 mt-6">
-                  <Link href="/contact">
-                    <StickyNoteButton color="purple" className="px-6 py-3">
-                      Say Hello <Mail className="ml-2" size={16} />
-                    </StickyNoteButton>
-                  </Link>
-                </div>
+              <p className="text-lg text-diary-charcoal/80 leading-relaxed mb-6">
+                Callie Cruse writes about the messy and funny side of modern
+                family life, finding humour in the small moments that often feel
+                the most overwhelming. Her series, The Blended Diaries, explores
+                the ups and downs of families of all shapes and sizes with
+                honesty, warmth and plenty of laughs.
+              </p>
+              <p className="text-diary-charcoal/80 leading-relaxed mb-6">
+                Outside of writing, Callie works as a nurse and understands how
+                important it is to share stories that help people feel less
+                alone. Family life, with all its chaos and love, inspires much
+                of her work and she hopes her books give readers both comfort
+                and entertainment.
+              </p>
+              <p className="text-diary-charcoal/80 leading-relaxed mb-6">
+                When she is not working or writing, Callie enjoys spending time
+                with her own family, drinking too much tea and coming up with
+                new ideas for the next diary entry.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mt-6">
+                <Link href="/contact">
+                  <StickyNoteButton color="purple" className="px-6 py-3">
+                    Say Hello <Mail className="ml-2" size={16} />
+                  </StickyNoteButton>
+                </Link>
               </div>
             </div>
 
@@ -66,16 +69,4 @@ export default function About() {
                     📚 Writes books about chaos while living in delightful chaos
                   </p>
                 </div>
-                <div className="bg-diary-yellow/20 p-4 rounded border-2 border-dashed border-diary-yellow transform -rotate-1">
-                  <p className="font-handwritten text-diary-charcoal">
-                    🐕 Pumpkin's official human servant and treat dispenser
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
+                <div className="bg-
