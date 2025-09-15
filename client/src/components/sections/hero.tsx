@@ -34,9 +34,12 @@ export default function Hero() {
             <h1 className="text-5xl font-bold mb-2 text-gray-800 font-handwritten">
               Chaos. Love. Repeat.
             </h1>
-            <p className="text-lg text-gray-600 mb-8 flex items-center justify-center lg:justify-start gap-2">
-              Blended family life. Less <Heart className="text-diary-red" size={20} /> Pinterest. More real.
+            <p className="text-lg text-gray-600 mb-4">
+              Blended family life. Less Pinterest. More real.
             </p>
+            <div className="flex justify-center lg:justify-start mb-8">
+              <Heart className="text-diary-red" size={32} />
+            </div>
 
             <blockquote className="text-xl italic text-diary-purple mb-8">
               "A diary series that makes blended family chaos feel normal. You will laugh. You might cry. You will definitely nod."
