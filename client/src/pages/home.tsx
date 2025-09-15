@@ -4,7 +4,7 @@ import Reviews from "@/components/sections/reviews";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[url('/attached_assets/linedpaper.png')] bg-repeat min-h-screen">
       <Hero />
       <CharacterCards />
       <Reviews />

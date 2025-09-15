@@ -29,7 +29,7 @@ const characters = [
 
 export default function CharacterCards() {
   return (
-    <section className="py-16 bg-gradient-to-b from-diary-cream to-white relative">
+    <section className="py-16 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-handwritten text-4xl sm:text-5xl text-center text-diary-charcoal mb-12">
           Meet the Family

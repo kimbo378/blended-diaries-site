@@ -5,7 +5,7 @@ import taylorCover from "../../../assets/taylorcover.png";
 
 export default function Hero() {
   return (
-    <section className="py-16 bg-[url('/attached_assets/linedpaper.png')] bg-repeat relative">
+    <section className="py-16 relative">
       {/* Decorative doodles */}
       <Star className="absolute top-8 left-8 text-diary-yellow transform rotate-12" size={20} />
       <Heart className="absolute top-12 right-16 text-diary-red transform -rotate-12" size={16} />

@@ -25,7 +25,7 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-diary-cream">
+    <section className="py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-handwritten text-4xl text-center text-diary-charcoal mb-12">
           What Readers Say
