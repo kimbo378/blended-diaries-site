@@ -15,7 +15,7 @@ export default function Hero() {
       <Heart className="absolute top-64 left-32 text-diary-red transform rotate-45" size={14} />
       
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left side - Book Cover */}
           <div className="flex justify-start lg:justify-start pl-4 lg:pl-8">
             <div className="relative">
@@ -30,14 +30,14 @@ export default function Hero() {
           </div>
 
           {/* Right side - Content */}
-          <div className="text-center lg:text-left lg:pt-8">
+          <div className="text-center lg:text-left lg:pt-2">
             <h1 className="text-5xl font-bold mb-2 text-gray-800 font-handwritten">
               Chaos. Love. Repeat.
             </h1>
             <p className="text-lg text-gray-600 mb-4">
               Blended family life. Less Pinterest. More real.
             </p>
-            <Heart className="mx-auto lg:mx-0 text-diary-red mb-6" size={32} />
+            <Heart className="mx-auto lg:mx-0 text-diary-red mb-8" size={32} />
 
             <blockquote className="text-xl italic text-diary-purple mb-8">
               "A diary series that makes blended family chaos feel normal. You will laugh. You might cry. You will definitely nod."
