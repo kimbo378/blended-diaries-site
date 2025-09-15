@@ -21,6 +21,16 @@ const reviews = [
     author: "Jo, Step-mum of 2",
     color: "pink-500", // bright pink for this review
   },
+  {
+    text: "This series feels like my own diary got published… only way funnier. My teen and I ended up with separate bookmarks because we kept dipping into it at different times.",
+    author: "James, Dad & Step dad",
+    color: "diary-yellow",
+  },
+  {
+    text: "I thought I'd just skim a few pages but ended up laughing out loud on the train. People were staring but I didn't care.",
+    author: "Sophie, Commuter & Step mum",
+    color: "diary-purple",
+  },
 ];
 
 export default function Reviews() {
@@ -48,7 +58,7 @@ export default function Reviews() {
                 "{review.text}"
               </p>
               <p className="text-sm text-diary-charcoal/70">
-                — {review.author}
+                - {review.author}
               </p>
             </div>
           ))}
