@@ -5,13 +5,13 @@ const characters = [
     name: "Taylor",
     description: "Teen with sarcasm for breakfast. Mum's new girlfriend. New siblings. New mess.",
     quote: "This is fine. Everything is fine.",
-    color: "purple-500",
+    color: "diary-purple",
   },
   {
     name: "Caleb",
     description: "Same house. Different brain. Deadpan commentary included.",
     quote: "That's... interesting.",
-    color: "green-500",
+    color: "green-600",
   },
   {
     name: "Libby",
