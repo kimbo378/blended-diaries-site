@@ -14,7 +14,7 @@ const bookData: Record<string, any> = {
       "Day 15: New house rule: No one is allowed to be happy before 9 AM. I'm looking at you, Caleb.",
       "Day 23: Mum asked if I'm adjusting well. I said yes while eating cereal for dinner. She seemed pleased."
     ],
-    amazonUrl: "https://www.amazon.co.uk/dp/YOUR_BOOK_ID_HERE",
+    amazonUrl: "https://www.amazon.co.uk",
     etsyUrl: "#",
   },
   "calebs-diary": {
