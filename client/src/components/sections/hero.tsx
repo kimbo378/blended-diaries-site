@@ -5,21 +5,53 @@ import taylorCover from "../../../assets/taylorcover.png";
 
 export default function Hero() {
   return (
-    <section className="py-20 relative z-10">
+    <section className="py-20 relative z-10 bg-[url('/attached_assets/linedpaper.png')] bg-repeat">
       {/* Decorative doodles */}
-      <Star className="absolute top-8 left-8 text-diary-yellow transform rotate-12 z-20" size={24} />
-      <Heart className="absolute top-12 right-16 text-diary-red transform -rotate-12 z-20" size={20} />
-      <Star className="absolute top-32 right-8 text-diary-purple transform rotate-45 z-20" size={18} />
-      <Heart className="absolute bottom-32 left-12 text-diary-red transform rotate-12 z-20" size={22} />
-      <Star className="absolute bottom-16 right-32 text-diary-yellow transform -rotate-12 z-20" size={20} />
+      <Star
+        className="absolute top-8 left-8 text-diary-yellow transform rotate-12 z-20"
+        size={24}
+      />
+      <Heart
+        className="absolute top-12 right-16 text-diary-red transform -rotate-12 z-20"
+        size={18}
+      />
+      <Star
+        className="absolute top-32 right-8 text-diary-purple transform rotate-45 z-20"
+        size={18}
+      />
+      <Heart
+        className="absolute bottom-32 left-12 text-diary-red transform rotate-12 z-20"
+        size={22}
+      />
+      <Star
+        className="absolute bottom-16 right-32 text-diary-yellow transform -rotate-12 z-20"
+        size={20}
+      />
+
       {/* Relocated purple stars */}
-      <Star className="absolute top-40 right-24 text-diary-purple transform rotate-12 z-20" size={12} />
-      <Star className="absolute bottom-24 right-12 text-diary-purple transform -rotate-45 z-20" size={10} />
+      <Star
+        className="absolute top-40 right-24 text-diary-purple transform rotate-12 z-20"
+        size={12}
+      />
+      <Star
+        className="absolute bottom-24 right-12 text-diary-purple transform -rotate-45 z-20"
+        size={10}
+      />
+
       {/* Small stars above book area */}
-      <Star className="absolute top-16 left-20 text-diary-yellow transform rotate-12 z-20" size={12} />
-      <Star className="absolute top-12 left-56 text-diary-red transform rotate-45 z-20" size={14} />
-      <Star className="absolute top-36 left-24 text-diary-yellow transform rotate-45 z-20" size={8} />
-      
+      <Star
+        className="absolute top-16 left-20 text-diary-yellow transform rotate-12 z-20"
+        size={12}
+      />
+      <Heart
+        className="absolute top-12 left-56 text-diary-red transform rotate-12 z-20"
+        size={14}
+      />
+      <Star
+        className="absolute top-36 left-24 text-diary-purple transform rotate-45 z-20"
+        size={8}
+      />
+
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Book Cover */}
@@ -40,17 +72,16 @@ export default function Hero() {
             <h1 className="text-6xl lg:text-7xl font-bold mb-4 text-gray-800 font-handwritten">
               Chaos. Love. Repeat.
             </h1>
-            <div className="relative mb-8">
-              <p className="text-xl lg:text-2xl text-gray-600 mb-4 text-center lg:text-left">
-                Blended family life. Less Pinterest. More real.
-              </p>
-              <div className="flex justify-center mt-6">
-                <Heart className="text-diary-red" size={28} />
-              </div>
+            <p className="text-xl lg:text-2xl text-gray-600 mb-4 text-center lg:text-left">
+              Blended family life. Less Pinterest. More real.
+            </p>
+            <div className="flex justify-center mt-6">
+              <Heart className="text-diary-red" size={28} />
             </div>
 
             <blockquote className="text-2xl lg:text-3xl italic text-diary-purple mb-8">
-              "A diary series that makes blended family chaos feel normal. You will laugh. You might cry. You will definitely nod."
+              "Because when your family feels like a circus, you might as well
+              enjoy the show."
             </blockquote>
 
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
@@ -60,7 +91,7 @@ export default function Hero() {
                 className="bg-diary-red text-white px-6 py-3 rounded-lg shadow hover:bg-red-600 transition"
                 data-testid="button-read-books"
               >
-                Read the Books
+                Read the Books →
               </a>
 
               {/* Free Sample Button */}

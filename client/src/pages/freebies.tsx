@@ -50,7 +50,7 @@ export default function Freebies() {
             <Mail size={28} />
           </a>
           <a
-            href="https://instagram.com/theblendeddiaries"
+            href="https://instagram.com/blendeddiaries"
             target="_blank"
             rel="noopener noreferrer"
             className="text-diary-charcoal hover:text-diary-red"

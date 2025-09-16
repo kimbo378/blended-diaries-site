@@ -12,16 +12,29 @@ export default function Books() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Taylor’s Diary (Available Now) */}
           <div className="relative bg-white shadow-lg rounded-xl p-4 border-2 border-dashed border-purple-400 flex flex-col items-center">
-            <img
-              src={taylorCover}
-              alt="Taylor's Diary Cover"
-              className="h-80 w-auto object-cover rounded-lg shadow-md mx-auto"
-            />
+            <a
+              href="https://www.amazon.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={taylorCover}
+                alt="Taylor's Diary Cover"
+                className="h-80 w-auto object-cover rounded-lg shadow-md mx-auto hover:opacity-90 transition"
+              />
+            </a>
             <div className="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
               Available Now
             </div>
             <h3 className="text-xl font-bold text-center mt-4 text-purple-700">
-              Taylor's Diary
+              <a
+                href="https://www.amazon.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Taylor's Diary
+              </a>
             </h3>
             <p className="text-center text-gray-600 mt-2">
               The chaos begins — the first diary is here!
