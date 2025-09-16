@@ -5,14 +5,14 @@ import taylorCover from "../../../assets/taylorcover.png";
 
 export default function Hero() {
   return (
-    <section className="py-16 relative">
+    <section className="py-20 relative z-10">
       {/* Decorative doodles */}
-      <Star className="absolute top-8 left-8 text-diary-yellow transform rotate-12" size={20} />
-      <Heart className="absolute top-12 right-16 text-diary-red transform -rotate-12" size={16} />
-      <Star className="absolute top-32 right-8 text-diary-purple transform rotate-45" size={14} />
-      <Heart className="absolute bottom-32 left-12 text-diary-red transform rotate-12" size={18} />
-      <Star className="absolute bottom-16 right-32 text-diary-yellow transform -rotate-12" size={16} />
-      <Heart className="absolute top-64 left-32 text-diary-red transform rotate-45" size={14} />
+      <Star className="absolute top-8 left-8 text-diary-yellow transform rotate-12 z-20" size={24} />
+      <Heart className="absolute top-12 right-16 text-diary-red transform -rotate-12 z-20" size={20} />
+      <Star className="absolute top-32 right-8 text-diary-purple transform rotate-45 z-20" size={18} />
+      <Heart className="absolute bottom-32 left-12 text-diary-red transform rotate-12 z-20" size={22} />
+      <Star className="absolute bottom-16 right-32 text-diary-yellow transform -rotate-12 z-20" size={20} />
+      <Heart className="absolute top-64 left-32 text-diary-red transform rotate-45 z-20" size={18} />
       
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -31,11 +31,11 @@ export default function Hero() {
 
           {/* Right side - Content */}
           <div className="text-center lg:text-left lg:pt-2">
-            <h1 className="text-5xl font-bold mb-2 text-gray-800 font-handwritten">
+            <h1 className="text-6xl lg:text-7xl font-bold mb-4 text-gray-800 font-handwritten">
               Chaos. Love. Repeat.
             </h1>
             <div className="relative mb-8">
-              <p className="text-lg text-gray-600 mb-2 text-center lg:text-left">
+              <p className="text-xl lg:text-2xl text-gray-600 mb-4 text-center lg:text-left">
                 Blended family life. Less Pinterest. More real.
               </p>
               <div className="absolute left-1/2 transform -translate-x-1/2 lg:left-40 lg:transform-none top-6">
@@ -43,7 +43,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <blockquote className="text-xl italic text-diary-purple mb-8">
+            <blockquote className="text-2xl lg:text-3xl italic text-diary-purple mb-8">
               "A diary series that makes blended family chaos feel normal. You will laugh. You might cry. You will definitely nod."
             </blockquote>
 
