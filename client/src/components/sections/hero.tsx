@@ -43,8 +43,8 @@ export default function Hero() {
               <p className="text-xl lg:text-2xl text-gray-600 mb-4 text-center lg:text-left">
                 Blended family life. Less Pinterest. More real.
               </p>
-              <div className="absolute left-1/2 transform -translate-x-1/2 lg:left-40 lg:transform-none top-6">
-                <Heart className="text-diary-red" size={32} />
+              <div className="flex justify-center mt-6">
+                <Heart className="text-diary-red" size={28} />
               </div>
             </div>
 
