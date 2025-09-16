@@ -94,7 +94,7 @@ export default function Footer() {
               <Music2 size={20} />
             </a>
             <a
-              href="https://instagram.com/blendeddiaries"
+              href="https://www.instagram.com/blendeddiaries/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-yellow-400 transition-colors"
