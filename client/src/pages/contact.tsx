@@ -36,7 +36,7 @@ export default function Contact() {
 
         {/* Instagram Icon */}
         <a
-          href="https://www.instagram.com/theblendeddiaries"
+          href="https://www.instagram.com/blendeddiaries/"
           target="_blank"
           rel="noopener noreferrer"
         >
