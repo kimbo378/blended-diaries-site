@@ -67,7 +67,7 @@ export default function About() {
                     📚 Writes books about chaos while living in delightful chaos
                   </p>
                 </div>
-                <div className="bg-diary-yellow/20 p-4 rounded border-2 border-dashed border-diary-yellow transform -rotate-1">
+                <div className="bg-diary-green/20 p-4 rounded border-2 border-dashed border-diary-green transform -rotate-1">
                   <p className="font-handwritten text-diary-charcoal">
                     🐕 Pumpkin's official human servant and treat dispenser
                   </p>
