@@ -21,9 +21,9 @@ export default function Hero() {
       <Star className="absolute top-36 left-24 text-diary-yellow transform rotate-45 z-20" size={8} />
       
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Book Cover */}
-          <div className="flex justify-center lg:justify-center">
+          <div className="flex justify-center lg:justify-center pt-4">
             <div className="relative">
               {/* Book cover image - smaller and positioned left */}
               <img
