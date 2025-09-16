@@ -14,7 +14,7 @@ const bookData: Record<string, any> = {
       "Day 15: New house rule: No one is allowed to be happy before 9 AM. I'm looking at you, Caleb.",
       "Day 23: Mum asked if I'm adjusting well. I said yes while eating cereal for dinner. She seemed pleased."
     ],
-    amazonUrl: "#",
+    amazonUrl: "https://www.amazon.co.uk/dp/YOUR_BOOK_ID_HERE",
     etsyUrl: "#",
   },
   "calebs-diary": {
@@ -78,14 +78,21 @@ export default function BookDetail() {
             <div className="grid grid-cols-1 lg:grid-cols-2">
               {/* Left page - Book cover */}
               <div className="p-8 lg:p-12 flex items-center justify-center bg-gradient-to-br from-white to-gray-50">
-                <div className="polaroid">
-                  <img
-                    src={book.image}
-                    alt={`${book.title} Cover`}
-                    className="w-full h-96 object-cover"
-                  />
-                  <div className="tape absolute -top-3 left-1/2 transform -translate-x-1/2 w-20 h-8"></div>
-                </div>
+                <a
+                  href={book.amazonUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:scale-105 transition-transform cursor-pointer"
+                >
+                  <div className="polaroid">
+                    <img
+                      src={book.image}
+                      alt={`${book.title} Cover`}
+                      className="w-full h-96 object-cover"
+                    />
+                    <div className="tape absolute -top-3 left-1/2 transform -translate-x-1/2 w-20 h-8"></div>
+                  </div>
+                </a>
               </div>
 
               {/* Right page - Content */}
