@@ -12,12 +12,13 @@ export default function Hero() {
       <Star className="absolute top-32 right-8 text-diary-purple transform rotate-45 z-20" size={18} />
       <Heart className="absolute bottom-32 left-12 text-diary-red transform rotate-12 z-20" size={22} />
       <Star className="absolute bottom-16 right-32 text-diary-yellow transform -rotate-12 z-20" size={20} />
+      {/* Relocated purple stars */}
+      <Star className="absolute top-40 right-24 text-diary-purple transform rotate-12 z-20" size={12} />
+      <Star className="absolute bottom-24 right-12 text-diary-purple transform -rotate-45 z-20" size={10} />
       {/* Small stars above book area */}
       <Star className="absolute top-16 left-20 text-diary-yellow transform rotate-12 z-20" size={12} />
-      <Star className="absolute top-24 left-40 text-diary-purple transform -rotate-12 z-20" size={10} />
       <Star className="absolute top-12 left-56 text-diary-red transform rotate-45 z-20" size={14} />
       <Star className="absolute top-36 left-24 text-diary-yellow transform rotate-45 z-20" size={8} />
-      <Star className="absolute top-20 left-64 text-diary-purple transform -rotate-45 z-20" size={10} />
       
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
