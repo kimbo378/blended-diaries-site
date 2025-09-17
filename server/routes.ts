@@ -3,8 +3,34 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertEmailSignupSchema, insertContactSubmissionSchema } from "@shared/schema";
 import { z } from "zod";
+import fs from "fs";
+import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve sitemap.xml from project root
+  app.get("/sitemap.xml", (req, res) => {
+    try {
+      const sitemapPath = path.resolve(import.meta.dirname, "..", "sitemap.xml");
+      const sitemap = fs.readFileSync(sitemapPath, "utf-8");
+      res.set("Content-Type", "application/xml");
+      res.send(sitemap);
+    } catch (error) {
+      res.status(404).send("Sitemap not found");
+    }
+  });
+
+  // Serve robots.txt from project root
+  app.get("/robots.txt", (req, res) => {
+    try {
+      const robotsPath = path.resolve(import.meta.dirname, "..", "robots.txt");
+      const robots = fs.readFileSync(robotsPath, "utf-8");
+      res.set("Content-Type", "text/plain");
+      res.send(robots);
+    } catch (error) {
+      res.status(404).send("Robots.txt not found");
+    }
+  });
+
   // Email signup endpoint
   app.post("/api/email-signup", async (req, res) => {
     try {
