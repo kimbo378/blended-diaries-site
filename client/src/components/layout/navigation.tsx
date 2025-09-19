@@ -19,11 +19,11 @@ export default function Navigation() {
     <nav className="relative z-50 bg-diary-cream border-b-2 border-diary-lines sticky top-0">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <h1 className="font-handwritten text-4xl sm:text-5xl text-diary-charcoal group-hover:text-diary-red transition-colors">
+          <Link href="/" className="flex items-center space-x-2 group -ml-4">
+            <h1 className="font-handwritten text-3xl sm:text-4xl text-diary-charcoal group-hover:text-diary-red transition-colors">
               The Blended Diaries
             </h1>
-            <Heart className="text-diary-red text-2xl" fill="currentColor" />
+            <Heart className="text-diary-red text-xl" fill="currentColor" />
           </Link>
           
           {/* Desktop Menu */}
