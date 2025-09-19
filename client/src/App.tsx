@@ -13,11 +13,13 @@ import Contact from "@/pages/contact";
 import Legal from "@/pages/legal";
 import Navigation from "@/components/layout/navigation";
 import Footer from "@/components/layout/footer";
+import SocialCorner from "@/components/layout/social-corner";
 
 function Router() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
+      <SocialCorner />
       <main className="flex-1">
         <Switch>
           <Route path="/" component={Home} />
