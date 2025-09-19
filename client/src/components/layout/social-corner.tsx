@@ -7,7 +7,7 @@ export default function SocialCorner() {
       {/* Email icon - left position */}
       <a
         href="mailto:hello@theblendeddiaries.com"
-        className="fixed top-12 left-[50%] transform -translate-x-16 z-50 text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-3 shadow-lg"
+        className="fixed top-12 left-[50%] transform -translate-x-16 z-50 text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-3 shadow-lg"
         aria-label="Email"
         data-testid="link-corner-social-email"
       >
@@ -19,7 +19,7 @@ export default function SocialCorner() {
         href="https://tiktok.com/@blendeddiaries"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed top-12 left-[50%] transform -translate-x-1/2 z-50 text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-3 shadow-lg"
+        className="fixed top-12 left-[50%] transform -translate-x-1/2 z-50 text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-3 shadow-lg"
         aria-label="TikTok"
         data-testid="link-corner-social-tiktok"
       >
