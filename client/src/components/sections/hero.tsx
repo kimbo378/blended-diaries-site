@@ -61,7 +61,7 @@ export default function Hero() {
               <img
                 src={taylorCover}
                 alt="The Blended Diaries Book Cover"
-                className="h-[26rem] w-auto object-cover rounded-lg shadow-xl transform -rotate-3"
+                className="h-[30rem] w-auto object-cover rounded-lg shadow-xl transform -rotate-3"
                 data-testid="img-book-cover"
               />
             </div>
