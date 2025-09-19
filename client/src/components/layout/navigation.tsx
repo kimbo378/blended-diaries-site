@@ -16,7 +16,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="relative z-50 bg-diary-cream border-b-2 border-diary-lines sticky top-0">
+    <nav className="relative z-50 bg-diary-cream sticky top-0">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center space-x-2 group -ml-4">
