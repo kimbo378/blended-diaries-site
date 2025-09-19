@@ -4,7 +4,7 @@ import { StickyNoteButton } from "@/components/ui/sticky-note-button";
 
 export default function About() {
   return (
-    <div className="lined-paper margin-line">
+    <div className="single-lined-paper margin-line">
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-xl p-8 md:p-12">
