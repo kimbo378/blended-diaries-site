@@ -3,35 +3,40 @@ import { Mail, Instagram, Music2 } from "lucide-react";
 
 export default function SocialCorner() {
   return (
-    <div className="fixed top-4 right-4 z-50 flex flex-col gap-3 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
+    <>
+      {/* Email icon - left position */}
       <a
         href="mailto:hello@theblendeddiaries.com"
-        className="text-gray-700 hover:text-diary-red transition-colors"
+        className="fixed top-11 left-1/2 transform -translate-x-16 z-50 text-diary-red hover:text-diary-red/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-3 shadow-lg"
         aria-label="Email"
         data-testid="link-corner-social-email"
       >
         <Mail size={28} />
       </a>
+      
+      {/* TikTok icon - center position */}
       <a
         href="https://tiktok.com/@blendeddiaries"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-700 hover:text-diary-purple transition-colors"
+        className="fixed top-11 left-1/2 transform -translate-x-1/2 z-50 text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-3 shadow-lg"
         aria-label="TikTok"
         data-testid="link-corner-social-tiktok"
       >
         <Music2 size={28} />
       </a>
+      
+      {/* Instagram icon - right position */}
       <a
         href="https://www.instagram.com/blendeddiaries/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-700 hover:text-diary-red transition-colors"
+        className="fixed top-11 left-1/2 transform translate-x-4 z-50 text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-3 shadow-lg"
         aria-label="Instagram"
         data-testid="link-corner-social-instagram"
       >
         <Instagram size={28} />
       </a>
-    </div>
+    </>
   );
 }
