@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, Mail, Instagram, Music2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
@@ -19,26 +19,66 @@ export default function Navigation() {
     <nav className="relative z-50 bg-diary-cream sticky top-0">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center space-x-2 group -ml-4">
+          <Link href="/" className="flex items-center space-x-3 group -ml-4">
             <h1 className="font-handwritten text-4xl sm:text-5xl text-diary-charcoal group-hover:text-diary-red transition-colors">
               The Blended Diaries
             </h1>
-            <Heart className="text-diary-red text-2xl" fill="currentColor" />
+            <img 
+              src="/attached_assets/Screenshot 2025-09-27 173457_1758991389616.png" 
+              alt="The Blended Diaries Logo" 
+              className="w-12 h-12 object-contain mix-blend-multiply" 
+            />
           </Link>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`hover:text-diary-red transition-colors font-medium ${
-                  location === item.href ? "text-diary-red" : "text-diary-charcoal"
-                }`}
+          <div className="hidden md:flex flex-col items-end">
+            <div className="flex items-center space-x-6 mb-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`hover:text-diary-red transition-colors font-medium ${
+                    location === item.href ? "text-diary-red" : "text-diary-charcoal"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+            
+            {/* Social Media Icons - positioned under menu */}
+            <div className="flex items-center space-x-3">
+              <a
+                href="mailto:hello@theblendeddiaries.com"
+                className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-1.5 shadow-md"
+                aria-label="Email"
+                data-testid="link-nav-social-email"
               >
-                {item.label}
-              </Link>
-            ))}
+                <Mail size={16} />
+              </a>
+              
+              <a
+                href="https://tiktok.com/@blendeddiaries"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-1.5 shadow-md"
+                aria-label="TikTok"
+                data-testid="link-nav-social-tiktok"
+              >
+                <Music2 size={16} />
+              </a>
+              
+              <a
+                href="https://www.instagram.com/blendeddiaries/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-1.5 shadow-md"
+                aria-label="Instagram"
+                data-testid="link-nav-social-instagram"
+              >
+                <Instagram size={16} />
+              </a>
+            </div>
           </div>
           
           {/* Mobile Menu Button */}
