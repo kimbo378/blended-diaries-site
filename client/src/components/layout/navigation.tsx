@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, Mail, Instagram, Music2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@assets/Screenshot 2025-09-27 173457_1758991389616.png";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,7 +25,7 @@ export default function Navigation() {
               The Blended Diaries
             </h1>
             <img 
-              src="/attached_assets/Screenshot 2025-09-27 173457_1758991389616.png" 
+              src={logoImage} 
               alt="The Blended Diaries Logo" 
               className="w-12 h-12 object-contain mix-blend-multiply" 
             />
