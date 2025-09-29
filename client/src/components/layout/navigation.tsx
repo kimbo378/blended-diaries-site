@@ -32,7 +32,7 @@ export default function Navigation() {
             <img
               src={logoImage}
               alt="The Blended Diaries Logo"
-              className="w-16 h-16 object-contain hover:scale-105 transition-transform duration-300"
+              className="w-20 h-20 object-contain hover:scale-105 transition-transform duration-300"
             />
           </Link>
 
