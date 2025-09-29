@@ -9,11 +9,11 @@ export default function Navigation() {
   const [location] = useLocation();
 
   const navItems = [
-    { href: "/", label: "Home", color: "text-diary-pink hover:text-diary-pink/80" },
-    { href: "/books", label: "Books", color: "text-diary-purple hover:text-diary-purple/80" },
-    { href: "/about", label: "About", color: "text-diary-yellow hover:text-diary-yellow/80" },
-    { href: "/freebies", label: "Freebies", color: "text-cyan-500 hover:text-cyan-600" },
-    { href: "/contact", label: "Contact", color: "text-diary-red hover:text-diary-red/80" },
+    { href: "/", label: "Home", color: "text-teal-500 hover:text-teal-600" },
+    { href: "/books", label: "Books", color: "text-teal-500 hover:text-teal-600" },
+    { href: "/about", label: "About", color: "text-teal-500 hover:text-teal-600" },
+    { href: "/freebies", label: "Freebies", color: "text-teal-500 hover:text-teal-600" },
+    { href: "/contact", label: "Contact", color: "text-teal-500 hover:text-teal-600" },
   ];
 
   return (
