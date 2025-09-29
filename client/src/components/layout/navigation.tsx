@@ -21,7 +21,7 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Left: Site Title with Social Icons */}
-          <div className="flex flex-col">
+          <div className="flex flex-col items-start justify-center">
             <Link href="/" className="group">
               <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
                 The Blended Diaries
