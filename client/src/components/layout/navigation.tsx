@@ -24,14 +24,14 @@ export default function Navigation() {
             {/* Left: Site Title */}
             <div className="flex-1">
               <Link href="/" className="group">
-                <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
+                <h1 className="font-handwritten text-4xl sm:text-5xl text-gray-400 group-hover:text-gray-500 transition-colors font-bold">
                   The Blended Diaries
                 </h1>
               </Link>
             </div>
             
             {/* Center: Logo */}
-            <div className="absolute left-[45%] top-2 transform -translate-x-1/2 z-10">
+            <div className="absolute left-[48%] top-2 transform -translate-x-1/2 z-10">
               <Link href="/">
                 <img
                   src={logoImage}
@@ -98,7 +98,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-4 md:hidden">
           <div className="flex flex-col">
             <Link href="/" className="group">
-              <h1 className="font-handwritten text-3xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
+              <h1 className="font-handwritten text-3xl text-gray-400 group-hover:text-gray-500 transition-colors font-bold">
                 The Blended Diaries
               </h1>
             </Link>
