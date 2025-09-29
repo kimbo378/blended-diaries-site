@@ -19,61 +19,29 @@ export default function Navigation() {
   return (
     <nav className="relative z-50 bg-diary-cream sticky top-0">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Left: Site Title with Social Icons */}
-          <div className="flex flex-col items-start justify-center">
+        <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] md:grid-rows-2 md:gap-2 py-4">
+          {/* Row 1, Col 1: Site Title */}
+          <div className="row-start-1 col-start-1 flex items-center">
             <Link href="/" className="group">
               <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
                 The Blended Diaries
               </h1>
             </Link>
-            
-            {/* Social Media Icons - positioned under title */}
-            <div className="flex items-center space-x-3 mt-2">
-              <a
-                href="mailto:hello@theblendeddiaries.com"
-                className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
-                aria-label="Email"
-                data-testid="link-nav-social-email"
-              >
-                <Mail size={24} />
-              </a>
-
-              <a
-                href="https://tiktok.com/@blendeddiaries"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
-                aria-label="TikTok"
-                data-testid="link-nav-social-tiktok"
-              >
-                <Music2 size={24} />
-              </a>
-
-              <a
-                href="https://www.instagram.com/blendeddiaries/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
-                aria-label="Instagram"
-                data-testid="link-nav-social-instagram"
-              >
-                <Instagram size={24} />
-              </a>
-            </div>
           </div>
           
-          {/* Center: Logo */}
-          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
-            <img
-              src={logoImage}
-              alt="The Blended Diaries Logo"
-              className="w-20 h-20 object-contain hover:scale-105 transition-transform duration-300"
-            />
-          </Link>
+          {/* Row 1, Col 2: Logo */}
+          <div className="row-start-1 col-start-2 flex items-center justify-center">
+            <Link href="/" className="">
+              <img
+                src={logoImage}
+                alt="The Blended Diaries Logo"
+                className="w-20 h-20 object-contain hover:scale-105 transition-transform duration-300"
+              />
+            </Link>
+          </div>
 
-          {/* Right: Desktop Menu - aligned with logo center */}
-          <div className="hidden md:flex items-center">
+          {/* Row 1, Col 3: Desktop Menu */}
+          <div className="row-start-1 col-start-3 flex items-center justify-end">
             <div className="flex items-center space-x-6">
               {navItems.map((item) => (
                 <Link
@@ -88,6 +56,92 @@ export default function Navigation() {
               ))}
             </div>
           </div>
+
+          {/* Row 2, Col 1: Social Media Icons */}
+          <div className="row-start-2 col-start-1 flex items-center space-x-3">
+            <a
+              href="mailto:hello@theblendeddiaries.com"
+              className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
+              aria-label="Email"
+              data-testid="link-nav-social-email"
+            >
+              <Mail size={24} />
+            </a>
+
+            <a
+              href="https://tiktok.com/@blendeddiaries"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
+              aria-label="TikTok"
+              data-testid="link-nav-social-tiktok"
+            >
+              <Music2 size={24} />
+            </a>
+
+            <a
+              href="https://www.instagram.com/blendeddiaries/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
+              aria-label="Instagram"
+              data-testid="link-nav-social-instagram"
+            >
+              <Instagram size={24} />
+            </a>
+          </div>
+        </div>
+
+        {/* Mobile Layout - fallback to flex */}
+        <div className="flex justify-between items-center py-4 md:hidden">
+          <div className="flex flex-col">
+            <Link href="/" className="group">
+              <h1 className="font-handwritten text-3xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
+                The Blended Diaries
+              </h1>
+            </Link>
+            
+            <div className="flex items-center space-x-3 mt-2">
+              <a
+                href="mailto:hello@theblendeddiaries.com"
+                className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2 shadow-md"
+                aria-label="Email"
+                data-testid="link-nav-social-email-mobile"
+              >
+                <Mail size={20} />
+              </a>
+
+              <a
+                href="https://tiktok.com/@blendeddiaries"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2 shadow-md"
+                aria-label="TikTok"
+                data-testid="link-nav-social-tiktok-mobile"
+              >
+                <Music2 size={20} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/blendeddiaries/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2 shadow-md"
+                aria-label="Instagram"
+                data-testid="link-nav-social-instagram-mobile"
+              >
+                <Instagram size={20} />
+              </a>
+            </div>
+          </div>
+
+          <Link href="/" className="">
+            <img
+              src={logoImage}
+              alt="The Blended Diaries Logo"
+              className="w-16 h-16 object-contain hover:scale-105 transition-transform duration-300"
+            />
+          </Link>
 
           {/* Mobile Menu Button */}
           <Button
