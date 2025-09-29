@@ -19,7 +19,7 @@ export default function Navigation() {
   return (
     <nav className="relative z-50 bg-diary-cream sticky top-0">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] md:grid-rows-2 md:gap-2 py-4">
+        <div className="hidden md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:grid-rows-2 md:gap-2 py-4 relative">
           {/* Row 1, Col 1: Site Title */}
           <div className="row-start-1 col-start-1 flex items-end">
             <Link href="/" className="group">
