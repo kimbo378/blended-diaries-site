@@ -20,40 +20,16 @@ export default function Navigation() {
     <nav className="relative z-50 bg-diary-cream sticky top-0">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Left: Site Title */}
-          <Link href="/" className="group">
-            <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
-              The Blended Diaries
-            </h1>
-          </Link>
-          
-          {/* Center: Logo */}
-          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
-            <img
-              src={logoImage}
-              alt="The Blended Diaries Logo"
-              className="w-20 h-20 object-contain hover:scale-105 transition-transform duration-300"
-            />
-          </Link>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex flex-col items-end justify-center">
-            <div className="flex items-center space-x-6 mb-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`transition-colors font-bold text-lg ${
-                    location === item.href ? item.color.split(' ')[0] : item.color
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-
-            {/* Social Media Icons - positioned under menu */}
-            <div className="flex items-center space-x-3">
+          {/* Left: Site Title with Social Icons */}
+          <div className="flex flex-col">
+            <Link href="/" className="group">
+              <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
+                The Blended Diaries
+              </h1>
+            </Link>
+            
+            {/* Social Media Icons - positioned under title */}
+            <div className="flex items-center space-x-3 mt-2">
               <a
                 href="mailto:hello@theblendeddiaries.com"
                 className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
@@ -84,6 +60,32 @@ export default function Navigation() {
               >
                 <Instagram size={24} />
               </a>
+            </div>
+          </div>
+          
+          {/* Center: Logo */}
+          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
+            <img
+              src={logoImage}
+              alt="The Blended Diaries Logo"
+              className="w-20 h-20 object-contain hover:scale-105 transition-transform duration-300"
+            />
+          </Link>
+
+          {/* Right: Desktop Menu - aligned with logo center */}
+          <div className="hidden md:flex items-center">
+            <div className="flex items-center space-x-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`transition-colors font-bold text-lg ${
+                    location === item.href ? item.color.split(' ')[0] : item.color
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
           </div>
 
