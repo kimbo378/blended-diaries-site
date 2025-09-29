@@ -37,7 +37,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex flex-col items-end">
+          <div className="hidden md:flex flex-col items-end justify-center">
             <div className="flex items-center space-x-6 mb-2">
               {navItems.map((item) => (
                 <Link
