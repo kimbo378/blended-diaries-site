@@ -24,7 +24,7 @@ export default function Navigation() {
             {/* Left: Site Title */}
             <div className="flex-1">
               <Link href="/" className="group">
-                <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-500 group-hover:text-teal-600 transition-colors font-bold">
+                <h1 className="font-handwritten text-4xl sm:text-5xl text-black group-hover:text-gray-700 transition-colors font-bold">
                   The Blended Diaries
                 </h1>
               </Link>
@@ -98,7 +98,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-4 md:hidden">
           <div className="flex flex-col">
             <Link href="/" className="group">
-              <h1 className="font-handwritten text-3xl text-teal-500 group-hover:text-teal-600 transition-colors font-bold">
+              <h1 className="font-handwritten text-3xl text-black group-hover:text-gray-700 transition-colors font-bold">
                 The Blended Diaries
               </h1>
             </Link>
