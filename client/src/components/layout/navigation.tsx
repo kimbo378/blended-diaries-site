@@ -21,14 +21,14 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center space-x-3 group -ml-4">
-            <h1 className="font-handwritten text-4xl sm:text-5xl text-diary-charcoal group-hover:text-diary-red transition-colors">
-              The Blended Diaries
-            </h1>
             <img 
               src={logoImage} 
               alt="The Blended Diaries Logo" 
               className="w-12 h-12 object-contain mix-blend-multiply" 
             />
+            <h1 className="font-handwritten text-4xl sm:text-5xl text-diary-charcoal group-hover:text-diary-red transition-colors">
+              The Blended Diaries
+            </h1>
           </Link>
           
           {/* Desktop Menu */}
