@@ -61,7 +61,7 @@ export default function Navigation() {
           <div className="row-start-2 col-start-1 flex items-center space-x-3">
             <a
               href="mailto:hello@theblendeddiaries.com"
-              className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
+              className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
               aria-label="Email"
               data-testid="link-nav-social-email"
             >
@@ -72,7 +72,7 @@ export default function Navigation() {
               href="https://tiktok.com/@blendeddiaries"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
+              className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
               aria-label="TikTok"
               data-testid="link-nav-social-tiktok"
             >
@@ -83,7 +83,7 @@ export default function Navigation() {
               href="https://www.instagram.com/blendeddiaries/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
+              className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
               aria-label="Instagram"
               data-testid="link-nav-social-instagram"
             >
@@ -104,7 +104,7 @@ export default function Navigation() {
             <div className="flex items-center space-x-3 mt-2">
               <a
                 href="mailto:hello@theblendeddiaries.com"
-                className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2 shadow-md"
+                className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2 shadow-md"
                 aria-label="Email"
                 data-testid="link-nav-social-email-mobile"
               >
@@ -115,7 +115,7 @@ export default function Navigation() {
                 href="https://tiktok.com/@blendeddiaries"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2 shadow-md"
+                className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2 shadow-md"
                 aria-label="TikTok"
                 data-testid="link-nav-social-tiktok-mobile"
               >
@@ -126,7 +126,7 @@ export default function Navigation() {
                 href="https://www.instagram.com/blendeddiaries/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2 shadow-md"
+                className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2 shadow-md"
                 aria-label="Instagram"
                 data-testid="link-nav-social-instagram-mobile"
               >
