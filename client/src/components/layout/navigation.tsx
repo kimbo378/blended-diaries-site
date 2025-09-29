@@ -23,24 +23,20 @@ export default function Navigation() {
           <div className="flex justify-between items-end relative">
             {/* Left: Site Title */}
             <div className="flex-1">
-              <Link href="/" className="group">
-                <h1 className="font-handwritten text-4xl sm:text-5xl transition-colors font-bold">
-                  <span className="text-teal-500 group-hover:text-teal-600">The </span>
-                  <span className="text-black group-hover:text-gray-700">Blended</span>
-                  <span className="text-teal-500 group-hover:text-teal-600"> Diaries</span>
-                </h1>
-              </Link>
+              <h1 className="font-handwritten text-4xl sm:text-5xl font-bold">
+                <span className="text-teal-500">The </span>
+                <span className="text-black">Blended</span>
+                <span className="text-teal-500"> Diaries</span>
+              </h1>
             </div>
             
             {/* Center: Logo */}
             <div className="absolute left-[48%] top-2 transform -translate-x-1/2 z-10">
-              <Link href="/">
-                <img
-                  src={logoImage}
-                  alt="The Blended Diaries Logo"
-                  className="w-20 h-20 object-contain hover:scale-105 transition-transform duration-300"
-                />
-              </Link>
+              <img
+                src={logoImage}
+                alt="The Blended Diaries Logo"
+                className="w-20 h-20 object-contain"
+              />
             </div>
 
             {/* Right: Desktop Menu */}
@@ -99,13 +95,11 @@ export default function Navigation() {
         {/* Mobile Layout - fallback to flex */}
         <div className="flex justify-between items-center py-4 md:hidden">
           <div className="flex flex-col">
-            <Link href="/" className="group">
-              <h1 className="font-handwritten text-3xl transition-colors font-bold">
-                <span className="text-teal-500 group-hover:text-teal-600">The </span>
-                <span className="text-black group-hover:text-gray-700">Blended</span>
-                <span className="text-teal-500 group-hover:text-teal-600"> Diaries</span>
-              </h1>
-            </Link>
+            <h1 className="font-handwritten text-3xl font-bold">
+              <span className="text-teal-500">The </span>
+              <span className="text-black">Blended</span>
+              <span className="text-teal-500"> Diaries</span>
+            </h1>
             
             <div className="flex items-center space-x-3 mt-2">
               <a
