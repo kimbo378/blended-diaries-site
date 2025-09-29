@@ -9,11 +9,11 @@ export default function Navigation() {
   const [location] = useLocation();
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/books", label: "Books" },
-    { href: "/about", label: "About" },
-    { href: "/freebies", label: "Freebies" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Home", color: "text-diary-pink hover:text-diary-pink/80" },
+    { href: "/books", label: "Books", color: "text-diary-purple hover:text-diary-purple/80" },
+    { href: "/about", label: "About", color: "text-diary-yellow hover:text-diary-yellow/80" },
+    { href: "/freebies", label: "Freebies", color: "text-cyan-500 hover:text-cyan-600" },
+    { href: "/contact", label: "Contact", color: "text-diary-red hover:text-diary-red/80" },
   ];
 
   return (
@@ -21,16 +21,16 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center space-x-3 group -ml-4">
-            <img 
-              src={logoImage} 
-              alt="The Blended Diaries Logo" 
-              className="w-12 h-12 object-contain" 
+            <img
+              src={logoImage}
+              alt="The Blended Diaries Logo"
+              className="w-12 h-12 object-contain"
             />
-            <h1 className="font-handwritten text-4xl sm:text-5xl text-diary-charcoal group-hover:text-diary-red transition-colors">
+            <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
               The Blended Diaries
             </h1>
           </Link>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex flex-col items-end">
             <div className="flex items-center space-x-6 mb-2">
@@ -38,50 +38,50 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`hover:text-diary-red transition-colors font-medium ${
-                    location === item.href ? "text-diary-red" : "text-diary-charcoal"
+                  className={`transition-colors font-bold text-lg ${
+                    location === item.href ? item.color.split(' ')[0] : item.color
                   }`}
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
-            
+
             {/* Social Media Icons - positioned under menu */}
             <div className="flex items-center space-x-3">
               <a
                 href="mailto:hello@theblendeddiaries.com"
-                className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-1.5 shadow-md"
+                className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
                 aria-label="Email"
                 data-testid="link-nav-social-email"
               >
-                <Mail size={16} />
+                <Mail size={24} />
               </a>
-              
+
               <a
                 href="https://tiktok.com/@blendeddiaries"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-1.5 shadow-md"
+                className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
                 aria-label="TikTok"
                 data-testid="link-nav-social-tiktok"
               >
-                <Music2 size={16} />
+                <Music2 size={24} />
               </a>
-              
+
               <a
                 href="https://www.instagram.com/blendeddiaries/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-1.5 shadow-md"
+                className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-diary-cream/90 backdrop-blur-sm rounded-full p-2.5 shadow-md"
                 aria-label="Instagram"
                 data-testid="link-nav-social-instagram"
               >
-                <Instagram size={16} />
+                <Instagram size={24} />
               </a>
             </div>
           </div>
-          
+
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
@@ -92,7 +92,7 @@ export default function Navigation() {
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>
         </div>
-        
+
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-diary-lines">
@@ -102,7 +102,9 @@ export default function Navigation() {
                   key={item.href}
                   href={item.href}
                   className={`hover:text-diary-red transition-colors font-medium ${
-                    location === item.href ? "text-diary-red" : "text-diary-charcoal"
+                    location === item.href
+                      ? "text-diary-red"
+                      : "text-diary-charcoal"
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
