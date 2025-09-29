@@ -19,46 +19,48 @@ export default function Navigation() {
   return (
     <nav className="relative z-50 bg-diary-cream sticky top-0">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="hidden md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:grid-rows-2 md:gap-2 py-4 relative">
-          {/* Row 1, Col 1: Site Title */}
-          <div className="row-start-1 col-start-1 flex items-end">
-            <Link href="/" className="group">
-              <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
-                The Blended Diaries
-              </h1>
-            </Link>
-          </div>
-          
-          {/* Row 1, Col 2: Logo */}
-          <div className="row-start-1 col-start-2 flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-            <Link href="/" className="">
-              <img
-                src={logoImage}
-                alt="The Blended Diaries Logo"
-                className="w-20 h-20 object-contain hover:scale-105 transition-transform duration-300"
-              />
-            </Link>
-          </div>
+        <div className="hidden md:block py-4">
+          <div className="flex justify-between items-end relative">
+            {/* Left: Site Title */}
+            <div className="flex-1">
+              <Link href="/" className="group">
+                <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
+                  The Blended Diaries
+                </h1>
+              </Link>
+            </div>
+            
+            {/* Center: Logo */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+              <Link href="/">
+                <img
+                  src={logoImage}
+                  alt="The Blended Diaries Logo"
+                  className="w-20 h-20 object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </Link>
+            </div>
 
-          {/* Row 1, Col 3: Desktop Menu */}
-          <div className="row-start-1 col-start-3 flex items-end justify-end">
-            <div className="flex items-center space-x-6">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`transition-colors font-bold text-lg ${
-                    location === item.href ? item.color.split(' ')[0] : item.color
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+            {/* Right: Desktop Menu */}
+            <div className="flex-1 flex justify-end">
+              <div className="flex items-center space-x-6">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`transition-colors font-bold text-lg ${
+                      location === item.href ? item.color.split(' ')[0] : item.color
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Row 2, Col 1: Social Media Icons */}
-          <div className="row-start-2 col-start-1 flex items-center space-x-3">
+          {/* Social Media Icons */}
+          <div className="flex items-center space-x-3 mt-2">
             <a
               href="mailto:hello@theblendeddiaries.com"
               className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
