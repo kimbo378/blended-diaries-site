@@ -10,9 +10,9 @@ export default function Navigation() {
 
   const navItems = [
     { href: "/", label: "Home", color: "text-teal-500 hover:text-teal-600" },
-    { href: "/books", label: "Books", color: "text-teal-500 hover:text-teal-600" },
+    { href: "/books", label: "Books", color: "text-black hover:text-gray-700" },
     { href: "/about", label: "About", color: "text-teal-500 hover:text-teal-600" },
-    { href: "/freebies", label: "Freebies", color: "text-teal-500 hover:text-teal-600" },
+    { href: "/freebies", label: "Freebies", color: "text-black hover:text-gray-700" },
     { href: "/contact", label: "Contact", color: "text-teal-500 hover:text-teal-600" },
   ];
 
