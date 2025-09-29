@@ -3,7 +3,7 @@ import { Mail, Instagram, Music2 } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-10">
+    <footer className="bg-black text-white py-10">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 max-w-7xl mx-auto px-6">
         {/* Subscribe */}
         <div className="md:col-span-6 flex flex-col items-start text-left">
@@ -20,7 +20,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="h-10 px-4 rounded-md bg-yellow-500 text-black hover:bg-yellow-400 transition"
+              className="h-10 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
               data-testid="button-subscribe"
             >
               Subscribe
@@ -33,22 +33,22 @@ export default function Footer() {
           <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="/books" className="hover:text-yellow-400 transition-colors">
+              <a href="/books" className="hover:text-white transition-colors">
                 Books
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:text-yellow-400 transition-colors">
+              <a href="/about" className="hover:text-white transition-colors">
                 About
               </a>
             </li>
             <li>
-              <a href="/freebies" className="hover:text-yellow-400 transition-colors">
+              <a href="/freebies" className="hover:text-white transition-colors">
                 Freebies
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-yellow-400 transition-colors">
+              <a href="/contact" className="hover:text-white transition-colors">
                 Contact
               </a>
             </li>
@@ -62,7 +62,7 @@ export default function Footer() {
             href="https://amazon.co.uk"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 h-10 px-4 rounded-md bg-yellow-500 text-black hover:bg-yellow-400 transition"
+            className="inline-flex items-center gap-2 h-10 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
             data-testid="link-amazon"
           >
             <span>🛒</span>
@@ -77,7 +77,7 @@ export default function Footer() {
           <div className="flex gap-4">
             <a
               href="mailto:hello@theblendeddiaries.com"
-              className="hover:text-yellow-400 transition-colors"
+              className="hover:text-white transition-colors"
               aria-label="Email"
               data-testid="link-social-email"
             >
@@ -87,7 +87,7 @@ export default function Footer() {
               href="https://tiktok.com/@blendeddiaries"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-yellow-400 transition-colors"
+              className="hover:text-white transition-colors"
               aria-label="TikTok"
               data-testid="link-social-tiktok"
             >
@@ -97,14 +97,14 @@ export default function Footer() {
               href="https://www.instagram.com/blendeddiaries/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-yellow-400 transition-colors"
+              className="hover:text-white transition-colors"
               aria-label="Instagram"
               data-testid="link-social-instagram"
             >
               <Instagram size={20} />
             </a>
           </div>
-          <p className="text-gray-400 text-sm">
+          <p className="text-white text-sm">
             © 2025 The Blended Diaries. All rights reserved.
           </p>
         </div>
