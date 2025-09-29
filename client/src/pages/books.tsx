@@ -5,8 +5,8 @@ export default function Books() {
   return (
     <div className="min-h-screen bg-[url('/attached_assets/linedpaper.png')] bg-repeat">
       <div className="max-w-6xl mx-auto py-16 px-6">
-        <h1 className="text-4xl font-bold text-center mb-12 text-purple-700">
-          The Blended Diaries
+        <h1 className="text-4xl font-handwritten text-center mb-12 text-black">
+          The Diaries
         </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
