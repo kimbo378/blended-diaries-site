@@ -31,7 +31,7 @@ export default function Navigation() {
             </div>
             
             {/* Center: Logo */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+            <div className="absolute left-[45%] top-2 transform -translate-x-1/2 z-10">
               <Link href="/">
                 <img
                   src={logoImage}
