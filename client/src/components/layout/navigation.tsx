@@ -20,15 +20,20 @@ export default function Navigation() {
     <nav className="relative z-50 bg-diary-cream sticky top-0">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center space-x-3 group -ml-4">
-            <img
-              src={logoImage}
-              alt="The Blended Diaries Logo"
-              className="w-12 h-12 object-contain"
-            />
+          {/* Left: Site Title */}
+          <Link href="/" className="group">
             <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
               The Blended Diaries
             </h1>
+          </Link>
+          
+          {/* Center: Logo */}
+          <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
+            <img
+              src={logoImage}
+              alt="The Blended Diaries Logo"
+              className="w-16 h-16 object-contain hover:scale-105 transition-transform duration-300"
+            />
           </Link>
 
           {/* Desktop Menu */}
