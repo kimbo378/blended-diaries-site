@@ -9,11 +9,11 @@ export default function Navigation() {
   const [location] = useLocation();
 
   const navItems = [
-    { href: "/", label: "Home", color: "text-gray-400 hover:text-gray-500" },
-    { href: "/books", label: "Books", color: "text-gray-400 hover:text-gray-500" },
-    { href: "/about", label: "About", color: "text-gray-400 hover:text-gray-500" },
-    { href: "/freebies", label: "Freebies", color: "text-gray-400 hover:text-gray-500" },
-    { href: "/contact", label: "Contact", color: "text-gray-400 hover:text-gray-500" },
+    { href: "/", label: "Home", color: "text-teal-500 hover:text-teal-600" },
+    { href: "/books", label: "Books", color: "text-teal-500 hover:text-teal-600" },
+    { href: "/about", label: "About", color: "text-teal-500 hover:text-teal-600" },
+    { href: "/freebies", label: "Freebies", color: "text-teal-500 hover:text-teal-600" },
+    { href: "/contact", label: "Contact", color: "text-teal-500 hover:text-teal-600" },
   ];
 
   return (
@@ -24,7 +24,7 @@ export default function Navigation() {
             {/* Left: Site Title */}
             <div className="flex-1">
               <Link href="/" className="group">
-                <h1 className="font-handwritten text-4xl sm:text-5xl text-gray-400 group-hover:text-gray-500 transition-colors font-bold">
+                <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-500 group-hover:text-teal-600 transition-colors font-bold">
                   The Blended Diaries
                 </h1>
               </Link>
@@ -98,7 +98,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-4 md:hidden">
           <div className="flex flex-col">
             <Link href="/" className="group">
-              <h1 className="font-handwritten text-3xl text-gray-400 group-hover:text-gray-500 transition-colors font-bold">
+              <h1 className="font-handwritten text-3xl text-teal-500 group-hover:text-teal-600 transition-colors font-bold">
                 The Blended Diaries
               </h1>
             </Link>
