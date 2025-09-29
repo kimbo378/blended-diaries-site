@@ -21,7 +21,7 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] md:grid-rows-2 md:gap-2 py-4">
           {/* Row 1, Col 1: Site Title */}
-          <div className="row-start-1 col-start-1 flex items-center">
+          <div className="row-start-1 col-start-1 flex items-end">
             <Link href="/" className="group">
               <h1 className="font-handwritten text-4xl sm:text-5xl text-teal-600 group-hover:text-teal-700 transition-colors font-bold">
                 The Blended Diaries
@@ -30,7 +30,7 @@ export default function Navigation() {
           </div>
           
           {/* Row 1, Col 2: Logo */}
-          <div className="row-start-1 col-start-2 flex items-center justify-center">
+          <div className="row-start-1 col-start-2 flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
             <Link href="/" className="">
               <img
                 src={logoImage}
@@ -41,7 +41,7 @@ export default function Navigation() {
           </div>
 
           {/* Row 1, Col 3: Desktop Menu */}
-          <div className="row-start-1 col-start-3 flex items-center justify-end">
+          <div className="row-start-1 col-start-3 flex items-end justify-end">
             <div className="flex items-center space-x-6">
               {navItems.map((item) => (
                 <Link
