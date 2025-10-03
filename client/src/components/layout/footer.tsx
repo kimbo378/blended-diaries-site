@@ -20,13 +20,13 @@ export default function Footer() {
               type="email"
               name="email_address"
               placeholder="Enter your email"
-              className="flex-1 h-10 rounded-md px-3 text-black"
+              className="flex-1 h-12 rounded-md px-3 text-black"
               data-testid="input-subscribe-email"
               required
             />
             <button
               type="submit"
-              className="h-10 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
+              className="h-12 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
               data-testid="button-subscribe"
             >
               Subscribe
