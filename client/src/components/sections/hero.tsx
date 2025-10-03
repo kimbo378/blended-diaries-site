@@ -1,5 +1,7 @@
 import React from "react";
 import { Heart, Star } from "lucide-react";
+
+// ✅ Correct relative paths (your assets folder is at client/assets)
 import ChapterSample from "../../../assets/ChapterSample.png";
 import taylorCover from "../../../assets/taylorcover.png";
 
@@ -28,82 +30,66 @@ export default function Hero() {
         size={20}
       />
 
-      {/* Relocated purple stars */}
-      <Star
-        className="absolute top-40 right-24 text-diary-purple transform rotate-12 z-20"
-        size={12}
-      />
-      <Star
-        className="absolute bottom-24 right-12 text-diary-purple transform -rotate-45 z-20"
-        size={10}
-      />
+      {/* Hero content container */}
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        {/* Left side - Book Cover */}
+        <div className="flex justify-center lg:justify-center pt-4">
+          <div className="relative">
+            <img
+              src={taylorCover}
+              alt="The Blended Diaries Book Cover"
+              className="
+                max-w-[220px] sm:max-w-[280px] lg:max-w-sm
+                h-auto mx-auto lg:mx-0
+                rounded-lg shadow-xl transform -rotate-3
+              "
+              data-testid="img-book-cover"
+            />
+          </div>
+        </div>
 
-      {/* Small stars above book area */}
-      <Star
-        className="absolute top-16 left-20 text-diary-yellow transform rotate-12 z-20"
-        size={12}
-      />
-      <Heart
-        className="absolute top-12 left-56 text-diary-red transform rotate-12 z-20"
-        size={14}
-      />
-      <Star
-        className="absolute top-36 left-24 text-diary-purple transform rotate-45 z-20"
-        size={8}
-      />
+        {/* Right side - Content */}
+        <div className="text-center lg:text-left">
+          <h1
+            className="
+              whitespace-nowrap
+              text-3xl sm:text-5xl lg:text-6xl
+              font-bold mb-4 text-gray-800 font-handwritten
+            "
+          >
+            The <span className="text-diary-teal">Blended</span> Diaries
+          </h1>
 
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left side - Book Cover */}
-          <div className="flex justify-center lg:justify-center pt-4">
-            <div className="relative">
-              {/* Book cover image - smaller and positioned left */}
-              <img
-                src={taylorCover}
-                alt="The Blended Diaries Book Cover"
-                className="h-[30rem] w-auto object-cover rounded-lg shadow-xl transform -rotate-3"
-                data-testid="img-book-cover"
-              />
-            </div>
+          <p className="text-xl lg:text-2xl text-gray-800 mb-4">
+            Blended family life. Less Pinterest. More real.
+          </p>
+
+          <div className="flex justify-center lg:justify-start mt-6">
+            <Heart className="text-diary-red" size={28} />
           </div>
 
-          {/* Right side - Content */}
-          <div className="text-center lg:text-left lg:pt-2">
-            <h1 className="text-6xl lg:text-7xl font-bold mb-4 text-gray-800 font-handwritten">
-              Chaos. Love. Repeat.
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-600 mb-4 text-center lg:text-left">
-              Blended family life. Less Pinterest. More real.
-            </p>
-            <div className="flex justify-center mt-6">
-              <Heart className="text-diary-red" size={28} />
-            </div>
+          <blockquote className="text-xl lg:text-2xl italic text-diary-purple mb-8">
+            "Because when your family feels like a circus, you might as well
+            enjoy the show."
+          </blockquote>
 
-            <blockquote className="text-2xl lg:text-3xl italic text-diary-purple mb-8">
-              "Because when your family feels like a circus, you might as well
-              enjoy the show."
-            </blockquote>
-
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-              {/* Read the Books Button */}
-              <a
-                href="/books"
-                className="bg-diary-red text-white px-6 py-3 rounded-lg shadow hover:bg-red-600 transition"
-                data-testid="button-read-books"
-              >
-                Read the Books →
-              </a>
-
-              {/* Free Sample Button */}
-              <a
-                href={ChapterSample}
-                download="BlendedDiaries-Sample.png"
-                className="bg-diary-purple text-white px-6 py-3 rounded-lg shadow hover:bg-purple-600 transition"
-                data-testid="button-free-sample"
-              >
-                Free Sample 🎁
-              </a>
-            </div>
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+            <a
+              href="/books"
+              className="bg-diary-red text-white px-6 py-3 rounded-lg shadow hover:bg-red-600 transition text-center"
+              data-testid="button-read-books"
+            >
+              Read the Books
+            </a>
+            <a
+              href={ChapterSample}
+              download="BlendedDiaries-Sample.png"
+              className="bg-diary-purple text-white px-6 py-3 rounded-lg shadow hover:bg-purple-600 transition text-center"
+              data-testid="button-free-sample"
+            >
+              Free Sample 📒
+            </a>
           </div>
         </div>
       </div>
