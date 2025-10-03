@@ -1,132 +1,78 @@
-import React from "react";
+import { Mail, Instagram, Music2 } from "lucide-react";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer
-      style={{
-        backgroundColor: "#111",
-        color: "#fff",
-        padding: "40px 20px",
-        textAlign: "center",
-      }}
-    >
-      <h3>Subscribe</h3>
-      <p>Get free samples & updates straight to your inbox.</p>
-      <form
-        action="https://your-kit-form-link-here" // replace with your Kit form action URL
-        method="post"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          marginTop: "15px",
-        }}
-      >
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          required
-          style={{
-            width: "240px",
-            height: "45px",
-            padding: "8px 12px",
-            fontSize: "16px",
-            boxSizing: "border-box",
-            borderRadius: "6px",
-            border: "1px solid #ccc",
-          }}
-        />
-        <button
-          type="submit"
-          style={{
-            height: "45px",
-            padding: "0 18px",
-            fontSize: "16px",
-            marginLeft: "8px",
-            borderRadius: "6px",
-            backgroundColor: "#00c2a8",
-            color: "#fff",
-            border: "none",
-            cursor: "pointer",
-          }}
-        >
-          Subscribe
-        </button>
-      </form>
+    <footer className="bg-black text-white py-10">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Subscribe Section */}
+        <div className="flex flex-col items-center text-center mb-8">
+          <h3 className="text-white font-semibold text-lg mb-4">Subscribe</h3>
+          <p className="text-gray-300 mb-4">
+            Get free samples & updates straight to your inbox.
+          </p>
+          <form
+            action="https://app.kit.com/forms/8555422/subscriptions"
+            method="post"
+            target="_blank"
+            className="flex w-full max-w-md gap-2 flex-col sm:flex-row"
+          >
+            <input
+              type="email"
+              name="email_address"
+              placeholder="Enter your email"
+              className="flex-1 h-12 rounded-md px-3 text-black"
+              data-testid="input-subscribe-email"
+              required
+            />
+            <button
+              type="submit"
+              className="h-12 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
+              data-testid="button-subscribe"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
 
-      {/* Social Icons */}
-      <div
-        style={{
-          marginTop: "25px",
-          display: "flex",
-          justifyContent: "center",
-          gap: "15px",
-        }}
-      >
-        <a
-          href="mailto:hello@theblendeddiaries.com"
-          style={{
-            backgroundColor: "#6a0dad", // purple for email
-            borderRadius: "50%",
-            width: "40px",
-            height: "40px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            fontSize: "20px",
-            textDecoration: "none",
-          }}
-        >
-          ✉️
-        </a>
-        <a
-          href="https://www.tiktok.com/@blendeddiaries1"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            backgroundColor: "#ff0050", // TikTok pink/red
-            borderRadius: "50%",
-            width: "40px",
-            height: "40px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            fontSize: "20px",
-            textDecoration: "none",
-          }}
-        >
-          ♬
-        </a>
-        <a
-          href="https://www.instagram.com/theblendeddiaries"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            backgroundColor: "#fccc63", // Instagram gold/yellow accent
-            borderRadius: "50%",
-            width: "40px",
-            height: "40px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#000",
-            fontSize: "20px",
-            textDecoration: "none",
-          }}
-        >
-          📸
-        </a>
+        {/* Social Media Icons - Matching Header Style */}
+        <div className="flex items-center justify-center space-x-3 mt-6 mb-6">
+          <a
+            href="mailto:hello@theblendeddiaries.com"
+            className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+            aria-label="Email"
+            data-testid="link-footer-social-email"
+          >
+            <Mail size={24} />
+          </a>
+
+          <a
+            href="https://tiktok.com/@blendeddiaries"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+            aria-label="TikTok"
+            data-testid="link-footer-social-tiktok"
+          >
+            <Music2 size={24} />
+          </a>
+
+          <a
+            href="https://www.instagram.com/blendeddiaries/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+            aria-label="Instagram"
+            data-testid="link-footer-social-instagram"
+          >
+            <Instagram size={24} />
+          </a>
+        </div>
+
+        {/* Copyright */}
+        <p className="text-gray-400 text-sm text-center">
+          © {new Date().getFullYear()} The Blended Diaries. All rights reserved.
+        </p>
       </div>
-
-      {/* Copyright */}
-      <p style={{ marginTop: "20px", fontSize: "14px", color: "#aaa" }}>
-        © {new Date().getFullYear()} The Blended Diaries. All rights reserved.
-      </p>
     </footer>
   );
-};
-
-export default Footer;
+}
