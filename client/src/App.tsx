@@ -12,6 +12,7 @@ import Freebies from "@/pages/freebies";
 import Contact from "@/pages/contact";
 import Legal from "@/pages/legal";
 import Thanks from "@/pages/thanks";
+import Subscribed from "@/pages/subscribed";
 import Navigation from "@/components/layout/navigation";
 import Footer from "@/components/layout/footer";
 
@@ -29,6 +30,7 @@ function Router() {
           <Route path="/contact" component={Contact} />
           <Route path="/legal" component={Legal} />
           <Route path="/thanks" component={Thanks} />
+          <Route path="/subscribed" component={Subscribed} />
           <Route component={NotFound} />
         </Switch>
       </main>
