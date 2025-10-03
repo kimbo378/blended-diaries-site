@@ -1,34 +1,6 @@
-import { useState } from "react";
 import { Mail, Instagram, Music2 } from "lucide-react";
-import { useLocation } from "wouter";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [, setLocation] = useLocation();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setIsSubmitting(true);
-    try {
-      const response = await fetch("/api/email-signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-
-      if (response.ok) {
-        setLocation("/thanks");
-      }
-    } catch (error) {
-      console.error("Signup failed:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <footer className="bg-black text-white py-10">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 max-w-7xl mx-auto px-6">
@@ -38,23 +10,26 @@ export default function Footer() {
           <p className="text-gray-300 mb-4">
             Get free samples & updates straight to your inbox.
           </p>
-          <form onSubmit={handleSubmit} className="flex w-full gap-2 flex-col sm:flex-row">
+          <form
+            action="https://app.kit.com/forms/8555422/subscriptions"
+            method="post"
+            target="_blank"
+            className="flex w-full gap-2 flex-col sm:flex-row"
+          >
             <input
               type="email"
+              name="email_address"
               placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               className="flex-1 h-10 rounded-md px-3 text-black"
               data-testid="input-subscribe-email"
               required
             />
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="h-10 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition disabled:opacity-50"
+              className="h-10 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
               data-testid="button-subscribe"
             >
-              {isSubmitting ? "Subscribing..." : "Subscribe"}
+              Subscribe
             </button>
           </form>
         </div>
