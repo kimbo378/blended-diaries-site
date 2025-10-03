@@ -18,12 +18,15 @@ export default function Footer() {
           >
             <input
               type="email"
-              name="email_address"
               placeholder="Enter your email"
-              className="flex-1 h-12 rounded-md px-3 text-black"
-              data-testid="input-subscribe-email"
-              required
+              style={{
+                height: "45px",
+                padding: "8px 12px",
+                fontSize: "16px",
+                boxSizing: "border-box",
+              }}
             />
+
             <button
               type="submit"
               className="h-12 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
@@ -49,7 +52,10 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="/freebies" className="hover:text-white transition-colors">
+              <a
+                href="/freebies"
+                className="hover:text-white transition-colors"
+              >
                 Freebies
               </a>
             </li>
