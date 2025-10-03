@@ -20,7 +20,7 @@ export default function Books() {
               <img
                 src={taylorCover}
                 alt="Taylor's Diary Cover"
-                className="h-80 w-auto object-cover rounded-lg shadow-md mx-auto hover:opacity-90 transition"
+                className="max-w-full h-auto object-contain rounded-lg shadow-md mx-auto hover:opacity-90 transition md:h-80 md:w-auto"
               />
             </a>
             <div className="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">

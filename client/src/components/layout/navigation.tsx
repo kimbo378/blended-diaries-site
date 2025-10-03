@@ -95,7 +95,7 @@ export default function Navigation() {
         {/* Mobile Layout - fallback to flex */}
         <div className="flex justify-between items-center py-4 md:hidden">
           <div className="flex flex-col">
-            <h1 className="font-handwritten text-3xl font-bold">
+            <h1 className="font-handwritten text-2xl sm:text-3xl font-bold whitespace-nowrap">
               <span className="text-teal-500">The </span>
               <span className="text-black">Blended</span>
               <span className="text-teal-500"> Diaries</span>
