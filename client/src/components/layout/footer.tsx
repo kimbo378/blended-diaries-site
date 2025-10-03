@@ -18,26 +18,15 @@ export default function Footer() {
           >
             <input
               type="email"
+              name="email_address"
               placeholder="Enter your email"
-              style={{
-                height: "50px", // Taller input
-                padding: "0 12px", // Padding only left/right
-                fontSize: "16px",
-                lineHeight: "1.6", // Prevents text clipping
-                boxSizing: "border-box",
-              }}
+              className="flex-1 h-12 rounded-md px-3 text-black"
+              data-testid="input-subscribe-email"
+              required
             />
-
             <button
               type="submit"
-              className="px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
-              style={{
-                height: "50px", // Match input height
-                fontSize: "16px",
-                lineHeight: "1.6",
-                padding: "0 16px", // Nice horizontal spacing
-                boxSizing: "border-box",
-              }}
+              className="h-12 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
               data-testid="button-subscribe"
             >
               Subscribe
@@ -60,10 +49,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a
-                href="/freebies"
-                className="hover:text-white transition-colors"
-              >
+              <a href="/freebies" className="hover:text-white transition-colors">
                 Freebies
               </a>
             </li>
@@ -124,7 +110,7 @@ export default function Footer() {
               <Instagram size={20} />
             </a>
           </div>
-          <p className="text-white text-sm">
+          <p className="text-gray-400 text-sm">
             © 2025 The Blended Diaries. All rights reserved.
           </p>
         </div>
