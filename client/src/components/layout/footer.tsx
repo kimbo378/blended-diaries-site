@@ -20,16 +20,24 @@ export default function Footer() {
               type="email"
               placeholder="Enter your email"
               style={{
-                height: "45px",
-                padding: "8px 12px",
+                height: "50px", // Taller input
+                padding: "0 12px", // Padding only left/right
                 fontSize: "16px",
+                lineHeight: "1.6", // Prevents text clipping
                 boxSizing: "border-box",
               }}
             />
 
             <button
               type="submit"
-              className="h-12 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
+              className="px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
+              style={{
+                height: "50px", // Match input height
+                fontSize: "16px",
+                lineHeight: "1.6",
+                padding: "0 16px", // Nice horizontal spacing
+                boxSizing: "border-box",
+              }}
               data-testid="button-subscribe"
             >
               Subscribe
