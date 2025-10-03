@@ -10,23 +10,23 @@ export default function Hero() {
     <section className="py-20 relative z-10 bg-[url('/attached_assets/linedpaper.png')] bg-repeat">
       {/* Decorative doodles */}
       <Star
-        className="absolute top-8 left-8 text-diary-yellow transform rotate-12 z-20"
+        className="absolute top-8 left-8 text-diary-yellow transform rotate-12 z-20 hidden sm:block"
         size={24}
       />
       <Heart
-        className="absolute top-12 right-16 text-diary-red transform -rotate-12 z-20"
+        className="absolute top-12 right-16 text-diary-red transform -rotate-12 z-20 hidden md:block"
         size={18}
       />
       <Star
-        className="absolute top-32 right-8 text-diary-purple transform rotate-45 z-20"
+        className="absolute top-32 right-8 text-diary-purple transform rotate-45 z-20 hidden sm:block"
         size={18}
       />
       <Heart
-        className="absolute bottom-32 left-12 text-diary-red transform rotate-12 z-20"
+        className="absolute bottom-32 left-12 text-diary-red transform rotate-12 z-20 hidden md:block"
         size={22}
       />
       <Star
-        className="absolute bottom-16 right-32 text-diary-yellow transform -rotate-12 z-20"
+        className="absolute bottom-16 right-32 text-diary-yellow transform -rotate-12 z-20 hidden lg:block"
         size={20}
       />
 
@@ -64,11 +64,7 @@ export default function Hero() {
             Blended family life. Less Pinterest. More real.
           </p>
 
-          <div className="flex justify-center lg:justify-start mt-6">
-            <Heart className="text-diary-red" size={28} />
-          </div>
-
-          <blockquote className="text-xl lg:text-2xl italic text-diary-purple mb-8">
+          <blockquote className="text-xl lg:text-2xl italic text-diary-purple mb-8 mt-6">
             "Because when your family feels like a circus, you might as well
             enjoy the show."
           </blockquote>

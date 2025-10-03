@@ -11,6 +11,7 @@ import About from "@/pages/about";
 import Freebies from "@/pages/freebies";
 import Contact from "@/pages/contact";
 import Legal from "@/pages/legal";
+import Thanks from "@/pages/thanks";
 import Navigation from "@/components/layout/navigation";
 import Footer from "@/components/layout/footer";
 
@@ -27,6 +28,7 @@ function Router() {
           <Route path="/freebies" component={Freebies} />
           <Route path="/contact" component={Contact} />
           <Route path="/legal" component={Legal} />
+          <Route path="/thanks" component={Thanks} />
           <Route component={NotFound} />
         </Switch>
       </main>

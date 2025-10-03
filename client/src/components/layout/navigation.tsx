@@ -162,10 +162,8 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`hover:text-diary-red transition-colors font-medium ${
-                    location === item.href
-                      ? "text-diary-red"
-                      : "text-diary-charcoal"
+                  className={`transition-colors font-bold text-lg ${
+                    location === item.href ? item.color.split(' ')[0] : item.color
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
