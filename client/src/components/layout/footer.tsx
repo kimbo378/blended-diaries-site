@@ -28,7 +28,7 @@ const Footer = () => {
           placeholder="Enter your email"
           required
           style={{
-            width: "240px", // reduced from 300px for better balance
+            width: "240px",
             height: "45px",
             padding: "8px 12px",
             fontSize: "16px",
@@ -41,11 +41,11 @@ const Footer = () => {
           type="submit"
           style={{
             height: "45px",
-            padding: "0 18px", // adjusted slightly so it lines up better
+            padding: "0 18px",
             fontSize: "16px",
             marginLeft: "8px",
             borderRadius: "6px",
-            backgroundColor: "#00c2a8", // turquoise brand colour
+            backgroundColor: "#00c2a8",
             color: "#fff",
             border: "none",
             cursor: "pointer",
@@ -54,6 +54,77 @@ const Footer = () => {
           Subscribe
         </button>
       </form>
+
+      {/* Social Icons */}
+      <div
+        style={{
+          marginTop: "25px",
+          display: "flex",
+          justifyContent: "center",
+          gap: "15px",
+        }}
+      >
+        <a
+          href="mailto:hello@theblendeddiaries.com"
+          style={{
+            backgroundColor: "#6a0dad", // purple for email
+            borderRadius: "50%",
+            width: "40px",
+            height: "40px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#fff",
+            fontSize: "20px",
+            textDecoration: "none",
+          }}
+        >
+          ✉️
+        </a>
+        <a
+          href="https://www.tiktok.com/@blendeddiaries1"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            backgroundColor: "#ff0050", // TikTok pink/red
+            borderRadius: "50%",
+            width: "40px",
+            height: "40px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#fff",
+            fontSize: "20px",
+            textDecoration: "none",
+          }}
+        >
+          ♬
+        </a>
+        <a
+          href="https://www.instagram.com/theblendeddiaries"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            backgroundColor: "#fccc63", // Instagram gold/yellow accent
+            borderRadius: "50%",
+            width: "40px",
+            height: "40px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#000",
+            fontSize: "20px",
+            textDecoration: "none",
+          }}
+        >
+          📸
+        </a>
+      </div>
+
+      {/* Copyright */}
+      <p style={{ marginTop: "20px", fontSize: "14px", color: "#aaa" }}>
+        © {new Date().getFullYear()} The Blended Diaries. All rights reserved.
+      </p>
     </footer>
   );
 };
