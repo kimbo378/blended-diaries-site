@@ -72,12 +72,27 @@ export default function Thanks() {
 
           {/* Main content */}
           <div className="bg-white/80 rounded-xl shadow-lg p-8 sm:p-12 text-center border-4 border-dashed border-diary-purple">
-            <h1 className="font-handwritten text-3xl sm:text-4xl lg:text-5xl text-black mb-6">
+            <h1 className="font-handwritten text-3xl sm:text-4xl lg:text-5xl text-black mb-8">
               Almost part of the family!
             </h1>
 
             <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Thanks so much for subscribing! One more step... ✉️ please check your email and click confirm so we can officially welcome you into The Blended Families. Once you confirm, you'll start receiving extras like family planners, survival tips, and behind the scenes diary chaos. We'll keep you posted when new freebies and updates are ready.
+              Thanks so much for subscribing! We're so excited to have you join The Blended Families.
+            </p>
+
+            {/* Call-to-action box */}
+            <div className="bg-diary-purple/10 border-3 border-diary-purple rounded-lg p-6 mb-8 mx-auto max-w-xl">
+              <div className="text-5xl mb-3">✉️</div>
+              <h2 className="font-handwritten text-2xl sm:text-3xl text-diary-purple mb-3 font-bold">
+                Check Your Email!
+              </h2>
+              <p className="text-base text-gray-700 leading-relaxed">
+                One more step to officially join... please click the confirm link in your email so we can start sending you all the good stuff!
+              </p>
+            </div>
+
+            <p className="text-sm sm:text-base text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+              Once you confirm, you'll start receiving extras like family planners, survival tips, and behind the scenes diary chaos. We'll keep you posted when new freebies and updates are ready.
             </p>
 
             {/* Back to Homepage button */}
