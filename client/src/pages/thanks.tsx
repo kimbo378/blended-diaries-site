@@ -73,13 +73,11 @@ export default function Thanks() {
           {/* Main content */}
           <div className="bg-white/80 rounded-xl shadow-lg p-8 sm:p-12 text-center border-4 border-dashed border-diary-purple">
             <h1 className="font-handwritten text-3xl sm:text-4xl lg:text-5xl text-black mb-6">
-              You're officially a part of The Blended Families!
+              Almost part of the family!
             </h1>
 
             <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Thanks for subscribing. You'll receive extras like family planners, survival tips, 
-              and behind the scenes diary chaos in due course. We'll keep you posted when new 
-              freebies and updates are ready.
+              Thanks so much for subscribing! One more step... ✉️ please check your email and click confirm so we can officially welcome you into The Blended Families. Once you confirm, you'll start receiving extras like family planners, survival tips, and behind the scenes diary chaos. We'll keep you posted when new freebies and updates are ready.
             </p>
 
             {/* Back to Homepage button */}
