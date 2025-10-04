@@ -18,9 +18,9 @@ export default function Freebies() {
           <form
             action="https://app.kit.com/forms/8555422/subscriptions"
             method="post"
-            target="_blank"
             className="max-w-md mx-auto"
           >
+            <input type="hidden" name="success_url" value="https://theblendeddiaries.com/thanks" />
             <input
               type="email"
               name="email_address"

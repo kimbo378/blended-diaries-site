@@ -13,20 +13,20 @@ export default function Footer() {
           <form
             action="https://app.kit.com/forms/8555422/subscriptions"
             method="post"
-            target="_blank"
             className="flex w-full max-w-md gap-2 flex-col sm:flex-row"
           >
+            <input type="hidden" name="success_url" value="https://theblendeddiaries.com/thanks" />
             <input
               type="email"
               name="email_address"
               placeholder="Enter your email"
-              className="flex-1 h-12 rounded-md px-3 text-black"
+              className="flex-1 min-h-[48px] h-12 rounded-md px-3 py-3 text-black text-base"
               data-testid="input-subscribe-email"
               required
             />
             <button
               type="submit"
-              className="h-12 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition"
+              className="min-h-[48px] h-12 px-4 rounded-md bg-teal-500 text-white hover:bg-teal-600 transition text-base font-medium"
               data-testid="button-subscribe"
             >
               Subscribe
