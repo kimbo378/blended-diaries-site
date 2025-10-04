@@ -77,7 +77,7 @@ export default function Thanks() {
             </h1>
 
             <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Thanks so much for subscribing! We're so excited to have you join The Blended Families.
+              Thanks so much for subscribing! We're so excited to have you join The Blended Diaries family.
             </p>
 
             {/* Call-to-action box */}
