@@ -35,16 +35,25 @@ export default function Hero() {
         {/* Left side - Book Cover */}
         <div className="flex justify-center lg:justify-center pt-4">
           <div className="relative">
-            <img
-              src={taylorCover}
-              alt="The Blended Diaries Book Cover"
-              className="
-                max-w-[220px] sm:max-w-[280px] lg:max-w-sm
-                h-auto mx-auto lg:mx-0
-                rounded-lg shadow-xl transform -rotate-3
-              "
-              data-testid="img-book-cover"
-            />
+            <a
+              href="https://www.amazon.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block transition-all duration-300 hover:scale-105 hover:-rotate-1"
+              data-testid="link-book-cover"
+            >
+              <img
+                src={taylorCover}
+                alt="The Blended Diaries Book Cover"
+                className="
+                  max-w-[220px] sm:max-w-[280px] lg:max-w-sm
+                  h-auto mx-auto lg:mx-0
+                  rounded-lg shadow-xl transform -rotate-3
+                  transition-all duration-300 hover:shadow-2xl
+                "
+                data-testid="img-book-cover"
+              />
+            </a>
           </div>
         </div>
 
