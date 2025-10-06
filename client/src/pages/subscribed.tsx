@@ -1,24 +1,13 @@
 import { Heart, Star, Music2, Lock } from "lucide-react";
-import logoImage from "@assets/Blended Diaries logo (1) (2)_1759152924243.png";
 import { Link } from "wouter";
 
 export default function Subscribed() {
   return (
     <div className="min-h-screen bg-[url('/attached_assets/linedpaper.png')] bg-repeat">
-      <section className="py-4">
+      <section className="pt-8">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Logo */}
-          <div className="flex justify-center mb-6">
-            <img
-              src={logoImage}
-              alt="The Blended Diaries Logo"
-              className="w-32 h-32 object-contain"
-              data-testid="img-logo"
-            />
-          </div>
-
           {/* Hand-drawn doodle banner */}
-          <div className="relative h-16 mb-6 overflow-hidden">
+          <div className="relative h-16 mb-4 overflow-hidden">
             {/* Scattered doodles across the top in a playful line */}
             <Star
               className="absolute top-2 left-[5%] text-diary-purple transform rotate-12"
