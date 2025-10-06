@@ -1,4 +1,4 @@
-import { Star, Music2, Lock } from "lucide-react";
+import { Heart, Star, Music2, Lock } from "lucide-react";
 import logoImage from "@assets/Blended Diaries logo (1) (2)_1759152924243.png";
 import { Link } from "wouter";
 
@@ -26,7 +26,8 @@ export default function Thanks() {
               strokeWidth={2.5}
             />
             <div className="absolute top-4 left-[12%] flex items-center">
-              <Lock className="text-diary-red transform rotate-12" size={12} strokeWidth={2.5} />
+              <Heart className="text-diary-red transform -rotate-6" size={18} strokeWidth={2.5} />
+              <Lock className="text-diary-red transform rotate-12 -ml-2 mt-1" size={12} strokeWidth={2.5} />
             </div>
             <Music2
               className="absolute top-1 left-[22%] text-diary-purple transform rotate-[-20deg]"
@@ -43,6 +44,11 @@ export default function Thanks() {
                 <path d="M2 12 Q 6 8, 10 12 T 18 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
               </svg>
             </div>
+            <Heart
+              className="absolute top-4 left-[52%] text-diary-red transform rotate-15"
+              size={19}
+              strokeWidth={2.5}
+            />
             <Star
               className="absolute top-1 left-[62%] text-diary-purple transform -rotate-12"
               size={18}

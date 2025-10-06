@@ -1,4 +1,4 @@
-import { Star, Music2, Lock } from "lucide-react";
+import { Heart, Star, Music2, Lock } from "lucide-react";
 import logoImage from "@assets/Blended Diaries logo (1) (2)_1759152924243.png";
 import { Link } from "wouter";
 
