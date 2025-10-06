@@ -1,11 +1,11 @@
-import { Heart, Star, Music2, Lock } from "lucide-react";
+import { Star, Music2, Lock } from "lucide-react";
 import logoImage from "@assets/Blended Diaries logo (1) (2)_1759152924243.png";
 import { Link } from "wouter";
 
 export default function Thanks() {
   return (
     <div className="min-h-screen bg-[url('/attached_assets/linedpaper.png')] bg-repeat">
-      <section className="py-16">
+      <section className="py-8">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex justify-center mb-8">
@@ -26,8 +26,7 @@ export default function Thanks() {
               strokeWidth={2.5}
             />
             <div className="absolute top-4 left-[12%] flex items-center">
-              <Heart className="text-diary-red transform -rotate-6" size={18} strokeWidth={2.5} />
-              <Lock className="text-diary-red transform rotate-12 -ml-2 mt-1" size={12} strokeWidth={2.5} />
+              <Lock className="text-diary-red transform rotate-12" size={12} strokeWidth={2.5} />
             </div>
             <Music2
               className="absolute top-1 left-[22%] text-diary-purple transform rotate-[-20deg]"
@@ -44,11 +43,6 @@ export default function Thanks() {
                 <path d="M2 12 Q 6 8, 10 12 T 18 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
               </svg>
             </div>
-            <Heart
-              className="absolute top-4 left-[52%] text-diary-red transform rotate-15"
-              size={19}
-              strokeWidth={2.5}
-            />
             <Star
               className="absolute top-1 left-[62%] text-diary-purple transform -rotate-12"
               size={18}
@@ -60,8 +54,7 @@ export default function Thanks() {
               strokeWidth={2.5}
             />
             <div className="absolute top-3 left-[82%] flex items-center">
-              <Heart className="text-diary-red transform rotate-6" size={17} strokeWidth={2.5} />
-              <Lock className="text-diary-red transform -rotate-12 -ml-2 mt-1" size={11} strokeWidth={2.5} />
+              <Lock className="text-diary-red transform -rotate-12" size={11} strokeWidth={2.5} />
             </div>
             <Star
               className="absolute top-2 left-[92%] text-diary-yellow transform rotate-[-30deg]"
@@ -71,28 +64,13 @@ export default function Thanks() {
           </div>
 
           {/* Main content */}
-          <div className="bg-white/80 rounded-xl shadow-lg p-8 sm:p-12 text-center border-4 border-dashed border-diary-purple">
-            <h1 className="font-handwritten text-3xl sm:text-4xl lg:text-5xl text-black mb-8">
+          <div className="bg-white/80 rounded-xl shadow-lg p-6 sm:p-8 text-center border-4 border-dashed border-diary-purple">
+            <h1 className="font-handwritten text-3xl sm:text-4xl lg:text-5xl text-black mb-6">
               Almost part of the family!
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Thanks so much for subscribing! We're so excited to have you join The Blended Diaries family.
-            </p>
-
-            {/* Call-to-action box */}
-            <div className="bg-diary-purple/10 border-3 border-diary-purple rounded-lg p-6 mb-8 mx-auto max-w-xl">
-              <div className="text-5xl mb-3">✉️</div>
-              <h2 className="font-handwritten text-2xl sm:text-3xl text-diary-purple mb-3 font-bold">
-                Check Your Email!
-              </h2>
-              <p className="text-base text-gray-700 leading-relaxed">
-                One more step to officially join... please click the confirm link in your email so we can start sending you all the good stuff!
-              </p>
-            </div>
-
-            <p className="text-sm sm:text-base text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Once you confirm, you'll start receiving extras like family planners, survival tips, and behind the scenes diary chaos. We'll keep you posted when new freebies and updates are ready.
+            <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed max-w-2xl mx-auto">
+              To confirm your subscription, please check your email (including spam).
             </p>
 
             {/* Back to Homepage button */}
@@ -107,9 +85,7 @@ export default function Thanks() {
 
           {/* Bottom decorative doodles */}
           <div className="flex justify-center gap-6 mt-8">
-            <Heart className="text-diary-red transform rotate-12" size={24} strokeWidth={2.5} />
             <Star className="text-diary-yellow transform -rotate-12" size={24} strokeWidth={2.5} />
-            <Heart className="text-diary-purple transform rotate-[-15deg]" size={24} strokeWidth={2.5} />
           </div>
         </div>
       </section>
