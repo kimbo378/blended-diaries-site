@@ -5,10 +5,10 @@ import { Link } from "wouter";
 export default function Subscribed() {
   return (
     <div className="min-h-screen bg-[url('/attached_assets/linedpaper.png')] bg-repeat">
-      <section className="py-8">
+      <section className="py-4">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6">
             <img
               src={logoImage}
               alt="The Blended Diaries Logo"
@@ -18,7 +18,7 @@ export default function Subscribed() {
           </div>
 
           {/* Hand-drawn doodle banner */}
-          <div className="relative h-16 mb-8 overflow-hidden">
+          <div className="relative h-16 mb-6 overflow-hidden">
             {/* Scattered doodles across the top in a playful line */}
             <Star
               className="absolute top-2 left-[5%] text-diary-purple transform rotate-12"
@@ -26,7 +26,8 @@ export default function Subscribed() {
               strokeWidth={2.5}
             />
             <div className="absolute top-4 left-[12%] flex items-center">
-              <Lock className="text-diary-red transform rotate-12" size={12} strokeWidth={2.5} />
+              <Heart className="text-diary-red transform -rotate-6" size={18} strokeWidth={2.5} />
+              <Lock className="text-diary-red transform rotate-12 -ml-2 mt-1" size={12} strokeWidth={2.5} />
             </div>
             <Music2
               className="absolute top-1 left-[22%] text-diary-purple transform rotate-[-20deg]"
@@ -43,6 +44,11 @@ export default function Subscribed() {
                 <path d="M2 12 Q 6 8, 10 12 T 18 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
               </svg>
             </div>
+            <Heart
+              className="absolute top-4 left-[52%] text-diary-red transform rotate-15"
+              size={19}
+              strokeWidth={2.5}
+            />
             <Star
               className="absolute top-1 left-[62%] text-diary-purple transform -rotate-12"
               size={18}
@@ -54,7 +60,8 @@ export default function Subscribed() {
               strokeWidth={2.5}
             />
             <div className="absolute top-3 left-[82%] flex items-center">
-              <Lock className="text-diary-red transform -rotate-12" size={11} strokeWidth={2.5} />
+              <Heart className="text-diary-red transform rotate-6" size={17} strokeWidth={2.5} />
+              <Lock className="text-diary-red transform -rotate-12 -ml-2 mt-1" size={11} strokeWidth={2.5} />
             </div>
             <Star
               className="absolute top-2 left-[92%] text-diary-yellow transform rotate-[-30deg]"
@@ -66,16 +73,16 @@ export default function Subscribed() {
           {/* Main content */}
           <div className="bg-white/80 rounded-xl shadow-lg p-6 sm:p-8 text-center border-4 border-dashed border-diary-purple">
             <h1 className="font-handwritten text-3xl sm:text-4xl lg:text-5xl text-black mb-6">
-              💜 You're officially part of the family!
+              You're officially part of the family!
             </h1>
 
-            <div className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
+            <div className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto text-center">
               <p className="mb-4">
                 Welcome to The Blended Diaries. You're not just subscribed, you're now part of our blended family crew.
               </p>
               
               <p className="mb-2">From here on, you'll get:</p>
-              <ul className="text-left list-none space-y-2 mb-4">
+              <ul className="list-none space-y-2 mb-4 inline-block text-left">
                 <li>✨ Exclusive freebies to make family life easier</li>
                 <li>✨ Survival tips straight from the chaos</li>
                 <li>✨ Sneak peeks and behind the scenes fun</li>

@@ -5,10 +5,10 @@ import { Link } from "wouter";
 export default function Thanks() {
   return (
     <div className="min-h-screen bg-[url('/attached_assets/linedpaper.png')] bg-repeat">
-      <section className="py-8">
+      <section className="py-4">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6">
             <img
               src={logoImage}
               alt="The Blended Diaries Logo"
@@ -18,7 +18,7 @@ export default function Thanks() {
           </div>
 
           {/* Hand-drawn doodle banner */}
-          <div className="relative h-16 mb-8 overflow-hidden">
+          <div className="relative h-16 mb-6 overflow-hidden">
             {/* Scattered doodles across the top in a playful line */}
             <Star
               className="absolute top-2 left-[5%] text-diary-purple transform rotate-12"
@@ -60,7 +60,8 @@ export default function Thanks() {
               strokeWidth={2.5}
             />
             <div className="absolute top-3 left-[82%] flex items-center">
-              <Lock className="text-diary-red transform -rotate-12" size={11} strokeWidth={2.5} />
+              <Heart className="text-diary-red transform rotate-6" size={17} strokeWidth={2.5} />
+              <Lock className="text-diary-red transform -rotate-12 -ml-2 mt-1" size={11} strokeWidth={2.5} />
             </div>
             <Star
               className="absolute top-2 left-[92%] text-diary-yellow transform rotate-[-30deg]"
@@ -74,6 +75,8 @@ export default function Thanks() {
             <h1 className="font-handwritten text-3xl sm:text-4xl lg:text-5xl text-black mb-6">
               Almost part of the family!
             </h1>
+
+            <div className="text-5xl mb-4">✉️</div>
 
             <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed max-w-2xl mx-auto">
               To confirm your subscription, please check your email (including spam).
