@@ -1,80 +1,155 @@
 import React from "react";
-import taylorCover from "../../assets/taylorcover.png";
 
-export default function Books() {
+export default function BooksPage() {
+  const books = [
+    {
+      id: "taylor",
+      title: "Taylor's Diary",
+      cover: "/assets/taylorcover.png",
+      audience: "Diary for teenagers and adults... if you dare",
+      status: "Available now",
+      color: "#0aa5a5", // turquoise
+    },
+    {
+      id: "caleb",
+      title: "Caleb's Diary",
+      audience: "Diary for teenagers and adults... if you dare",
+      status: "Coming soon",
+      color: "#1e3a8a", // lighter navy blue
+    },
+    {
+      id: "libby",
+      title: "Libby's Diary",
+      audience: "Diary for adults only",
+      status: "Coming soon",
+      color: "#7a2e8a", // purple
+    },
+    {
+      id: "pumpkin",
+      title: "Pumpkin's Diary",
+      audience: "Diary for kids",
+      status: "Coming soon",
+      color: "#e67e22", // orange
+    },
+  ];
+
+  const pageStyles = {
+    padding: "40px 20px",
+    backgroundColor: "#fffefb",
+    minHeight: "100vh",
+  };
+
+  const gridStyles = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: "20px",
+    justifyItems: "center",
+    alignItems: "stretch",
+  };
+
+  const cardStyles = {
+    background: "#fff",
+    border: "2px dashed #d3d3d3",
+    borderRadius: "14px",
+    padding: "18px",
+    textAlign: "center",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+    transition: "transform 0.2s ease, box-shadow 0.2s ease",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    height: "540px",
+    width: "100%",
+    maxWidth: "280px",
+  };
+
+  const hoverEffect = {
+    transform: "translateY(-3px)",
+    boxShadow: "0 5px 14px rgba(0,0,0,0.08)",
+  };
+
+  const coverBox = {
+    width: "100%",
+    height: "320px",
+    borderRadius: "10px",
+    marginBottom: "10px",
+    background: "#f7f7f7",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#999",
+    fontSize: "1rem",
+    textTransform: "capitalize",
+  };
+
   return (
-    <div className="min-h-screen bg-[url('/attached_assets/linedpaper.png')] bg-repeat">
-      <div className="max-w-6xl mx-auto py-16 px-6">
-        <h1 className="text-4xl font-handwritten text-center mb-12 text-black">
-          The Diaries
-        </h1>
+    <section style={pageStyles}>
+      <h2
+        style={{
+          textAlign: "center",
+          color: "#0aa5a5",
+          fontSize: "2rem",
+          marginBottom: "30px",
+        }}
+      >
+        The Diaries
+      </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Taylor’s Diary (Available Now) */}
-          <div className="relative bg-white shadow-lg rounded-xl p-4 border-2 border-dashed border-purple-400 flex flex-col items-center">
-            <a
-              href="https://www.amazon.co.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+      <div style={gridStyles}>
+        {books.map((b) => (
+          <div
+            key={b.id}
+            style={cardStyles}
+            onMouseEnter={(e) => {
+              Object.assign(e.currentTarget.style, hoverEffect);
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "none";
+              e.currentTarget.style.boxShadow = cardStyles.boxShadow;
+            }}
+          >
+            {b.cover ? (
               <img
-                src={taylorCover}
-                alt="Taylor's Diary Cover"
-                className="max-w-full h-auto object-contain rounded-lg shadow-md mx-auto hover:opacity-90 transition md:h-80 md:w-auto"
+                src={b.cover}
+                alt={`${b.title} cover`}
+                style={{
+                  width: "100%",
+                  height: "320px",
+                  borderRadius: "10px",
+                  objectFit: "cover",
+                  marginBottom: "10px",
+                }}
               />
-            </a>
-            <div className="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
-              Available Now
-            </div>
-            <h3 className="text-xl font-bold text-center mt-4 text-purple-700">
-              <a
-                href="https://www.amazon.co.uk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                Taylor's Diary
-              </a>
+            ) : (
+              <div style={coverBox}>Cover coming soon</div>
+            )}
+
+            <h3
+              style={{
+                color: b.color,
+                fontWeight: "700",
+                fontSize: "1.15rem",
+                marginBottom: "6px",
+              }}
+            >
+              {b.title}
             </h3>
-            <p className="text-center text-gray-600 mt-2">
-              The chaos begins — the first diary is here!
+
+            <p
+              style={{
+                fontStyle: "italic",
+                fontSize: "0.95rem",
+                color: "#444",
+                marginBottom: "4px",
+              }}
+            >
+              {b.audience}
             </p>
-          </div>
 
-          {/* Caleb’s Diary (Coming Soon) */}
-          <div className="relative bg-white shadow-lg rounded-xl p-4 border-2 border-dashed border-orange-400 flex flex-col items-center">
-            <div className="h-80 w-auto flex items-center justify-center text-center text-orange-600 font-bold">
-              Cover Coming Soon
-            </div>
-            <h3 className="text-xl font-bold text-center mt-4 text-orange-600">
-              Caleb's Diary
-            </h3>
-            <p className="text-center text-gray-500 mt-2">Coming Soon</p>
+            <p style={{ color: "#666", fontSize: "0.9rem" }}>{b.status}</p>
           </div>
-
-          {/* Libby’s Diary (Coming Soon) */}
-          <div className="relative bg-white shadow-lg rounded-xl p-4 border-2 border-dashed border-pink-400 flex flex-col items-center">
-            <div className="h-80 w-auto flex items-center justify-center text-center text-pink-600 font-bold">
-              Cover Coming Soon
-            </div>
-            <h3 className="text-xl font-bold text-center mt-4 text-pink-600">
-              Libby's Diary
-            </h3>
-            <p className="text-center text-gray-500 mt-2">Coming Soon</p>
-          </div>
-
-          {/* Pumpkin’s Diary (Coming Soon) */}
-          <div className="relative bg-white shadow-lg rounded-xl p-4 border-2 border-dashed border-yellow-400 flex flex-col items-center">
-            <div className="h-80 w-auto flex items-center justify-center text-center text-yellow-600 font-bold">
-              Cover Coming Soon
-            </div>
-            <h3 className="text-xl font-bold text-center mt-4 text-yellow-600">
-              Pumpkin's Diary
-            </h3>
-            <p className="text-center text-gray-500 mt-2">Coming Soon</p>
-          </div>
-        </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }
