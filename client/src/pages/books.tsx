@@ -36,6 +36,8 @@ export default function Books() {
       justifyContent: "center",
       overflow: "hidden",
       marginBottom: "15px",
+      padding: "10px",
+      textAlign: "center",
     } as React.CSSProperties,
     img: {
       width: "100%",
@@ -69,26 +71,17 @@ export default function Books() {
       {/* Taylor's Diary */}
       <article style={styles.card}>
         <div style={styles.cover}>
-          <a href="https://www.amazon.co.uk" target="_blank" rel="noreferrer">
-            <img
-              src={taylorCover}
-              alt="Taylor's Diary cover"
-              style={styles.img}
-            />
-          </a>
+          <img
+            src={taylorCover}
+            alt="Taylor's Diary cover"
+            style={styles.img}
+          />
         </div>
-        <h3 style={styles.title}>
-          <a
-            href="https://www.amazon.co.uk"
-            target="_blank"
-            rel="noreferrer"
-            style={styles.title}
-          >
-            Taylor's Diary
-          </a>
-        </h3>
+        <h3 style={styles.title}>Taylor's Diary</h3>
         <p style={styles.desc}>Diary for teenagers and adults… if you dare</p>
-        <p style={{ ...styles.status, ...styles.available }}>Available now</p>
+        <p style={{ ...styles.status, ...styles.available }}>
+          Launching this week
+        </p>
       </article>
 
       {/* Caleb's Diary */}
@@ -118,7 +111,23 @@ export default function Books() {
         </div>
         <h3 style={styles.title}>Pumpkin's Diary</h3>
         <p style={styles.desc}>The Dog's Diary, for kids</p>
-        <p style={{ ...styles.status, ...styles.coming }}>Coming soon</p>
+        <p style={{ ...styles.status, ...styles.available }}>
+          Launching by Halloween
+        </p>
+      </article>
+
+      {/* The Blended Diaries: Always Evolving */}
+      <article style={styles.card}>
+        <div style={styles.cover}>
+          <p>The Blended Diaries: Always Evolving</p>
+        </div>
+        <h3 style={styles.title}>More Families Coming Soon</h3>
+        <p style={styles.desc}>
+          Our world’s expanding with new families, new dramas, and new diaries,
+          proving there’s no one way to be a family but plenty of ways to laugh
+          about it.
+        </p>
+        <p style={{ ...styles.status, ...styles.coming }}>Stay tuned</p>
       </article>
     </main>
   );

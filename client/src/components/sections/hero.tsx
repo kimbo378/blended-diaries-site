@@ -32,28 +32,20 @@ export default function Hero() {
 
       {/* Hero content container */}
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        {/* Left side - Book Cover */}
+        {/* Left side - Book Cover (link removed) */}
         <div className="flex justify-center lg:justify-center pt-4">
           <div className="relative">
-            <a
-              href="https://www.amazon.co.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block transition-all duration-300 hover:scale-105 hover:-rotate-1"
-              data-testid="link-book-cover"
-            >
-              <img
-                src={taylorCover}
-                alt="The Blended Diaries Book Cover"
-                className="
-                  max-w-[220px] sm:max-w-[280px] lg:max-w-sm
-                  h-auto mx-auto lg:mx-0
-                  rounded-lg shadow-xl transform -rotate-3
-                  transition-all duration-300 hover:shadow-2xl
-                "
-                data-testid="img-book-cover"
-              />
-            </a>
+            <img
+              src={taylorCover}
+              alt="The Blended Diaries Book Cover"
+              className="
+                max-w-[220px] sm:max-w-[280px] lg:max-w-sm
+                h-auto mx-auto lg:mx-0
+                rounded-lg shadow-xl transform -rotate-3
+                transition-all duration-300 hover:shadow-2xl
+              "
+              data-testid="img-book-cover"
+            />
           </div>
         </div>
 

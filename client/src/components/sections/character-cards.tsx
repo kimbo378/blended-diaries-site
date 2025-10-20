@@ -49,12 +49,18 @@ export default function CharacterCards() {
   };
 
   return (
-    <section className="py-16 relative">
+    <section className="py-8 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-handwritten text-4xl sm:text-5xl text-center text-diary-charcoal mb-12">
-          Meet the Family
-          <span className="ml-4 text-diary-yellow">🐾</span>
-        </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl sm:text-5xl font-handwritten text-gray-800 mb-3">
+            Meet the First Family
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
+            Our world is expanding with new families, new dramas, and new diaries,
+            proving there's no one way to be a family but plenty of ways to laugh
+            about it.
+          </p>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {characters.map((character, index) => (
