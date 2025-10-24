@@ -1,0 +1,34 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Amazon review redirect</title>
+<p>Taking you to the correct Amazon review page...</p>
+<script>
+  const ASIN = "B0FX1B9RWP";
+  const map = {
+    AE: "amazon.ae",
+    AU: "amazon.com.au",
+    BR: "amazon.com.br",
+    CA: "amazon.ca",
+    DE: "amazon.de",
+    EG: "amazon.eg",
+    ES: "amazon.es",
+    FR: "amazon.fr",
+    GB: "amazon.co.uk",
+    IE: "amazon.co.uk",
+    IN: "amazon.in",
+    IT: "amazon.it",
+    JP: "amazon.co.jp",
+    MX: "amazon.com.mx",
+    NL: "amazon.nl",
+    PL: "amazon.pl",
+    SA: "amazon.sa",
+    SE: "amazon.se",
+    SG: "amazon.sg",
+    TR: "amazon.com.tr",
+    US: "amazon.com",
+  };
+  const lang = navigator.language || "en-US";
+  const cc = /-([A-Z]{2})$/.exec(lang)?.[1] || "US";
+  const domain = map[cc] || "amazon.com";
+  location.replace(`https://${domain}/review/create-review?asin=${ASIN}`);
+</script>
