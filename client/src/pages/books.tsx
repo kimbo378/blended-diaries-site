@@ -63,7 +63,7 @@ export default function Books() {
       fontSize: "15px",
       fontWeight: 800,
     } as React.CSSProperties,
-    available: { color: "#e74c3c", fontWeight: 700, fontSize: "14px" } as React.CSSProperties,
+    available: { color: "#9b59b6", fontWeight: 700, fontSize: "14px", marginBottom: "10px" } as React.CSSProperties,
     coming: { color: "gray" } as React.CSSProperties,
   };
 
@@ -78,6 +78,9 @@ export default function Books() {
         style={{ textDecoration: "none" }}
       >
         <article style={styles.card}>
+          <p style={{ ...styles.status, ...styles.available }}>
+            Now Available - Click to Buy
+          </p>
           <div style={styles.cover}>
             <img
               src={taylorCover}
@@ -85,23 +88,34 @@ export default function Books() {
               style={styles.img}
             />
           </div>
-          <p style={{ ...styles.status, ...styles.available }}>
-            Now Available - Click to Buy
-          </p>
           <h3 style={styles.title}>Taylor's Diary</h3>
           <p style={styles.desc}>Diary for teenagers and adults… if you dare</p>
         </article>
       </a>
 
-      {/* Caleb's Diary */}
-      <article style={styles.card}>
-        <div style={styles.cover}>
-          <p>Cover coming soon</p>
-        </div>
-        <h3 style={styles.title}>Caleb's Diary</h3>
-        <p style={styles.desc}>Diary for teenagers and adults… if you dare</p>
-        <p style={{ ...styles.status, ...styles.coming }}>Coming soon</p>
-      </article>
+      {/* Pumpkin's Diary */}
+      <a
+        href="https://mybook.to/PumpkinsDiary"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Buy Pumpkin's Diary on Amazon"
+        style={{ textDecoration: "none" }}
+      >
+        <article style={styles.card}>
+          <p style={{ ...styles.status, ...styles.available }}>
+            Now Available - Click to Buy
+          </p>
+          <div style={styles.cover}>
+            <img
+              src={pumpkinCover}
+              alt="Pumpkin's Diary cover"
+              style={styles.img}
+            />
+          </div>
+          <h3 style={styles.title}>Pumpkin's Diary</h3>
+          <p style={styles.desc}>The Dog's Diary, for kids</p>
+        </article>
+      </a>
 
       {/* Libby's Diary */}
       <article style={styles.card}>
@@ -113,29 +127,15 @@ export default function Books() {
         <p style={{ ...styles.status, ...styles.coming }}>Coming soon</p>
       </article>
 
-      {/* Pumpkin's Diary */}
-      <a
-        href="https://mybook.to/PumpkinsDiary"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Buy Pumpkin's Diary on Amazon"
-        style={{ textDecoration: "none" }}
-      >
-        <article style={styles.card}>
-          <div style={styles.cover}>
-            <img
-              src={pumpkinCover}
-              alt="Pumpkin's Diary cover"
-              style={styles.img}
-            />
-          </div>
-          <p style={{ ...styles.status, ...styles.available }}>
-            Now Available - Click to Buy
-          </p>
-          <h3 style={styles.title}>Pumpkin's Diary</h3>
-          <p style={styles.desc}>The Dog's Diary, for kids</p>
-        </article>
-      </a>
+      {/* Caleb's Diary */}
+      <article style={styles.card}>
+        <div style={styles.cover}>
+          <p>Cover coming soon</p>
+        </div>
+        <h3 style={styles.title}>Caleb's Diary</h3>
+        <p style={styles.desc}>Diary for teenagers and adults… if you dare</p>
+        <p style={{ ...styles.status, ...styles.coming }}>Coming soon</p>
+      </article>
 
       {/* The Blended Diaries: Always Evolving */}
       <article style={styles.card}>
