@@ -26,18 +26,10 @@ export default function Confetti() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const colors = [
-      "#FFD700",
-      "#C0C0C0", 
-      "#E6C200",
-      "#B8B8B8",
-      "#FFF8DC",
-      "#D4AF37",
-      "#E8E8E8"
-    ];
+    const colors = ["#9b59b6", "#00b9b9", "#f39c12", "#e74c3c"];
     const shapes: ("star" | "heart")[] = ["star", "heart"];
     const confettiPieces: ConfettiPiece[] = [];
-    const confettiCount = 60;
+    const confettiCount = 40;
 
     const drawStar = (ctx: CanvasRenderingContext2D, size: number) => {
       const spikes = 5;
@@ -74,14 +66,14 @@ export default function Confetti() {
       confettiPieces.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height - canvas.height,
-        size: Math.random() * 10 + 8,
-        speedY: Math.random() * 2 + 1,
-        speedX: Math.random() * 2 - 1,
+        size: Math.random() * 6 + 6,
+        speedY: Math.random() * 1.5 + 0.8,
+        speedX: Math.random() * 1.5 - 0.75,
         color: colors[Math.floor(Math.random() * colors.length)],
         rotation: Math.random() * 360,
-        rotationSpeed: Math.random() * 4 - 2,
+        rotationSpeed: Math.random() * 3 - 1.5,
         shape: shapes[Math.floor(Math.random() * shapes.length)],
-        opacity: Math.random() * 0.4 + 0.6,
+        opacity: Math.random() * 0.3 + 0.5,
       });
     }
 
@@ -95,9 +87,10 @@ export default function Confetti() {
         ctx.translate(piece.x, piece.y);
         ctx.rotate((piece.rotation * Math.PI) / 180);
         
+        const glowIntensity = 0.5 + Math.sin(Date.now() * 0.003 + piece.x) * 0.3;
         ctx.shadowColor = piece.color;
-        ctx.shadowBlur = 15;
-        ctx.globalAlpha = piece.opacity;
+        ctx.shadowBlur = 8 * glowIntensity;
+        ctx.globalAlpha = piece.opacity * (0.8 + glowIntensity * 0.2);
         ctx.fillStyle = piece.color;
 
         if (piece.shape === "star") {
@@ -111,8 +104,6 @@ export default function Confetti() {
         piece.y += piece.speedY;
         piece.x += piece.speedX;
         piece.rotation += piece.rotationSpeed;
-        
-        piece.opacity = 0.6 + Math.sin(Date.now() * 0.002 + piece.x) * 0.4;
 
         if (piece.y > canvas.height) {
           piece.y = -20;
