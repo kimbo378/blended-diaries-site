@@ -10,6 +10,7 @@ interface ConfettiPiece {
   rotation: number;
   rotationSpeed: number;
   shape: "star" | "heart";
+  opacity: number;
 }
 
 export default function Confetti() {
@@ -25,10 +26,18 @@ export default function Confetti() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const colors = ["#c0392b", "#27ae60", "#ecf0f1", "#f39c12"];
+    const colors = [
+      "#FFD700",
+      "#C0C0C0", 
+      "#E6C200",
+      "#B8B8B8",
+      "#FFF8DC",
+      "#D4AF37",
+      "#E8E8E8"
+    ];
     const shapes: ("star" | "heart")[] = ["star", "heart"];
     const confettiPieces: ConfettiPiece[] = [];
-    const confettiCount = 50;
+    const confettiCount = 60;
 
     const drawStar = (ctx: CanvasRenderingContext2D, size: number) => {
       const spikes = 5;
@@ -65,13 +74,14 @@ export default function Confetti() {
       confettiPieces.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height - canvas.height,
-        size: Math.random() * 8 + 8,
+        size: Math.random() * 10 + 8,
         speedY: Math.random() * 2 + 1,
         speedX: Math.random() * 2 - 1,
         color: colors[Math.floor(Math.random() * colors.length)],
         rotation: Math.random() * 360,
         rotationSpeed: Math.random() * 4 - 2,
         shape: shapes[Math.floor(Math.random() * shapes.length)],
+        opacity: Math.random() * 0.4 + 0.6,
       });
     }
 
@@ -84,6 +94,10 @@ export default function Confetti() {
         ctx.save();
         ctx.translate(piece.x, piece.y);
         ctx.rotate((piece.rotation * Math.PI) / 180);
+        
+        ctx.shadowColor = piece.color;
+        ctx.shadowBlur = 15;
+        ctx.globalAlpha = piece.opacity;
         ctx.fillStyle = piece.color;
 
         if (piece.shape === "star") {
@@ -97,6 +111,8 @@ export default function Confetti() {
         piece.y += piece.speedY;
         piece.x += piece.speedX;
         piece.rotation += piece.rotationSpeed;
+        
+        piece.opacity = 0.6 + Math.sin(Date.now() * 0.002 + piece.x) * 0.4;
 
         if (piece.y > canvas.height) {
           piece.y = -20;
