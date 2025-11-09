@@ -25,14 +25,15 @@ export default function Books() {
           <p className="text-gray-600 font-bold text-sm mb-2.5">
             Now Available - Click to Buy
           </p>
-          <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center relative">
+          <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 text-center relative">
             <img
               src={taylorCover}
               alt="Taylor's Diary cover"
-              className="w-full h-full object-contain transition-all duration-500 
+              className="w-full h-full object-cover transition-all duration-500 
                 group-hover:scale-110 group-hover:brightness-105"
               style={{
                 filter: 'drop-shadow(0 0 0px rgba(0, 185, 185, 0))',
+                imageRendering: 'crisp-edges',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.filter = 'drop-shadow(0 0 15px rgba(0, 185, 185, 0.5))';

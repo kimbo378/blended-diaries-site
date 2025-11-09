@@ -55,6 +55,7 @@ export default function Hero() {
               style={{
                 filter: 'drop-shadow(0 0 20px rgba(0, 185, 185, 0))',
                 transition: 'all 0.5s ease',
+                imageRendering: 'crisp-edges',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.filter = 'drop-shadow(0 0 20px rgba(0, 185, 185, 0.4))';
