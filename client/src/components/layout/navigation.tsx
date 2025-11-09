@@ -43,26 +43,67 @@ export default function Navigation() {
 
   return (
     <nav className="relative z-50 bg-diary-cream sticky top-0">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="hidden md:block py-4">
-          {/* Top row: Site Title + Logo */}
-          <div className="flex justify-between items-center mb-3">
-            <h1 className="font-handwritten text-4xl sm:text-5xl font-bold">
-              <span className="text-teal-500">The </span>
-              <span className="text-black">Blended</span>
-              <span className="text-teal-500"> Diaries</span>
-            </h1>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="hidden md:block py-6">
+          {/* Top row: Title on left, Logo center, Social on right */}
+          <div className="flex items-center justify-between mb-4">
+            {/* Left: Site Title */}
+            <div className="flex-1">
+              <h1 className="font-handwritten text-4xl sm:text-5xl font-bold">
+                <span className="text-teal-500">The </span>
+                <span className="text-black">Blended</span>
+                <span className="text-teal-500"> Diaries</span>
+              </h1>
+            </div>
             
-            <img
-              src={logoImage}
-              alt="The Blended Diaries Logo"
-              className="w-20 h-20 object-contain"
-            />
+            {/* Center: Logo - bigger and prominent */}
+            <div className="flex-shrink-0 mx-8">
+              <img
+                src={logoImage}
+                alt="The Blended Diaries Logo"
+                className="w-32 h-32 object-contain hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            {/* Right: Social Media Icons */}
+            <div className="flex-1 flex justify-end">
+              <div className="flex items-center space-x-3">
+                <a
+                  href="mailto:hello@theblendeddiaries.com"
+                  className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+                  aria-label="Email"
+                  data-testid="link-nav-social-email"
+                >
+                  <Mail size={24} />
+                </a>
+
+                <a
+                  href="https://tiktok.com/@blendeddiaries"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+                  aria-label="TikTok"
+                  data-testid="link-nav-social-tiktok"
+                >
+                  <Music2 size={24} />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/blendeddiaries/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+                  aria-label="Instagram"
+                  data-testid="link-nav-social-instagram"
+                >
+                  <Instagram size={24} />
+                </a>
+              </div>
+            </div>
           </div>
 
-          {/* Bottom row: Navigation + Social */}
-          <div className="flex justify-between items-center">
-            {/* Desktop Menu */}
+          {/* Bottom row: Centered Navigation */}
+          <div className="flex justify-center">
             <div className="flex items-center gap-2">
               {navItems.map((item) => {
                 const Icon = item.icon;
@@ -110,40 +151,6 @@ export default function Navigation() {
                   </Link>
                 );
               })}
-            </div>
-
-            {/* Social Media Icons */}
-            <div className="flex items-center space-x-3">
-              <a
-                href="mailto:hello@theblendeddiaries.com"
-                className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
-                aria-label="Email"
-                data-testid="link-nav-social-email"
-              >
-                <Mail size={24} />
-              </a>
-
-              <a
-                href="https://tiktok.com/@blendeddiaries"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
-                aria-label="TikTok"
-                data-testid="link-nav-social-tiktok"
-              >
-                <Music2 size={24} />
-              </a>
-
-              <a
-                href="https://www.instagram.com/blendeddiaries/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
-                aria-label="Instagram"
-                data-testid="link-nav-social-instagram"
-              >
-                <Instagram size={24} />
-              </a>
             </div>
           </div>
         </div>
