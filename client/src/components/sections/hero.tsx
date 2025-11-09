@@ -32,9 +32,15 @@ export default function Hero() {
 
       {/* Hero content container */}
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        {/* Left side - Book Cover (link removed) */}
+        {/* Left side - Book Cover */}
         <div className="flex justify-center lg:justify-center pt-4">
-          <div className="relative">
+          <a
+            href="https://mybook.to/taylorsversion"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Buy Taylor's Diary on Amazon"
+            className="relative"
+          >
             <img
               src={taylorCover}
               alt="The Blended Diaries Book Cover"
@@ -46,7 +52,7 @@ export default function Hero() {
               "
               data-testid="img-book-cover"
             />
-          </div>
+          </a>
         </div>
 
         {/* Right side - Content */}

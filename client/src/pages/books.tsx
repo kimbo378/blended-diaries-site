@@ -69,20 +69,28 @@ export default function Books() {
   return (
     <main style={styles.container}>
       {/* Taylor's Diary */}
-      <article style={styles.card}>
-        <div style={styles.cover}>
-          <img
-            src={taylorCover}
-            alt="Taylor's Diary cover"
-            style={styles.img}
-          />
-        </div>
-        <h3 style={styles.title}>Taylor's Diary</h3>
-        <p style={styles.desc}>Diary for teenagers and adults… if you dare</p>
-        <p style={{ ...styles.status, ...styles.available }}>
-          Launching this week
-        </p>
-      </article>
+      <a
+        href="https://mybook.to/taylorsversion"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Buy Taylor's Diary on Amazon"
+        style={{ textDecoration: "none" }}
+      >
+        <article style={styles.card}>
+          <div style={styles.cover}>
+            <img
+              src={taylorCover}
+              alt="Taylor's Diary cover"
+              style={styles.img}
+            />
+          </div>
+          <h3 style={styles.title}>Taylor's Diary</h3>
+          <p style={styles.desc}>Diary for teenagers and adults… if you dare</p>
+          <p style={{ ...styles.status, ...styles.available }}>
+            Launching this week
+          </p>
+        </article>
+      </a>
 
       {/* Caleb's Diary */}
       <article style={styles.card}>
@@ -105,16 +113,24 @@ export default function Books() {
       </article>
 
       {/* Pumpkin's Diary */}
-      <article style={styles.card}>
-        <div style={styles.cover}>
-          <p>Cover coming soon</p>
-        </div>
-        <h3 style={styles.title}>Pumpkin's Diary</h3>
-        <p style={styles.desc}>The Dog's Diary, for kids</p>
-        <p style={{ ...styles.status, ...styles.available }}>
-          Launching by Halloween
-        </p>
-      </article>
+      <a
+        href="https://mybook.to/PumpkinsDiary"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Buy Pumpkin's Diary on Amazon"
+        style={{ textDecoration: "none" }}
+      >
+        <article style={styles.card}>
+          <div style={styles.cover}>
+            <p>Cover coming soon</p>
+          </div>
+          <h3 style={styles.title}>Pumpkin's Diary</h3>
+          <p style={styles.desc}>The Dog's Diary, for kids</p>
+          <p style={{ ...styles.status, ...styles.available }}>
+            Launching by Halloween
+          </p>
+        </article>
+      </a>
 
       {/* The Blended Diaries: Always Evolving */}
       <article style={styles.card}>
