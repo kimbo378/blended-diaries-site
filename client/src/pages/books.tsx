@@ -7,7 +7,7 @@ export default function Books() {
   const { elementRef, isVisible } = useScrollAnimation<HTMLElement>();
 
   return (
-    <main className="flex flex-wrap justify-center gap-10 my-10 mx-auto max-w-[1100px] px-4">
+    <main ref={elementRef} className="flex flex-wrap justify-center gap-10 my-10 mx-auto max-w-[1100px] px-4">
       {/* Taylor's Diary */}
       <a
         href="/taylor"
@@ -17,7 +17,11 @@ export default function Books() {
         className="no-underline group"
       >
         <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
-          transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-2">
+          transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-2
+          opacity-0 translate-y-8"
+          style={{
+            animation: isVisible ? 'fadeInUp 0.6s ease-out 0s forwards' : 'none'
+          }}>
           <p className="text-gray-600 font-bold text-sm mb-2.5">
             Now Available - Click to Buy
           </p>
@@ -54,7 +58,11 @@ export default function Books() {
         className="no-underline group"
       >
         <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
-          transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-2">
+          transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-2
+          opacity-0 translate-y-8"
+          style={{
+            animation: isVisible ? 'fadeInUp 0.6s ease-out 0.2s forwards' : 'none'
+          }}>
           <p className="text-gray-600 font-bold text-sm mb-2.5">
             Now Available - Click to Buy
           </p>
@@ -85,9 +93,8 @@ export default function Books() {
       {/* Libby's Diary */}
       <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
         transition-all duration-500 opacity-0 translate-y-8"
-        ref={elementRef}
         style={{
-          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.2s forwards' : 'none'
+          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.4s forwards' : 'none'
         }}>
         <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
           <p>Cover coming soon</p>
@@ -103,7 +110,7 @@ export default function Books() {
       <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
         transition-all duration-500 opacity-0 translate-y-8"
         style={{
-          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.4s forwards' : 'none'
+          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.6s forwards' : 'none'
         }}>
         <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
           <p>Cover coming soon</p>
@@ -119,7 +126,7 @@ export default function Books() {
       <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
         transition-all duration-500 opacity-0 translate-y-8"
         style={{
-          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.6s forwards' : 'none'
+          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.8s forwards' : 'none'
         }}>
         <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
           <p>The Blended Diaries: Always Evolving</p>
