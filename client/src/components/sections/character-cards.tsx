@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const characters = [
   {
@@ -28,6 +29,8 @@ const characters = [
 ];
 
 export default function CharacterCards() {
+  const { elementRef, isVisible } = useScrollAnimation<HTMLDivElement>();
+  
   const getBorderClass = (color: string) => {
     switch (color) {
       case "diary-purple": return "border-diary-purple";
@@ -62,11 +65,18 @@ export default function CharacterCards() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div ref={elementRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {characters.map((character, index) => (
             <div
               key={character.name}
-              className={`bg-white rounded-lg p-6 shadow-lg border-l-4 ${getBorderClass(character.color)} transform hover:scale-105 transition-transform`}
+              className={`bg-white rounded-lg p-6 shadow-lg border-l-4 ${getBorderClass(character.color)} 
+                transform hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300
+                opacity-0 translate-y-8
+                ${isVisible ? 'animate-fade-in-up' : ''}
+              `}
+              style={{
+                animationDelay: isVisible ? `${index * 150}ms` : '0ms',
+              }}
             >
               <h3 className="font-handwritten text-2xl text-diary-charcoal mb-3">
                 {character.name}

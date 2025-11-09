@@ -1,95 +1,47 @@
 import React from "react";
 import taylorCover from "../../assets/taylorcover.png";
 import pumpkinCover from "../../assets/pumpkincover.png";
-// path from client/src/pages → client/assets
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export default function Books() {
-  const styles = {
-    container: {
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "center",
-      gap: "40px",
-      margin: "40px auto",
-      maxWidth: "1100px",
-      padding: "0 16px",
-      fontFamily: "Poppins, sans-serif",
-    } as React.CSSProperties,
-    card: {
-      background: "#fff",
-      borderRadius: "20px",
-      boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-      width: "280px",
-      textAlign: "center",
-      padding: "20px",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      transition: "all 0.2s ease",
-    } as React.CSSProperties,
-    cover: {
-      width: "220px",
-      height: "320px",
-      borderRadius: "12px",
-      background: "#f2f2f2",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      overflow: "hidden",
-      marginBottom: "15px",
-      padding: "10px",
-      textAlign: "center",
-    } as React.CSSProperties,
-    img: {
-      width: "100%",
-      height: "100%",
-      objectFit: "contain",
-    } as React.CSSProperties,
-    title: {
-      fontSize: "20px",
-      fontWeight: 700,
-      color: "#00b9b9",
-      margin: 0,
-      textDecoration: "none",
-    } as React.CSSProperties,
-    desc: {
-      marginTop: "6px",
-      fontSize: "15px",
-      color: "#000",
-      fontWeight: 500,
-    } as React.CSSProperties,
-    status: {
-      marginTop: "8px",
-      fontSize: "15px",
-      fontWeight: 800,
-    } as React.CSSProperties,
-    available: { color: "#7f8c8d", fontWeight: 700, fontSize: "14px", marginBottom: "10px" } as React.CSSProperties,
-    coming: { color: "gray" } as React.CSSProperties,
-  };
+  const { elementRef, isVisible } = useScrollAnimation<HTMLElement>();
 
   return (
-    <main style={styles.container}>
+    <main className="flex flex-wrap justify-center gap-10 my-10 mx-auto max-w-[1100px] px-4">
       {/* Taylor's Diary */}
       <a
         href="/taylor"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Buy Taylor's Diary on Amazon"
-        style={{ textDecoration: "none" }}
+        className="no-underline group"
       >
-        <article style={styles.card}>
-          <p style={{ ...styles.status, ...styles.available }}>
+        <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
+          transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-2">
+          <p className="text-gray-600 font-bold text-sm mb-2.5">
             Now Available - Click to Buy
           </p>
-          <div style={styles.cover}>
+          <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center relative">
             <img
               src={taylorCover}
               alt="Taylor's Diary cover"
-              style={styles.img}
+              className="w-full h-full object-contain transition-all duration-500 
+                group-hover:scale-110 group-hover:brightness-105"
+              style={{
+                filter: 'drop-shadow(0 0 0px rgba(0, 185, 185, 0))',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.filter = 'drop-shadow(0 0 15px rgba(0, 185, 185, 0.5))';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.filter = 'drop-shadow(0 0 0px rgba(0, 185, 185, 0))';
+              }}
             />
           </div>
-          <h3 style={styles.title}>Taylor's Diary</h3>
-          <p style={styles.desc}>Diary for teenagers and adults… if you dare</p>
+          <h3 className="text-xl font-bold text-diary-teal m-0">Taylor's Diary</h3>
+          <p className="mt-1.5 text-[15px] text-black font-medium">
+            Diary for teenagers and adults… if you dare
+          </p>
         </article>
       </a>
 
@@ -99,56 +51,86 @@ export default function Books() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Buy Pumpkin's Diary on Amazon"
-        style={{ textDecoration: "none" }}
+        className="no-underline group"
       >
-        <article style={styles.card}>
-          <p style={{ ...styles.status, ...styles.available }}>
+        <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
+          transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-2">
+          <p className="text-gray-600 font-bold text-sm mb-2.5">
             Now Available - Click to Buy
           </p>
-          <div style={styles.cover}>
+          <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
             <img
               src={pumpkinCover}
               alt="Pumpkin's Diary cover"
-              style={styles.img}
+              className="w-full h-full object-contain transition-all duration-500 
+                group-hover:scale-110 group-hover:brightness-105"
+              style={{
+                filter: 'drop-shadow(0 0 0px rgba(231, 76, 60, 0))',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.filter = 'drop-shadow(0 0 15px rgba(231, 76, 60, 0.5))';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.filter = 'drop-shadow(0 0 0px rgba(231, 76, 60, 0))';
+              }}
             />
           </div>
-          <h3 style={styles.title}>Pumpkin's Diary</h3>
-          <p style={styles.desc}>The Dog's Diary, for kids</p>
+          <h3 className="text-xl font-bold text-diary-teal m-0">Pumpkin's Diary</h3>
+          <p className="mt-1.5 text-[15px] text-black font-medium">
+            The Dog's Diary, for kids
+          </p>
         </article>
       </a>
 
       {/* Libby's Diary */}
-      <article style={styles.card}>
-        <div style={styles.cover}>
+      <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
+        transition-all duration-500 opacity-0 translate-y-8"
+        ref={elementRef}
+        style={{
+          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.2s forwards' : 'none'
+        }}>
+        <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
           <p>Cover coming soon</p>
         </div>
-        <h3 style={styles.title}>Libby's Diary</h3>
-        <p style={styles.desc}>Diary for adults only</p>
-        <p style={{ ...styles.status, ...styles.coming }}>Coming soon</p>
+        <h3 className="text-xl font-bold text-diary-teal m-0">Libby's Diary</h3>
+        <p className="mt-1.5 text-[15px] text-black font-medium">
+          Diary for adults only
+        </p>
+        <p className="mt-2 text-[15px] text-gray-500">Coming soon</p>
       </article>
 
       {/* Caleb's Diary */}
-      <article style={styles.card}>
-        <div style={styles.cover}>
+      <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
+        transition-all duration-500 opacity-0 translate-y-8"
+        style={{
+          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.4s forwards' : 'none'
+        }}>
+        <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
           <p>Cover coming soon</p>
         </div>
-        <h3 style={styles.title}>Caleb's Diary</h3>
-        <p style={styles.desc}>Diary for teenagers and adults… if you dare</p>
-        <p style={{ ...styles.status, ...styles.coming }}>Coming soon</p>
+        <h3 className="text-xl font-bold text-diary-teal m-0">Caleb's Diary</h3>
+        <p className="mt-1.5 text-[15px] text-black font-medium">
+          Diary for teenagers and adults… if you dare
+        </p>
+        <p className="mt-2 text-[15px] text-gray-500">Coming soon</p>
       </article>
 
       {/* The Blended Diaries: Always Evolving */}
-      <article style={styles.card}>
-        <div style={styles.cover}>
+      <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
+        transition-all duration-500 opacity-0 translate-y-8"
+        style={{
+          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.6s forwards' : 'none'
+        }}>
+        <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
           <p>The Blended Diaries: Always Evolving</p>
         </div>
-        <h3 style={styles.title}>More Families Coming Soon</h3>
-        <p style={styles.desc}>
-          Our world’s expanding with new families, new dramas, and new diaries,
-          proving there’s no one way to be a family but plenty of ways to laugh
+        <h3 className="text-xl font-bold text-diary-teal m-0">More Families Coming Soon</h3>
+        <p className="mt-1.5 text-[15px] text-black font-medium">
+          Our world's expanding with new families, new dramas, and new diaries,
+          proving there's no one way to be a family but plenty of ways to laugh
           about it.
         </p>
-        <p style={{ ...styles.status, ...styles.coming }}>Stay tuned</p>
+        <p className="mt-2 text-[15px] text-gray-500">Stay tuned</p>
       </article>
     </main>
   );
