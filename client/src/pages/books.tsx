@@ -63,7 +63,7 @@ export default function Books() {
       fontSize: "15px",
       fontWeight: 800,
     } as React.CSSProperties,
-    available: { color: "green" } as React.CSSProperties,
+    available: { color: "#e74c3c", fontWeight: 700, fontSize: "14px" } as React.CSSProperties,
     coming: { color: "gray" } as React.CSSProperties,
   };
 
@@ -85,11 +85,11 @@ export default function Books() {
               style={styles.img}
             />
           </div>
-          <h3 style={styles.title}>Taylor's Diary</h3>
-          <p style={styles.desc}>Diary for teenagers and adults… if you dare</p>
           <p style={{ ...styles.status, ...styles.available }}>
             Now Available - Click to Buy
           </p>
+          <h3 style={styles.title}>Taylor's Diary</h3>
+          <p style={styles.desc}>Diary for teenagers and adults… if you dare</p>
         </article>
       </a>
 
@@ -129,11 +129,11 @@ export default function Books() {
               style={styles.img}
             />
           </div>
-          <h3 style={styles.title}>Pumpkin's Diary</h3>
-          <p style={styles.desc}>The Dog's Diary, for kids</p>
           <p style={{ ...styles.status, ...styles.available }}>
             Now Available - Click to Buy
           </p>
+          <h3 style={styles.title}>Pumpkin's Diary</h3>
+          <p style={styles.desc}>The Dog's Diary, for kids</p>
         </article>
       </a>
 
