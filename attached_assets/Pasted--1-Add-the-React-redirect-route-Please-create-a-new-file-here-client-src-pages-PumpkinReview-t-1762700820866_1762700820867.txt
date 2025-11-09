@@ -1,0 +1,67 @@
+🧩 1. Add the React redirect route
+
+Please create a new file here:
+
+client/src/pages/PumpkinReview.tsx
+
+
+Add this code:
+
+import { useEffect } from "react";
+
+export default function PumpkinReview() {
+  useEffect(() => {
+    const ASIN = "B0DLPH9RFL"; // Pumpkin's Diary ASIN
+    const map: Record<string, string> = {
+      AE:"amazon.ae", AU:"amazon.com.au", BR:"amazon.com.br", CA:"amazon.ca",
+      DE:"amazon.de", EG:"amazon.eg", ES:"amazon.es", FR:"amazon.fr",
+      GB:"amazon.co.uk", IE:"amazon.co.uk", IN:"amazon.in", IT:"amazon.it",
+      JP:"amazon.co.jp", MX:"amazon.com.mx", NL:"amazon.nl", PL:"amazon.pl",
+      SA:"amazon.sa", SE:"amazon.se", SG:"amazon.sg", TR:"amazon.com.tr",
+      US:"amazon.com"
+    };
+    const cc = /-([A-Z]{2})$/.exec(navigator.language || "en-US")?.[1] || "US";
+    const domain = map[cc] || "amazon.com";
+    window.location.replace(`https://${domain}/review/create-review?asin=${ASIN}`);
+  }, []);
+
+  return (
+    <main className="flex items-center justify-center min-h-screen">
+      <p>Redirecting to your Amazon review page...</p>
+    </main>
+  );
+}
+
+🧩 2. Add the route
+
+In the site router file (client/src/App.tsx or wherever routes are registered), import and add this route:
+
+import PumpkinReview from "./pages/PumpkinReview";
+<Route path="/pumpkinreview" element={<PumpkinReview />} />
+
+🧩 3. Optional fallback
+
+If it helps with static deployment, please also move my existing file
+client/src/review.html
+into the public folder as
+
+client/public/review.html
+
+
+so that
+👉 https://theblendeddiaries.com/review.html
+still works as a static backup redirect.
+
+✅ Acceptance checklist
+
+https://theblendeddiaries.com/pumpkinreview immediately redirects to the correct Amazon review form for ASIN B0DLPH9RFL.
+
+Visitors in any country are sent to their correct Amazon store (UK, US, CA, AU, etc.).
+
+/review.html in the public folder also redirects properly as a static fallback.
+
+No other layout, styling, or page elements are changed.
+
+Site is re-deployed and tested after completion.
+
+That’s everything — quick and simple. Thanks!

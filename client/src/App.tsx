@@ -14,6 +14,7 @@ import Legal from "@/pages/legal";
 import Thanks from "@/pages/thanks";
 import Subscribed from "@/pages/subscribed";
 import ReviewRedirect from "@/pages/review";
+import PumpkinReview from "@/pages/PumpkinReview";
 import Navigation from "@/components/layout/navigation";
 import Footer from "@/components/layout/footer";
 
@@ -33,6 +34,7 @@ function Router() {
           <Route path="/thanks" component={Thanks} />
           <Route path="/subscribed" component={Subscribed} />
           <Route path="/review" component={ReviewRedirect} />
+          <Route path="/pumpkinreview" component={PumpkinReview} />
           <Route component={NotFound} />
         </Switch>
       </main>
