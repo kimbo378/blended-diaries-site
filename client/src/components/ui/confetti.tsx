@@ -9,7 +9,7 @@ interface ConfettiPiece {
   color: string;
   rotation: number;
   rotationSpeed: number;
-  shape: "star" | "heart";
+  shape: "snowflake" | "tree" | "ornament" | "star";
 }
 
 export default function Confetti() {
@@ -25,10 +25,54 @@ export default function Confetti() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const colors = ["#9b59b6", "#00b9b9", "#f39c12", "#e74c3c"];
-    const shapes: ("star" | "heart")[] = ["star", "heart"];
+    const colors = ["#c0392b", "#27ae60", "#ecf0f1", "#f39c12", "#3498db"];
+    const shapes: ("snowflake" | "tree" | "ornament" | "star")[] = ["snowflake", "tree", "ornament", "star"];
     const confettiPieces: ConfettiPiece[] = [];
     const confettiCount = 50;
+
+    const drawSnowflake = (ctx: CanvasRenderingContext2D, size: number) => {
+      const branches = 6;
+      ctx.strokeStyle = ctx.fillStyle;
+      ctx.lineWidth = 2;
+      
+      for (let i = 0; i < branches; i++) {
+        ctx.save();
+        ctx.rotate((i * Math.PI * 2) / branches);
+        
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(0, -size);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(0, -size * 0.6);
+        ctx.lineTo(-size * 0.3, -size * 0.8);
+        ctx.moveTo(0, -size * 0.6);
+        ctx.lineTo(size * 0.3, -size * 0.8);
+        ctx.stroke();
+        
+        ctx.restore();
+      }
+    };
+
+    const drawTree = (ctx: CanvasRenderingContext2D, size: number) => {
+      ctx.beginPath();
+      ctx.moveTo(0, -size);
+      ctx.lineTo(-size * 0.6, size * 0.2);
+      ctx.lineTo(size * 0.6, size * 0.2);
+      ctx.closePath();
+      ctx.fill();
+      
+      ctx.fillRect(-size * 0.15, size * 0.2, size * 0.3, size * 0.4);
+    };
+
+    const drawOrnament = (ctx: CanvasRenderingContext2D, size: number) => {
+      ctx.beginPath();
+      ctx.arc(0, 0, size * 0.7, 0, Math.PI * 2);
+      ctx.fill();
+      
+      ctx.fillRect(-size * 0.2, -size * 0.9, size * 0.4, size * 0.2);
+    };
 
     const drawStar = (ctx: CanvasRenderingContext2D, size: number) => {
       const spikes = 5;
@@ -51,21 +95,11 @@ export default function Confetti() {
       ctx.fill();
     };
 
-    const drawHeart = (ctx: CanvasRenderingContext2D, size: number) => {
-      const scale = size / 10;
-      ctx.beginPath();
-      ctx.moveTo(0, 3 * scale);
-      ctx.bezierCurveTo(-5 * scale, -3 * scale, -10 * scale, 1 * scale, 0, 10 * scale);
-      ctx.bezierCurveTo(10 * scale, 1 * scale, 5 * scale, -3 * scale, 0, 3 * scale);
-      ctx.closePath();
-      ctx.fill();
-    };
-
     for (let i = 0; i < confettiCount; i++) {
       confettiPieces.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height - canvas.height,
-        size: Math.random() * 8 + 8,
+        size: Math.random() * 8 + 10,
         speedY: Math.random() * 2 + 1,
         speedX: Math.random() * 2 - 1,
         color: colors[Math.floor(Math.random() * colors.length)],
@@ -86,10 +120,14 @@ export default function Confetti() {
         ctx.rotate((piece.rotation * Math.PI) / 180);
         ctx.fillStyle = piece.color;
 
-        if (piece.shape === "star") {
-          drawStar(ctx, piece.size);
+        if (piece.shape === "snowflake") {
+          drawSnowflake(ctx, piece.size);
+        } else if (piece.shape === "tree") {
+          drawTree(ctx, piece.size);
+        } else if (piece.shape === "ornament") {
+          drawOrnament(ctx, piece.size);
         } else {
-          drawHeart(ctx, piece.size);
+          drawStar(ctx, piece.size);
         }
 
         ctx.restore();
