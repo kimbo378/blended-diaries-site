@@ -58,6 +58,7 @@ export default {
         "diary-yellow": "var(--diary-yellow)",
         "diary-green": "var(--diary-green)",
         "diary-pink": "var(--diary-pink)",
+        "diary-teal": "var(--diary-teal)",
         "diary-lines": "var(--diary-lines)",
       },
       fontFamily: {
