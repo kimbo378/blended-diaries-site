@@ -35,7 +35,7 @@ export default function Hero() {
         {/* Left side - Book Cover */}
         <div className="flex justify-center lg:justify-center pt-4">
           <a
-            href="https://mybook.to/taylorsversion"
+            href="/taylor"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Buy Taylor's Diary on Amazon"

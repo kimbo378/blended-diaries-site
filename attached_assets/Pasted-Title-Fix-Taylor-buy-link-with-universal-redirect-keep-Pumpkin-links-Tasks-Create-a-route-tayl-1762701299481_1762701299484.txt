@@ -1,0 +1,91 @@
+Title: Fix Taylor buy link with universal redirect + keep Pumpkin links
+Tasks
+
+
+Create a route /taylor that sends visitors to their local Amazon product page for Taylor’s book.
+
+
+Update Taylor’s cover links on Home and Books pages to open /taylor in a new tab.
+
+
+Do not change Pumpkin’s BookLinker link or any review redirects.
+
+
+Details
+
+
+Taylor ASIN: B0FX1B9RWP
+
+
+For UK visitors, use this exact URL:
+https://www.amazon.co.uk/dp/B0FX1B9RWP?tag=uklinktagbk-21&th=1&psc=1&geniuslink=true
+
+
+For all other countries, send to https://[amazon-domain]/dp/B0FX1B9RWP
+
+
+Implement
+Create client/src/pages/TaylorProduct.tsx:
+import { useEffect } from "react";
+
+export default function TaylorProduct() {
+  useEffect(() => {
+    const ASIN = "B0FX1B9RWP";
+    const map: Record<string,string> = {
+      AE:"amazon.ae", AU:"amazon.com.au", BR:"amazon.com.br", CA:"amazon.ca",
+      DE:"amazon.de", EG:"amazon.eg", ES:"amazon.es", FR:"amazon.fr",
+      GB:"amazon.co.uk", IE:"amazon.co.uk", IN:"amazon.in", IT:"amazon.it",
+      JP:"amazon.co.jp", MX:"amazon.com.mx", NL:"amazon.nl", PL:"amazon.pl",
+      SA:"amazon.sa", SE:"amazon.se", SG:"amazon.sg", TR:"amazon.com.tr",
+      US:"amazon.com"
+    };
+    const lang = navigator.language || "en-US";
+    const cc = /-([A-Z]{2})$/.exec(lang)?.[1] || "US";
+    const domain = map[cc] || "amazon.com";
+
+    // UK uses my full affiliate URL
+    const ukUrl = "https://www.amazon.co.uk/dp/B0FX1B9RWP?tag=uklinktagbk-21&th=1&psc=1&geniuslink=true";
+    const url = domain === "amazon.co.uk" ? ukUrl : `https://${domain}/dp/${ASIN}`;
+
+    window.location.replace(url);
+  }, []);
+
+  return <main className="flex items-center justify-center min-h-screen"><p>Taking you to your local Amazon store...</p></main>;
+}
+
+Register route in the router (e.g., client/src/App.tsx):
+import TaylorProduct from "./pages/TaylorProduct";
+<Route path="/taylor" element={<TaylorProduct />} />
+
+Wrap Taylor cover images on Home and Books pages:
+<a href="/taylor" target="_blank" rel="noopener noreferrer" aria-label="Buy Taylor's Diary on Amazon">
+  {/* existing image/card */}
+</a>
+
+Do not change
+
+
+Pumpkin product link: https://mybook.to/PumpkinsDiary
+
+
+Pumpkin review redirect at /pumpkinreview
+
+
+Any other styling or layout
+
+
+Acceptance
+
+
+Visiting /taylor opens the UK URL above for GB users, and https://[their-amazon]/dp/B0FX1B9RWP for others.
+
+
+Taylor cover links on Home and Books open /taylor in a new tab.
+
+
+Pumpkin links and review redirects still work.
+
+
+Deployed and tested.
+
+

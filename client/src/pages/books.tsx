@@ -70,7 +70,7 @@ export default function Books() {
     <main style={styles.container}>
       {/* Taylor's Diary */}
       <a
-        href="https://mybook.to/taylorsversion"
+        href="/taylor"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Buy Taylor's Diary on Amazon"
