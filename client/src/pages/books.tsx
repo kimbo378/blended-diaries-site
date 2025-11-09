@@ -88,7 +88,7 @@ export default function Books() {
           <h3 style={styles.title}>Taylor's Diary</h3>
           <p style={styles.desc}>Diary for teenagers and adults… if you dare</p>
           <p style={{ ...styles.status, ...styles.available }}>
-            Launching this week
+            Now Available - Click to Buy
           </p>
         </article>
       </a>
@@ -132,7 +132,7 @@ export default function Books() {
           <h3 style={styles.title}>Pumpkin's Diary</h3>
           <p style={styles.desc}>The Dog's Diary, for kids</p>
           <p style={{ ...styles.status, ...styles.available }}>
-            Launching by Halloween
+            Now Available - Click to Buy
           </p>
         </article>
       </a>
