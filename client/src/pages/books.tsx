@@ -1,5 +1,6 @@
 import React from "react";
 import taylorCover from "../../assets/taylorcover.png";
+import pumpkinCover from "../../assets/pumpkincover.png";
 // path from client/src/pages → client/assets
 
 export default function Books() {
@@ -122,7 +123,11 @@ export default function Books() {
       >
         <article style={styles.card}>
           <div style={styles.cover}>
-            <p>Cover coming soon</p>
+            <img
+              src={pumpkinCover}
+              alt="Pumpkin's Diary cover"
+              style={styles.img}
+            />
           </div>
           <h3 style={styles.title}>Pumpkin's Diary</h3>
           <p style={styles.desc}>The Dog's Diary, for kids</p>
