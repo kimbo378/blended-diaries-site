@@ -70,33 +70,33 @@ export default function Navigation() {
               <div className="flex items-center space-x-3">
                 <a
                   href="mailto:hello@theblendeddiaries.com"
-                  className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+                  className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-3 shadow-md"
                   aria-label="Email"
                   data-testid="link-nav-social-email"
                 >
-                  <Mail size={24} />
+                  <Mail size={32} />
                 </a>
 
                 <a
                   href="https://tiktok.com/@blendeddiaries"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+                  className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-3 shadow-md"
                   aria-label="TikTok"
                   data-testid="link-nav-social-tiktok"
                 >
-                  <Music2 size={24} />
+                  <Music2 size={32} />
                 </a>
 
                 <a
                   href="https://www.instagram.com/blendeddiaries/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+                  className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-3 shadow-md"
                   aria-label="Instagram"
                   data-testid="link-nav-social-instagram"
                 >
-                  <Instagram size={24} />
+                  <Instagram size={32} />
                 </a>
               </div>
             </div>
