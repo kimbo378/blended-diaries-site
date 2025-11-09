@@ -3,7 +3,7 @@ import { Heart, Star } from "lucide-react";
 
 // ✅ Correct relative paths (your assets folder is at client/assets)
 import ChapterSample from "../../../assets/ChapterSample.png";
-import taylorCover from "@assets/TAYDIGITAL_BOOK_THUMBNAIL_1762708518493.jpg";
+import taylorCover from "@assets/111kdpfinaltaylorjpg_1762709437780.jpg";
 
 export default function Hero() {
   return (
@@ -55,7 +55,6 @@ export default function Hero() {
               style={{
                 filter: 'drop-shadow(0 0 20px rgba(0, 185, 185, 0))',
                 transition: 'all 0.5s ease',
-                imageRendering: 'crisp-edges',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.filter = 'drop-shadow(0 0 20px rgba(0, 185, 185, 0.4))';
