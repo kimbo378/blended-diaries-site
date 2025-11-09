@@ -63,7 +63,7 @@ export default function Books() {
       fontSize: "15px",
       fontWeight: 800,
     } as React.CSSProperties,
-    available: { color: "#f39c12", fontWeight: 700, fontSize: "14px", marginBottom: "10px" } as React.CSSProperties,
+    available: { color: "#7f8c8d", fontWeight: 700, fontSize: "14px", marginBottom: "10px" } as React.CSSProperties,
     coming: { color: "gray" } as React.CSSProperties,
   };
 
