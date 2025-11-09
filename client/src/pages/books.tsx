@@ -1,5 +1,5 @@
 import React from "react";
-import taylorCover from "../../assets/taylorcover.png";
+import taylorCover from "@assets/TAYDIGITAL_BOOK_THUMBNAIL_1762708518493.jpg";
 import pumpkinCover from "../../assets/pumpkincover.png";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 

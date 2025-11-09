@@ -3,7 +3,7 @@ import { Heart, Star } from "lucide-react";
 
 // ✅ Correct relative paths (your assets folder is at client/assets)
 import ChapterSample from "../../../assets/ChapterSample.png";
-import taylorCover from "../../../assets/taylorcover.png";
+import taylorCover from "@assets/TAYDIGITAL_BOOK_THUMBNAIL_1762708518493.jpg";
 
 export default function Hero() {
   return (
