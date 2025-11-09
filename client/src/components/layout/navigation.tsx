@@ -13,165 +13,138 @@ export default function Navigation() {
       href: "/", 
       label: "Home", 
       icon: Home,
-      color: "text-diary-purple",
-      bgColor: "bg-diary-purple/10 hover:bg-diary-purple/20",
-      iconColor: "text-diary-purple"
+      color: "text-teal-500 hover:text-teal-600"
     },
     { 
       href: "/books", 
       label: "Books", 
       icon: BookOpen,
-      color: "text-diary-teal",
-      bgColor: "bg-diary-teal/10 hover:bg-diary-teal/20",
-      iconColor: "text-diary-teal"
+      color: "text-black hover:text-gray-700"
     },
     { 
       href: "/about", 
       label: "About", 
       icon: Heart,
-      color: "text-diary-red",
-      bgColor: "bg-diary-red/10 hover:bg-diary-red/20",
-      iconColor: "text-diary-red"
+      color: "text-teal-500 hover:text-teal-600"
     },
     { 
       href: "/freebies", 
       label: "Freebies", 
       icon: Gift,
-      color: "text-diary-yellow",
-      bgColor: "bg-diary-yellow/20 hover:bg-diary-yellow/30",
-      iconColor: "text-diary-yellow"
+      color: "text-black hover:text-gray-700"
     },
     { 
       href: "/contact", 
       label: "Contact", 
       icon: MessageCircle,
-      color: "text-diary-pink",
-      bgColor: "bg-diary-pink/10 hover:bg-diary-pink/20",
-      iconColor: "text-diary-pink"
+      color: "text-teal-500 hover:text-teal-600"
     },
   ];
 
   return (
-    <nav className="relative z-50 bg-diary-cream sticky top-0 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="hidden md:block py-6">
-          <div className="flex justify-between items-end relative">
-            {/* Left: Site Title */}
-            <div className="flex-1">
-              <h1 className="font-handwritten text-4xl sm:text-5xl font-bold">
-                <span className="text-teal-500">The </span>
-                <span className="text-black">Blended</span>
-                <span className="text-teal-500"> Diaries</span>
-              </h1>
-            </div>
+    <nav className="relative z-50 bg-diary-cream sticky top-0">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="hidden md:block py-4">
+          {/* Top row: Site Title + Logo */}
+          <div className="flex justify-between items-center mb-3">
+            <h1 className="font-handwritten text-4xl sm:text-5xl font-bold">
+              <span className="text-teal-500">The </span>
+              <span className="text-black">Blended</span>
+              <span className="text-teal-500"> Diaries</span>
+            </h1>
             
-            {/* Center: Logo */}
-            <div className="absolute left-[48%] top-2 transform -translate-x-1/2 z-10">
-              <img
-                src={logoImage}
-                alt="The Blended Diaries Logo"
-                className="w-20 h-20 object-contain"
-              />
-            </div>
-
-            {/* Right: Desktop Menu */}
-            <div className="flex-1 flex justify-end">
-              <div className="flex items-center gap-3">
-                {navItems.map((item) => {
-                  const Icon = item.icon;
-                  const isActive = location === item.href;
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      data-testid={`link-nav-${item.label.toLowerCase()}`}
-                    >
-                      <div 
-                        className={`
-                          group relative px-4 py-2.5 rounded-2xl
-                          ${item.bgColor}
-                          ${isActive ? 'ring-2 ring-offset-2 ring-offset-diary-cream' : ''}
-                          ${isActive && item.color.includes('purple') ? 'ring-diary-purple' : ''}
-                          ${isActive && item.color.includes('teal') ? 'ring-diary-teal' : ''}
-                          ${isActive && item.color.includes('red') ? 'ring-diary-red' : ''}
-                          ${isActive && item.color.includes('yellow') ? 'ring-diary-yellow' : ''}
-                          ${isActive && item.color.includes('pink') ? 'ring-diary-pink' : ''}
-                          transition-all duration-300
-                          hover:scale-110 hover:-rotate-2
-                          active:scale-95
-                          cursor-pointer
-                        `}
-                      >
-                        <div className="flex items-center gap-2">
-                          <Icon 
-                            size={24} 
-                            className={`${item.iconColor} group-hover:animate-bounce`}
-                          />
-                          <span className={`
-                            font-handwritten text-2xl font-bold ${item.color}
-                            group-hover:scale-105 transition-transform
-                          `}>
-                            {item.label}
-                          </span>
-                        </div>
-                        
-                        {/* Decorative underline on hover */}
-                        <div className={`
-                          absolute -bottom-1 left-1/2 -translate-x-1/2
-                          h-1 w-0 ${item.color.replace('text-', 'bg-')}
-                          rounded-full
-                          transition-all duration-300
-                          group-hover:w-3/4
-                        `} />
-                        
-                        {/* Fun doodle effect */}
-                        <div className={`
-                          absolute -top-1 -right-1
-                          w-3 h-3 ${item.color.replace('text-', 'bg-')}
-                          rounded-full
-                          opacity-0 group-hover:opacity-100
-                          transition-opacity duration-300
-                        `} />
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
+            <img
+              src={logoImage}
+              alt="The Blended Diaries Logo"
+              className="w-20 h-20 object-contain"
+            />
           </div>
 
-          {/* Social Media Icons */}
-          <div className="flex items-center space-x-3 mt-4">
-            <a
-              href="mailto:hello@theblendeddiaries.com"
-              className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
-              aria-label="Email"
-              data-testid="link-nav-social-email"
-            >
-              <Mail size={24} />
-            </a>
+          {/* Bottom row: Navigation + Social */}
+          <div className="flex justify-between items-center">
+            {/* Desktop Menu */}
+            <div className="flex items-center gap-2">
+              {navItems.map((item) => {
+                const Icon = item.icon;
+                const isActive = location === item.href;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    data-testid={`link-nav-${item.label.toLowerCase()}`}
+                  >
+                    <div 
+                      className={`
+                        group relative px-3 py-2 rounded-xl
+                        transition-all duration-300
+                        hover:scale-105 hover:-rotate-1
+                        active:scale-95
+                        cursor-pointer
+                        ${isActive ? 'bg-teal-500/10' : 'hover:bg-gray-100'}
+                      `}
+                    >
+                      <div className="flex items-center gap-1.5">
+                        <Icon 
+                          size={20} 
+                          className={`${item.color.split(' ')[0]} group-hover:animate-bounce`}
+                        />
+                        <span className={`
+                          font-handwritten text-xl font-bold ${
+                            isActive ? item.color.split(' ')[0] : item.color
+                          }
+                          group-hover:scale-105 transition-transform
+                        `}>
+                          {item.label}
+                        </span>
+                      </div>
+                      
+                      {/* Decorative underline on hover */}
+                      <div className={`
+                        absolute -bottom-0.5 left-1/2 -translate-x-1/2
+                        h-0.5 w-0 ${item.color.split(' ')[0].replace('text-', 'bg-')}
+                        rounded-full
+                        transition-all duration-300
+                        group-hover:w-3/4
+                      `} />
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
 
-            <a
-              href="https://tiktok.com/@blendeddiaries"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
-              aria-label="TikTok"
-              data-testid="link-nav-social-tiktok"
-            >
-              <Music2 size={24} />
-            </a>
+            {/* Social Media Icons */}
+            <div className="flex items-center space-x-3">
+              <a
+                href="mailto:hello@theblendeddiaries.com"
+                className="text-diary-purple hover:text-diary-purple/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+                aria-label="Email"
+                data-testid="link-nav-social-email"
+              >
+                <Mail size={24} />
+              </a>
 
-            <a
-              href="https://www.instagram.com/blendeddiaries/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
-              aria-label="Instagram"
-              data-testid="link-nav-social-instagram"
-            >
-              <Instagram size={24} />
-            </a>
+              <a
+                href="https://tiktok.com/@blendeddiaries"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-diary-pink hover:text-diary-pink/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+                aria-label="TikTok"
+                data-testid="link-nav-social-tiktok"
+              >
+                <Music2 size={24} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/blendeddiaries/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-diary-yellow hover:text-diary-yellow/80 transition-all duration-300 hover:scale-110 bg-black rounded-full p-2.5 shadow-md"
+                aria-label="Instagram"
+                data-testid="link-nav-social-instagram"
+              >
+                <Instagram size={24} />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -255,19 +228,15 @@ export default function Navigation() {
                     <div 
                       className={`
                         flex items-center gap-3 px-4 py-3 rounded-xl
-                        ${item.bgColor}
-                        ${isActive ? 'ring-2 ring-offset-2 ring-offset-diary-cream' : ''}
-                        ${isActive && item.color.includes('purple') ? 'ring-diary-purple' : ''}
-                        ${isActive && item.color.includes('teal') ? 'ring-diary-teal' : ''}
-                        ${isActive && item.color.includes('red') ? 'ring-diary-red' : ''}
-                        ${isActive && item.color.includes('yellow') ? 'ring-diary-yellow' : ''}
-                        ${isActive && item.color.includes('pink') ? 'ring-diary-pink' : ''}
                         transition-all duration-300
                         active:scale-95
+                        ${isActive ? 'bg-teal-500/10' : 'hover:bg-gray-100'}
                       `}
                     >
-                      <Icon size={28} className={item.iconColor} />
-                      <span className={`font-handwritten text-2xl font-bold ${item.color}`}>
+                      <Icon size={24} className={item.color.split(' ')[0]} />
+                      <span className={`font-handwritten text-xl font-bold ${
+                        isActive ? item.color.split(' ')[0] : item.color
+                      }`}>
                         {item.label}
                       </span>
                     </div>
