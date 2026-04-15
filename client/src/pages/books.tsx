@@ -4,145 +4,170 @@ import pumpkinCover from "../../assets/pumpkincover.png";
 import libbyCover from "@assets/LIBBYPaperback_cover99_1776246144743.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
+interface BookCardProps {
+  cover: string;
+  alt: string;
+  title: string;
+  subtitle: string;
+  badge: string;
+  badgeColor: string;
+  glowColor: string;
+  delay: string;
+  isVisible: boolean;
+  href?: string;
+}
+
+function BookCard({ cover, alt, title, subtitle, badge, badgeColor, glowColor, delay, isVisible, href }: BookCardProps) {
+  const content = (
+    <article
+      className="group relative w-[240px] flex flex-col items-center cursor-pointer select-none opacity-0 translate-y-8"
+      style={{ animation: isVisible ? `fadeInUp 0.6s ease-out ${delay} forwards` : 'none' }}
+    >
+      {/* Badge */}
+      <span className={`absolute top-3 left-3 z-20 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md ${badgeColor}`}>
+        {badge}
+      </span>
+
+      {/* Cover image container — no background, just the image */}
+      <div className="relative w-full overflow-hidden rounded-2xl shadow-lg"
+        style={{ aspectRatio: '2/3' }}>
+        <img
+          src={cover}
+          alt={alt}
+          className="w-full h-full object-cover rounded-2xl transition-all duration-500
+            group-hover:scale-105 group-hover:brightness-110"
+        />
+
+        {/* Shine sweep on hover */}
+        <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500
+          bg-gradient-to-tr from-transparent via-white/25 to-transparent pointer-events-none" />
+
+        {/* Glow border on hover */}
+        <div
+          className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          style={{ boxShadow: `0 0 28px 6px ${glowColor}` }}
+        />
+      </div>
+
+      {/* Text below cover */}
+      <div className="mt-3 text-center px-1">
+        <h3 className="font-handwritten text-xl font-bold text-diary-teal leading-tight">{title}</h3>
+        <p className="text-sm text-gray-600 mt-1">{subtitle}</p>
+      </div>
+
+      {/* Clickable arrow pulse — only if linked */}
+      {href && (
+        <div className="mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
+          <span className="text-xs font-bold text-white bg-diary-teal px-3 py-1 rounded-full shadow">
+            Buy Now →
+          </span>
+        </div>
+      )}
+    </article>
+  );
+
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className="no-underline">
+        {content}
+      </a>
+    );
+  }
+
+  return content;
+}
+
 export default function Books() {
   const { elementRef, isVisible } = useScrollAnimation<HTMLElement>();
 
   return (
-    <main ref={elementRef} className="flex flex-wrap justify-center gap-10 my-10 mx-auto max-w-[1100px] px-4">
-      {/* Taylor's Diary */}
-      <a
-        href="/taylor"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Buy Taylor's Diary on Amazon"
-        className="no-underline group"
-      >
-        <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
-          transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-2
-          opacity-0 translate-y-8"
-          style={{
-            animation: isVisible ? 'fadeInUp 0.6s ease-out 0s forwards' : 'none'
-          }}>
-          <p className="text-gray-600 font-bold text-sm mb-2.5">
-            Now Available - Click to Buy
-          </p>
-          <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center relative">
-            <img
-              src={taylorCover}
-              alt="Taylor's Diary cover"
-              className="w-full h-full object-contain rounded-lg transition-all duration-500 
-                group-hover:scale-110 group-hover:brightness-105"
-              style={{
-                filter: 'drop-shadow(0 0 0px rgba(0, 185, 185, 0))',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.filter = 'drop-shadow(0 0 15px rgba(0, 185, 185, 0.5))';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.filter = 'drop-shadow(0 0 0px rgba(0, 185, 185, 0))';
-              }}
-            />
-          </div>
-          <h3 className="text-xl font-bold text-diary-teal m-0">Taylor's Diary</h3>
-          <p className="mt-1.5 text-[15px] text-black font-medium">
-            Diary for teenagers and adults… if you dare
-          </p>
-        </article>
-      </a>
+    <main
+      ref={elementRef}
+      className="flex flex-wrap justify-center gap-10 my-12 mx-auto max-w-[1200px] px-4"
+    >
+      {/* Taylor's Diary — not yet live, no link */}
+      <BookCard
+        cover={taylorCover}
+        alt="Taylor's Diary cover"
+        title="Taylor's Diary"
+        subtitle="Diary for teenagers and adults… if you dare"
+        badge="Coming Soon"
+        badgeColor="bg-diary-teal"
+        glowColor="rgba(0, 185, 185, 0.45)"
+        delay="0s"
+        isVisible={isVisible}
+      />
 
       {/* Pumpkin's Diary */}
-      <a
+      <BookCard
+        cover={pumpkinCover}
+        alt="Pumpkin's Diary cover"
+        title="Pumpkin's Diary"
+        subtitle="The Dog's Diary, for kids"
+        badge="Available Now"
+        badgeColor="bg-orange-500"
+        glowColor="rgba(231, 76, 60, 0.45)"
+        delay="0.15s"
+        isVisible={isVisible}
         href="https://mybook.to/PumpkinsDiary"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Buy Pumpkin's Diary on Amazon"
-        className="no-underline group"
+      />
+
+      {/* Libby's Diary — now live */}
+      <BookCard
+        cover={libbyCover}
+        alt="Libby's Diary cover"
+        title="Libby's Diary"
+        subtitle="Diary for adults only"
+        badge="Available Now"
+        badgeColor="bg-pink-500"
+        glowColor="rgba(236, 72, 153, 0.45)"
+        delay="0.3s"
+        isVisible={isVisible}
+        href="https://amzn.eu/d/00ejvcm5"
+      />
+
+      {/* Caleb's Diary — coming soon */}
+      <article
+        className="group relative w-[240px] flex flex-col items-center opacity-0 translate-y-8"
+        style={{ animation: isVisible ? 'fadeInUp 0.6s ease-out 0.45s forwards' : 'none' }}
       >
-        <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
-          transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-2
-          opacity-0 translate-y-8"
-          style={{
-            animation: isVisible ? 'fadeInUp 0.6s ease-out 0.2s forwards' : 'none'
-          }}>
-          <p className="text-gray-600 font-bold text-sm mb-2.5">
-            Now Available - Click to Buy
-          </p>
-          <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
-            <img
-              src={pumpkinCover}
-              alt="Pumpkin's Diary cover"
-              className="w-full h-full object-contain rounded-lg transition-all duration-500 
-                group-hover:scale-110 group-hover:brightness-105"
-              style={{
-                filter: 'drop-shadow(0 0 0px rgba(231, 76, 60, 0))',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.filter = 'drop-shadow(0 0 15px rgba(231, 76, 60, 0.5))';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.filter = 'drop-shadow(0 0 0px rgba(231, 76, 60, 0))';
-              }}
-            />
+        <span className="absolute top-3 left-3 z-20 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md bg-gray-400">
+          Coming Soon
+        </span>
+        <div
+          className="relative w-full overflow-hidden rounded-2xl shadow-md bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center"
+          style={{ aspectRatio: '2/3' }}
+        >
+          <div className="text-center px-6">
+            <p className="font-handwritten text-2xl text-gray-400 leading-snug">Caleb's Diary</p>
+            <p className="text-sm text-gray-400 mt-2">Cover coming soon…</p>
           </div>
-          <h3 className="text-xl font-bold text-diary-teal m-0">Pumpkin's Diary</h3>
-          <p className="mt-1.5 text-[15px] text-black font-medium">
-            The Dog's Diary, for kids
-          </p>
-        </article>
-      </a>
-
-      {/* Libby's Diary */}
-      <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
-        transition-all duration-500 opacity-0 translate-y-8"
-        style={{
-          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.4s forwards' : 'none'
-        }}>
-        <p className="text-gray-600 font-bold text-sm mb-2.5">Coming soon</p>
-        <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
-          <img
-            src={libbyCover}
-            alt="Libby's Diary cover"
-            className="w-full h-full object-contain rounded-lg"
-          />
         </div>
-        <h3 className="text-xl font-bold text-diary-teal m-0">Libby's Diary</h3>
-        <p className="mt-1.5 text-[15px] text-black font-medium">
-          Diary for adults only
-        </p>
+        <div className="mt-3 text-center px-1">
+          <h3 className="font-handwritten text-xl font-bold text-diary-teal leading-tight">Caleb's Diary</h3>
+          <p className="text-sm text-gray-600 mt-1">Diary for teenagers and adults… if you dare</p>
+        </div>
       </article>
 
-      {/* Caleb's Diary */}
-      <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
-        transition-all duration-500 opacity-0 translate-y-8"
-        style={{
-          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.6s forwards' : 'none'
-        }}>
-        <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
-          <p>Cover coming soon</p>
+      {/* More Coming Soon */}
+      <article
+        className="group relative w-[240px] flex flex-col items-center opacity-0 translate-y-8"
+        style={{ animation: isVisible ? 'fadeInUp 0.6s ease-out 0.6s forwards' : 'none' }}
+      >
+        <div
+          className="relative w-full overflow-hidden rounded-2xl shadow-md bg-gradient-to-br from-teal-50 to-purple-50 flex items-center justify-center"
+          style={{ aspectRatio: '2/3' }}
+        >
+          <div className="text-center px-6">
+            <p className="text-4xl mb-3">📖✨</p>
+            <p className="font-handwritten text-xl text-diary-teal leading-snug">More families coming soon</p>
+            <p className="text-sm text-gray-500 mt-2">New dramas, new diaries, new chaos</p>
+          </div>
         </div>
-        <h3 className="text-xl font-bold text-diary-teal m-0">Caleb's Diary</h3>
-        <p className="mt-1.5 text-[15px] text-black font-medium">
-          Diary for teenagers and adults… if you dare
-        </p>
-        <p className="mt-2 text-[15px] text-gray-500">Coming soon</p>
-      </article>
-
-      {/* The Blended Diaries: Always Evolving */}
-      <article className="bg-white rounded-[20px] shadow-md w-[280px] text-center p-5 flex flex-col items-center 
-        transition-all duration-500 opacity-0 translate-y-8"
-        style={{
-          animation: isVisible ? 'fadeInUp 0.6s ease-out 0.8s forwards' : 'none'
-        }}>
-        <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
-          <p>The Blended Diaries: Always Evolving</p>
+        <div className="mt-3 text-center px-1">
+          <h3 className="font-handwritten text-xl font-bold text-diary-teal leading-tight">More Families</h3>
+          <p className="text-sm text-gray-600 mt-1">Stay tuned — the world is expanding</p>
         </div>
-        <h3 className="text-xl font-bold text-diary-teal m-0">More Families Coming Soon</h3>
-        <p className="mt-1.5 text-[15px] text-black font-medium">
-          Our world's expanding with new families, new dramas, and new diaries,
-          proving there's no one way to be a family but plenty of ways to laugh
-          about it.
-        </p>
-        <p className="mt-2 text-[15px] text-gray-500">Stay tuned</p>
       </article>
     </main>
   );
