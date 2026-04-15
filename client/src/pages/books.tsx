@@ -1,6 +1,7 @@
 import React from "react";
-import taylorCover from "@assets/111kdpfinaltaylorjpg_1762709437780.jpg";
+import taylorCover from "@assets/PAPERBACK_Taylor_DiariesCOVER_1776245932604.jpg";
 import pumpkinCover from "../../assets/pumpkincover.png";
+import libbyCover from "@assets/LIBBYPaperback_cover99_1776246144743.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export default function Books() {
@@ -96,14 +97,18 @@ export default function Books() {
         style={{
           animation: isVisible ? 'fadeInUp 0.6s ease-out 0.4s forwards' : 'none'
         }}>
+        <p className="text-gray-600 font-bold text-sm mb-2.5">Coming soon</p>
         <div className="w-[220px] h-[320px] rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-4 p-2.5 text-center">
-          <p>Cover coming soon</p>
+          <img
+            src={libbyCover}
+            alt="Libby's Diary cover"
+            className="w-full h-full object-contain rounded-lg"
+          />
         </div>
         <h3 className="text-xl font-bold text-diary-teal m-0">Libby's Diary</h3>
         <p className="mt-1.5 text-[15px] text-black font-medium">
           Diary for adults only
         </p>
-        <p className="mt-2 text-[15px] text-gray-500">Coming soon</p>
       </article>
 
       {/* Caleb's Diary */}
