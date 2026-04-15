@@ -15,22 +15,27 @@ export default function Hero() {
       <Star className="absolute bottom-10 right-10 text-diary-purple rotate-45 z-20 hidden lg:block animate-float opacity-60" size={16} />
 
       {/* ── Copy block ── */}
-      <div className="max-w-3xl mx-auto pt-12 pb-10 px-6 text-center">
+      <div className="max-w-3xl mx-auto pt-14 pb-10 px-6 text-center">
 
-        <p className="font-handwritten text-diary-teal text-base sm:text-lg tracking-wide mb-4 animate-fade-in">
-          ✏️ A book series unlike anything you've read before
-        </p>
-
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 leading-snug mb-5 animate-fade-in-delayed">
-          Funny, honest and painfully{" "}
-          <span className="text-diary-teal">relatable</span> diaries about
-          stepfamily life —{" "}
-          <span className="text-diary-red">told through the eyes of the people living it.</span>
+        <h1
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-6 animate-fade-in"
+          style={{ color: '#2B2B2B' }}
+        >
+          Real stories. Real chaos. Real family.
         </h1>
 
-        <p className="text-sm sm:text-base text-gray-500 italic max-w-xl mx-auto animate-fade-in-delayed-2">
-          Sarcastic teens, overwhelmed mums and an unimpressed family dog.
-          Real stories that are as funny as they are true.
+        <p
+          className="text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-5 animate-fade-in-delayed"
+          style={{ color: '#6B6B6B' }}
+        >
+          Funny, honest diaries about blended family life, told by the people living it.
+        </p>
+
+        <p
+          className="font-handwritten text-base sm:text-lg tracking-wide animate-fade-in-delayed-2"
+          style={{ color: '#C97B63' }}
+        >
+          Teens. Parents. Even the dog.
         </p>
       </div>
 
