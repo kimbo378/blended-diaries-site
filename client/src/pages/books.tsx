@@ -1,5 +1,5 @@
 import React from "react";
-import taylorCover from "@assets/PAPERBACK_Taylor_DiariesCOVER_1776245932604.jpg";
+import taylorCover from "@assets/revisedcroppedtaylorcover_1776663377762.png";
 import pumpkinCover from "../../assets/pumpkincover.png";
 import libbyCover from "@assets/LIBBYPaperback_cover99_1776246144743.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
