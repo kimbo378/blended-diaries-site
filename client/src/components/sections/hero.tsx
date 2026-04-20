@@ -1,7 +1,7 @@
 import React from "react";
 import { Heart, Star } from "lucide-react";
 import ChapterSample from "../../../assets/ChapterSample.png";
-import taylorCover from "@assets/revisedcroppedtaylorcover_1776663377762.png";
+import taylorCover from "@assets/revisedcroppedtaylorcover_1776663460286.png";
 import pumpkinCover from "../../../assets/pumpkincover.png";
 import libbyCover from "@assets/LIBBYPaperback_cover99_1776246144743.jpg";
 
