@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Mail, Instagram, Music2, Home, BookOpen, Heart, Gift, MessageCircle } from "lucide-react";
+import { Menu, X, Mail, Instagram, Music2, Home, BookOpen, Heart, Gift, MessageCircle, Newspaper } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoImage from "@assets/Blended Diaries logo (1) (2)_1759152924243.png";
 
@@ -31,6 +31,12 @@ export default function Navigation() {
       href: "/freebies", 
       label: "Freebies", 
       icon: Gift,
+      color: "text-black hover:text-gray-700"
+    },
+    { 
+      href: "/blog", 
+      label: "Blog", 
+      icon: Newspaper,
       color: "text-black hover:text-gray-700"
     },
     { 

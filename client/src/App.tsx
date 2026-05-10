@@ -16,6 +16,7 @@ import Subscribed from "@/pages/subscribed";
 import ReviewRedirect from "@/pages/review";
 import PumpkinReview from "@/pages/PumpkinReview";
 import TaylorProduct from "@/pages/TaylorProduct";
+import Blog from "@/pages/blog";
 import Navigation from "@/components/layout/navigation";
 import Footer from "@/components/layout/footer";
 
@@ -37,6 +38,7 @@ function Router() {
           <Route path="/review" component={ReviewRedirect} />
           <Route path="/pumpkinreview" component={PumpkinReview} />
           <Route path="/taylor" component={TaylorProduct} />
+          <Route path="/blog" component={Blog} />
           <Route component={NotFound} />
         </Switch>
       </main>
