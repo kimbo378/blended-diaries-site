@@ -85,17 +85,18 @@ export default function Books() {
       ref={elementRef}
       className="flex flex-wrap justify-center gap-10 my-12 mx-auto max-w-[1200px] px-4"
     >
-      {/* Taylor's Diary — not yet live, no link */}
+      {/* Taylor's Diary */}
       <BookCard
         cover={taylorCover}
         alt="Taylor's Diary cover"
         title="Taylor's Diary"
         subtitle="Diary for teenagers and adults… if you dare"
-        badge="Coming Soon"
+        badge="Available Now"
         badgeColor="bg-diary-teal"
         glowColor="rgba(0, 185, 185, 0.45)"
         delay="0s"
         isVisible={isVisible}
+        href="https://www.amazon.co.uk/Teens-Blended-Family-Diary-Stepfamily/dp/1918321507/ref=tmm_pap_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.4MCpUz76mn0a7RpSsxiKtZkkmnSs6CyxgCXdYyT7MwY-uLItLWBMxqkY_hs-S7In.gwpDW7DGjReqMRf7yHV3F6pOGGeH9f-Q8h2TGeDxJtY&qid=1778416725&sr=8-3"
       />
 
       {/* Pumpkin's Diary */}

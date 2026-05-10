@@ -46,25 +46,32 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto px-6 pb-2">
         <div className="grid grid-cols-3 gap-4 sm:gap-8 items-start">
 
-          {/* Taylor — coming soon, no link */}
-          <div className="group flex flex-col items-center gap-3">
+          {/* Taylor — now live */}
+          <a href="https://www.amazon.co.uk/Teens-Blended-Family-Diary-Stepfamily/dp/1918321507/ref=tmm_pap_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.4MCpUz76mn0a7RpSsxiKtZkkmnSs6CyxgCXdYyT7MwY-uLItLWBMxqkY_hs-S7In.gwpDW7DGjReqMRf7yHV3F6pOGGeH9f-Q8h2TGeDxJtY&qid=1778416725&sr=8-3"
+            target="_blank" rel="noopener noreferrer"
+            className="group flex flex-col items-center gap-3 no-underline">
             <div className="relative w-full rounded-2xl overflow-hidden shadow-lg"
               style={{ aspectRatio: '2/3' }}>
               <span className="absolute top-2 left-2 z-10 bg-diary-teal text-white
                 text-[10px] font-bold px-2 py-0.5 rounded-full shadow">
-                Coming Soon
+                Available Now
               </span>
               <img src={taylorCover} alt="Taylor's Diary"
                 className="w-full h-full object-cover transition-all duration-500
                   group-hover:scale-105 group-hover:brightness-110" />
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent
                 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style={{ boxShadow: 'inset 0 0 0 2px rgba(0,185,185,0.6)' }} />
             </div>
             <div className="text-center">
               <p className="font-handwritten text-diary-teal font-bold text-base leading-tight">Taylor's Diary</p>
               <p className="text-xs text-gray-500 mt-0.5">For teens & adults</p>
+              <p className="text-xs font-bold text-diary-teal mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Buy Now →
+              </p>
             </div>
-          </div>
+          </a>
 
           {/* Pumpkin — available, linked */}
           <a href="https://mybook.to/PumpkinsDiary" target="_blank" rel="noopener noreferrer"
