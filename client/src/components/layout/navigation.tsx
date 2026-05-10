@@ -37,13 +37,13 @@ export default function Navigation() {
       href: "/blog", 
       label: "Blog", 
       icon: Newspaper,
-      color: "text-black hover:text-gray-700"
+      color: "text-teal-500 hover:text-teal-600"
     },
     { 
       href: "/contact", 
       label: "Contact", 
       icon: MessageCircle,
-      color: "text-teal-500 hover:text-teal-600"
+      color: "text-black hover:text-gray-700"
     },
   ];
 
